@@ -7,12 +7,13 @@ import { OurStory } from "./Components/OurStory/OurStory";
 import { OurWorks } from "./Components/OurWorks/OurWorks";
 import { ProblemScenario } from "./Components/ProblemScenario/ProblemScenario";
 import { WhyOpengrad } from "./Components/WhyOpengrad/WhyOpengrad";
+import styles from './Home.module.css'
 
 type Props = {};
 
 export const Home = (_props: Props) => {
   return (
-    <div>
+    <div className={styles.HomePageWrapper}>
       <Navbar />
       <Header />
       <CounterContainer />
