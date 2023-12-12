@@ -1,0 +1,60 @@
+.ImageHoverBoxWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 25px;
+}
+.ImageHoverBoxWrap {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  width: 200px;
+  height: 220px;
+}
+
+.ImageHoverBoxWrap .FrontDiv {
+  background-color: #ededed;
+  height: 100%;
+  width: 100%;
+  position: absolute;
+  z-index: 500;
+  display: flex;
+}
+.ImageHoverBoxWrap .FrontDiv img {
+  width: 100%;
+  filter: grayscale(100%);
+}
+.ImageHoverBoxWrap .BackDiv {
+  height: 100%;
+  width: 100%;
+  background-color: #034852;
+}
+
+.ImageHoverBoxWrap:hover .BackDiv {
+  margin-bottom: -20px;
+  margin-right: -20px;
+}
+
+.ImageHoverBoxWrap:hover .FrontDiv img {
+  filter: grayscale(0%);
+}
+
+.ImageHoverBoxWrapper .Content {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+.ImageHoverBoxWrapper .Content h2 {
+  color: #034852;
+  font-size: 17px;
+  line-height: 1;
+  text-transform: uppercase;
+}
+.ImageHoverBoxWrapper .Content h3 {
+  color: #05B570;
+  font-size: 15px;
+  line-height: 1;
+  font-weight: 400;
+  text-transform: uppercase;
+}

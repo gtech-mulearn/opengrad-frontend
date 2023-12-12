@@ -1,0 +1,63 @@
+.FooterWrapper {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  background-color: white;
+}
+
+.FooterWrapper .TopSection {
+  display: flex;
+  flex-direction: column;
+  width: 100%;
+  align-items: center;
+}
+
+.FooterWrapper .TopSection img {
+  width: 200px;
+}
+
+.FooterWrapper .TopSection p {
+  color: #656565;
+  line-height: 1;
+}
+
+.FooterWrapper .iconFill {
+  display: none;
+}
+
+.FooterWrapper .iconLink:hover .iconFill {
+  display: inline;
+}
+
+.FooterWrapper .iconLink:hover .iconDefault {
+  display: none;
+}
+
+.FooterWrapper .BottomSection {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: space-between;
+  padding: 20px 5vw;
+  gap: 20px;
+  flex-wrap: wrap;
+}
+
+.FooterWrapper .BottomSection .left {
+  display: flex;
+  gap: 20px;
+}
+.FooterWrapper .BottomSection .left a{
+    text-decoration: none;
+    color: #656565;
+}
+.FooterWrapper .BottomSection .left a:hover{
+    color: #034852;
+}
+.FooterWrapper .BottomSection .Social {
+  display: flex;
+  gap: 30px;
+}
+.FooterWrapper .BottomSection >p{
+    color: #656565;
+}

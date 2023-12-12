@@ -1,9 +1,13 @@
+import { SectionHeading } from "../../../../Components/SectionHeading/SectionHeading";
 
 
 type Props = {}
 
 export const OurJourney = (_props: Props) => {
   return (
-    <div>OurJourney</div>
-  )
+    <div>
+      {" "}
+      <SectionHeading title="Our Journey" />
+    </div>
+  );
 }

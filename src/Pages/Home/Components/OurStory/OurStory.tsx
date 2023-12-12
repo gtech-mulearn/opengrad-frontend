@@ -1,5 +1,9 @@
 import { ImageHoverBox } from "../../../../Components/ImageHoverBox/ImageHoverBox";
 import styles from './OurStory.module.css'
+import amith from "../../../assets/founders/amith.png";
+import sahil from '../../../assets/founders/sahil.png'
+import shahid from "../../../assets/founders/shahid.png";
+import { SectionHeading } from "../../../../Components/SectionHeading/SectionHeading";
 
 
 type Props = {}
@@ -7,7 +11,7 @@ type Props = {}
 export const OurStory = (_props: Props) => {
   return (
     <div>
-      <h1>Our Story</h1>
+      <SectionHeading title="Our Story" />
       <div>
         <div>
           <p>
@@ -18,9 +22,27 @@ export const OurStory = (_props: Props) => {
           </p>
           <h3>THE FOUNDERS</h3>
           <div>
-            <ImageHoverBox />
-            <ImageHoverBox />
-            <ImageHoverBox />
+            <ImageHoverBox
+              image={sahil}
+              name={"Sahil Sameer"}
+              width={"250px"}
+              height={"270px"}
+              description="Builder of OpenGrad"
+            />
+            <ImageHoverBox
+              image={amith}
+              name={"Amith Tony Joseph"}
+              width={"250px"}
+              height={"270px"}
+              description="Co-Founder & Product Lead"
+            />
+            <ImageHoverBox
+              image={shahid}
+              name={"Mohammed Shahid CO"}
+              width={"250px"}
+              height={"270px"}
+              description="Co-Founder, OpenGrad"
+            />
           </div>
         </div>
         <div className={styles.SliderTestimonialWrapper}></div>

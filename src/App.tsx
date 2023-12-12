@@ -1,6 +1,6 @@
 
 import './App.css'
-import { createBrowserRouter, RouterProvider } from "react-router-dom";
+import { createBrowserRouter, Navigate, RouterProvider } from "react-router-dom";
 import { Home } from './Pages/Home/Home';
 import { AboutUs } from './Pages/AboutUs/AboutUs';
 import { Volunteer } from './Pages/Volunteer/Volunteer';
@@ -9,7 +9,7 @@ function App() {
   const router = createBrowserRouter([
     {
       path: "/",
-      element: <Home />,
+      element: <Navigate to="/home" replace />,
     },
     {
       path: "/home",
