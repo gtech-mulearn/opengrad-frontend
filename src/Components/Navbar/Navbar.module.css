@@ -1,24 +1,26 @@
 .navbarWrapper {
   position: fixed;
-  width: 100%;
+  width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  padding: 25px 0px 20px;
-  background-color: transparent;
-  z-index: 9999;
+  padding: 25px 20px 20px 20px;
+  z-index: 9990;
   backdrop-filter: blur(8px);
 }
 .navbarWrapper > div {
   width: fit-content;
 }
 .navbarLeft {
-  padding: 0px 35px;
+  width: fit-content;
   background-color: transparent;
+}
+.navbarLeft img {
+  width: 160px;
 }
 .navbarRight > div {
   display: flex;
-  gap: 5vh;
+  gap: 5vw;
 }
 .navbarRight > div > a > p {
   text-transform: capitalize;
@@ -26,43 +28,49 @@
 .navbarRight {
   display: flex;
   align-items: center;
-  gap: 5vh;
-  padding: 0px 35px;
-  background-color: transparent;
 }
 
-.navbarRight > button > a {
+.navbarWrapper .StudyButton,
+.navbarWrapper .navbarMobile > .StudyButton {
   padding: 10px 15px;
   border-radius: 5px;
   color: #fff;
-  background-color: #6f6fff;
+  background-color: #00272d;
   font-weight: 600;
+  margin: 0;
+  border: none;
+}
+.navbarWrapper .StudyButton a {
+  color: white;
+  font-weight: 400;
 }
 
 .navbarMobile {
   display: none;
-  padding: 0px 35px;
-  background-color: transparent;
-  position: fixed;
-  right: 0;
-  top: 15px;
+}
+.navbarMobile .menuMd{
+    background-color: transparent;
+    color: black;
+    font-size: 25px;
 }
 .navbarMobile > div {
-  background-color: rgba(18, 153, 180, 0.7);
+  background-color: rgba(255, 255, 255, 1);
   z-index: 9999;
   backdrop-filter: blur(8px);
   padding: 8px;
   border-radius: 10px;
   display: flex;
   flex-direction: column;
+  position: absolute;
+  right: 45px;
   gap: 5px;
-  height: 40vh;
-  width: 50vw;
+  height: calc(100vh - 70px);
+  width: calc(100vw - 90px);
   justify-content: space-between;
   padding: 20px;
 }
 .navbarMobile > div > a > p {
-  color: white;
+  color: rgb(0, 0, 0);
   font-size: 20px;
   font-weight: 600;
   text-transform: capitalize;
@@ -71,10 +79,9 @@
   color: white;
   font-size: 20px;
   font-weight: 600;
-
 }
-.navbarWrapper a{
-    text-decoration: none;
+.navbarWrapper a {
+  text-decoration: none;
 }
 
 @media screen and (max-width: 850px) {
@@ -85,5 +92,8 @@
     display: flex;
     flex-direction: row-reverse;
     align-items: baseline;
+  }
+  .navbarWrapper > .StudyButton {
+    display: none;
   }
 }

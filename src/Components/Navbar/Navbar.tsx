@@ -30,7 +30,7 @@ export const Navbar = (_props: Props) => {
       style={{ background: navbg ? "rgba(255,255,255,0.4)" : "transparent" }}
     >
       <div className={styles.navbarLeft}>
-        <a href="#home">
+        <a href="/home">
           <img src={logo} alt="" />
         </a>
       </div>
@@ -38,16 +38,15 @@ export const Navbar = (_props: Props) => {
         <div>
           {navContent.map((content, i) => (
             <a
-              href={`#${content.toLowerCase().replace(/\s+/g, "")}`}
+              href={`/${content.toLowerCase().replace(/\s+/g, "")}`}
               key={i.toString() + content}
             >
               <p
                 style={{
-                  height: "12px",
-                  fontSize: "18px",
+                  fontSize: "17px",
                   fontWeight: 600,
                   color: window.location.href.includes(
-                    `#${content.toLowerCase().replace(/\s+/g, "")}`
+                    `/${content.toLowerCase().replace(/\s+/g, "")}`
                   )
                     ? "#05B570"
                     : "#696969",
@@ -60,34 +59,37 @@ export const Navbar = (_props: Props) => {
         </div>
       </div>
       <div className={styles.navbarMobile}>
-        <button onClick={openMenu}>
+        <button className={styles.menuMd} onClick={openMenu}>
           <MdMenu />
         </button>
         {openmenu && (
           <div>
             {navContent.map((content, i) => (
               <a
-                href={`#${content.toLowerCase().replace(/\s+/g, "")}`}
+                href={`/${content.toLowerCase().replace(/\s+/g, "")}`}
                 key={i.toString() + content}
               >
                 <p
                   style={{
                     color: window.location.href.includes(
-                      `#${content.toLowerCase().replace(/\s+/g, "")}`
+                      `/${content.toLowerCase().replace(/\s+/g, "")}`
                     )
                       ? "#05B570"
                       : "#696969",
-                    height: "12px",
+                 
                   }}
                 >
                   {content}
                 </p>
               </a>
             ))}
+            <button className={styles.StudyButton}>
+              <a href="http://app.mulearn.org">Study Now</a>
+            </button>
           </div>
         )}
       </div>{" "}
-      <button>
+      <button className={styles.StudyButton}>
         <a href="http://app.mulearn.org">Study Now</a>
       </button>
     </div>

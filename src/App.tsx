@@ -12,6 +12,10 @@ function App() {
       element: <Home />,
     },
     {
+      path: "/home",
+      element: <Home />,
+    },
+    {
       path: "/aboutus",
       element: <AboutUs />,
     },
