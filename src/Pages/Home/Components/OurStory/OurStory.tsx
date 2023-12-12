@@ -3,6 +3,7 @@ import styles from './OurStory.module.css'
 import amith from "../../../assets/founders/amith.png";
 import sahil from '../../../assets/founders/sahil.png'
 import shahid from "../../../assets/founders/shahid.png";
+import { SectionHeading } from "../../../../Components/SectionHeading/SectionHeading";
 
 
 type Props = {}
@@ -10,7 +11,7 @@ type Props = {}
 export const OurStory = (_props: Props) => {
   return (
     <div>
-      <h1>Our Story</h1>
+      <SectionHeading title="Our Story" />
       <div>
         <div>
           <p>

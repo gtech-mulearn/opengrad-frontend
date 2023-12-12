@@ -1,4 +1,5 @@
 import { ImageHoverBox } from "../../../../Components/ImageHoverBox/ImageHoverBox"
+import { SectionHeading } from "../../../../Components/SectionHeading/SectionHeading";
 import amith from "../../../assets/founders/amith.png";
 import sahil from "../../../assets/founders/sahil.png";
 import shahid from "../../../assets/founders/shahid.png";
@@ -8,7 +9,8 @@ type Props = {}
 export const FoundersSection = (_props: Props) => {
   return (
     <div>
-      <h1>The Founders</h1>
+      <h1></h1>
+      <SectionHeading title="The Founders" />
       <div>
         <ImageHoverBox
           image={sahil}
