@@ -1,9 +1,12 @@
+import { SectionHeading } from "../SectionHeading/SectionHeading";
 
 
 type Props = {}
 
 export const OurPartners = (_props: Props) => {
   return (
-    <div>OurPartners</div>
-  )
+    <div>
+      <SectionHeading title="Our Partners" />
+    </div>
+  );
 }

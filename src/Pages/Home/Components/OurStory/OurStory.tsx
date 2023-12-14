@@ -10,7 +10,7 @@ type Props = {}
 
 export const OurStory = (_props: Props) => {
   return (
-    <div>
+    <div className={styles.OurStoryWrapper}>
       <SectionHeading title="Our Story" />
       <div>
         <div>

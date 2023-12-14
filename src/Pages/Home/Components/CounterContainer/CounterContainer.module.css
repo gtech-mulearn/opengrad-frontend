@@ -1,0 +1,32 @@
+.CounterContainer{
+    width: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 0px 5vw;
+    gap: 25px;
+    flex-wrap: wrap;
+}
+.CounterContainer >div{
+    border-right: 1px solid #05B570;
+}
+.CounterContainer > div:last-child {
+    border-right: none;
+}
+.CounterComponent{
+    display: flex;
+    align-items: center;
+    gap: 20px;
+    padding: 5px 35px 5px 10px;
+}
+
+.CounterComponent h1{
+    color: #05B570;
+}
+
+.CounterComponent div{
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    line-height: 1;
+}

@@ -7,6 +7,7 @@
   padding: 25px 20px 20px 20px;
   z-index: 9990;
   backdrop-filter: blur(8px);
+  top: 0;
 }
 .navbarWrapper > div {
   width: fit-content;
