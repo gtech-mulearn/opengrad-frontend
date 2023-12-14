@@ -3,6 +3,7 @@
   align-items: center;
   justify-content: center;
   min-height: 100vh;
+  height: fit-content;
   padding-top: 100px;
   width: 100%;
   position: relative;
@@ -23,6 +24,7 @@
   align-items: center;
   justify-content: space-between;
   gap: 20px;
+
 }
 .HeaderWrapper .DetailSection > .ContentWrapper {
   width: 55%;

@@ -18,6 +18,7 @@ export const CounterContainer = (_props: Props) => {
         limit={600}
         text1="Students"
         text2="Enrolled"
+        
       />{" "}
       <CounterComponent
         Svg={Timersvg}

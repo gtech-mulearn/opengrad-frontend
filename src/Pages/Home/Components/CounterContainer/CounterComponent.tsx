@@ -27,7 +27,7 @@ export const CounterComponent = ({ Svg, limit, text1, text2 }: Props) => {
   }, [limit]);
 
   return (
-    <div className={styles.CounterComponent}>
+    <div className={styles.CounterComponent} >
       <Svg />
       <h1>{count}+</h1>
       <div>
