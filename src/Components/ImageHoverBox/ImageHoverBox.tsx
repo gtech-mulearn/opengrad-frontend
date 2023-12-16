@@ -5,6 +5,7 @@ type Props = {
   description?: string;
   width: string;
   height: string;
+  className?: string;
 };
 
 export const ImageHoverBox = ({
@@ -13,9 +14,11 @@ export const ImageHoverBox = ({
   description,
   width,
   height,
+  className,
 }: Props) => {
+  console.log(className)
   return (
-    <div className={styles.ImageHoverBoxWrapper} style={{ width: width }}>
+    <div className={styles.ImageHoverBoxWrapper + " " + className}>
       <div
         className={styles.ImageHoverBoxWrap}
         style={{ width: width, height: height }}

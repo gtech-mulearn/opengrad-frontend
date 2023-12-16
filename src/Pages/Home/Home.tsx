@@ -9,8 +9,21 @@ import { ProblemScenario } from "./Components/ProblemScenario/ProblemScenario";
 import { WhyOpengrad } from "./Components/WhyOpengrad/WhyOpengrad";
 import styles from './Home.module.css'
 
+// Partners data
+
+import nudge from '../assets/Partners/thenudge.png'
+import nsr from '../assets/Partners/nsrcel.png'
+import ignite from '../assets/Partners/ignite.png'
+import nuale from "../assets/Partners/nuals.png";
 
 export const Home = () => {
+   const partnersData = [
+     { image: nudge, name: "Nudge" },
+     { image: nsr, name: "NSR" },
+     { image: ignite, name: "Ignite" },
+     { image: nuale, name: "Nuale" },
+   ];
+
   return (
     <div className={styles.HomePageWrapper}>
       <Navbar />
@@ -20,7 +33,7 @@ export const Home = () => {
       <WhyOpengrad />
       <OurStory />
       <OurWorks />
-      <OurPartners />
+      <OurPartners partners={partnersData} />
       <Footer />
     </div>
   );
