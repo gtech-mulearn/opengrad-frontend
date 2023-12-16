@@ -9,9 +9,8 @@ import { ProblemScenario } from "./Components/ProblemScenario/ProblemScenario";
 import { WhyOpengrad } from "./Components/WhyOpengrad/WhyOpengrad";
 import styles from './Home.module.css'
 
-type Props = {};
 
-export const Home = (_props: Props) => {
+export const Home = () => {
   return (
     <div className={styles.HomePageWrapper}>
       <Navbar />

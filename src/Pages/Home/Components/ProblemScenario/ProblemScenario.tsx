@@ -10,7 +10,7 @@ type Props = {
   pra: string;
 };
 
-export const ProblemScenario = (_props: Props) => {
+export const ProblemScenario = () => {
   return (
     <div className={styles.ProblemScenarioWrapper}>
       <div className={styles.heading}>

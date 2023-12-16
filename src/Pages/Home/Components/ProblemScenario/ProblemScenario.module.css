@@ -13,9 +13,9 @@
 .ProblemScenarioWrapper .DetailSection {
   display: flex;
   align-items: center;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
-  gap: 30px;
+  gap: 50px;
 }
 
 .DetailSection .GridSetWrapper {
@@ -24,10 +24,10 @@
   grid-template-rows: repeat(2, 1fr); /* 2 rows */
   gap: 0;
   border: 0.5px solid #82dab7; /* Outer border */
-  min-width: 300px; /* Adjust size as needed */
-  min-height: 300px;
-  width: 30vw;
-  height: 30vw;
+  min-width: 250px; /* Adjust size as needed */
+  min-height: 250px;
+  width: 20vw;
+  height: 20vw;
   place-items: center;
 }
 .GrifSet {
@@ -38,6 +38,7 @@
   width: 100%;
   height: 100%;
   gap: 5px;
+  padding: 0px 5px;
   border-right: 0.5px solid #82dab7; /* Vertical center line */
   border-bottom: 0.5px solid #82dab7;
 }
@@ -58,8 +59,8 @@
 }
 
 .CircularAnimationWrapper {
-  width: 30vw;
-  min-width: 300px;
+  width: 35vw;
+  min-width: 330px;
 }
 .CircularAnimationWrapper img {
   width: 100%;
