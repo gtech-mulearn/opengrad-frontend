@@ -18,10 +18,10 @@ import nuale from "../assets/Partners/nuals.png";
 
 export const Home = () => {
    const partnersData = [
-     { image: nudge, name: "Nudge" },
-     { image: nsr, name: "NSR" },
-     { image: ignite, name: "Ignite" },
-     { image: nuale, name: "Nuale" },
+     { image: nudge, name: "" },
+     { image: nsr, name: "" },
+     { image: ignite, name: "" },
+     { image: nuale, name: "" },
    ];
 
   return (

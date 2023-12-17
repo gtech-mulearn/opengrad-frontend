@@ -3,35 +3,35 @@ import { SectionHeading } from "../../../../Components/SectionHeading/SectionHea
 import amith from "../../../assets/founders/amith.png";
 import sahil from "../../../assets/founders/sahil.png";
 import shahid from "../../../assets/founders/shahid.png";
+import styles from './FoundersSection.module.css'
 
 type Props = {}
 
 export const FoundersSection = (_props: Props) => {
   return (
-    <div>
-      <h1></h1>
+    <div className={styles.FoundersSection}>
       <SectionHeading title="The Founders" />
       <div>
         <ImageHoverBox
           image={sahil}
           name={"Sahil Sameer"}
-          width={"250px"}
-          height={"270px"}
-          description="Builder of OpenGrad"
+          width={"300px"}
+          height={"320px"}
+          description="Builder of OpenGrad, MBA FROM IIM INDORE, & HUMANITARIAN"
         />
         <ImageHoverBox
           image={amith}
           name={"Amith Tony Joseph"}
-          width={"250px"}
-          height={"270px"}
-          description="Co-Founder & Product Lead"
+          width={"300px"}
+          height={"320px"}
+          description="Innovations head, Ex Founder - Alpha study memix.com"
         />
         <ImageHoverBox
           image={shahid}
           name={"Mohammed Shahid CO"}
-          width={"250px"}
-          height={"270px"}
-          description="Co-Founder, OpenGrad"
+          width={"300px"}
+          height={"320px"}
+          description="ENGINEERING GRAD PASSIONATE ABOUT PRODUCTS, BRIDGING TECH AND MANAGEMENT."
         />
       </div>
     </div>
