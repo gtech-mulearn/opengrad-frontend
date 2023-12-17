@@ -29,7 +29,11 @@ export const OurStory = (_props: Props) => {
             ever since the 1500s, when an unknown printer took a galley of type
             and scrambled it to make a type specimen.
           </p>
-          <h3>THE FOUNDERS</h3>
+          <h3>
+            <div></div>
+            <p>THE FOUNDERS</p>
+            <div></div>
+          </h3>
           <div className={styles.ImageBoxWrapper}>
             <ImageHoverBox
               image={sahil}
@@ -58,6 +62,7 @@ export const OurStory = (_props: Props) => {
           </div>
         </div>
         <div className={styles.SliderTestimonialWrapper}>
+          <h3>TESTIMONIALS</h3>
           <Swiper
             pagination={true}
             modules={[Pagination]}
@@ -89,7 +94,6 @@ const TestimonialIndividuals = () => {
     <div className={styles.IndividualSlider}>
       <div className={styles.Topset}>
         <DoubleQuotessvg />
-        <h3>TESTIMONIALS</h3>
       </div>
       <div className={styles.testContentWrap}>
         <div className={styles.TextContent}>

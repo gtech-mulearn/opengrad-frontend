@@ -12,8 +12,8 @@ export const Header = (_props: Props) => {
         <div className={styles.ContentWrapper}>
           <div className={styles.Title}>
             <h2>
-              India’s first <span>Free</span> and<br></br>{" "}
-              <span>Open Source</span> Entrance Exam Solution
+              India’s first&nbsp;<div>Free</div>&nbsp;and<br></br>
+              <div>Open Source</div>&nbsp;<p>Entrance</p> Exam Solution
             </h2>
             <div>
               <p>
@@ -26,7 +26,9 @@ export const Header = (_props: Props) => {
             </div>
           </div>
           <div className={styles.ButtonWrapper}>
-            <button style={{ backgroundColor: "#00272D",color:"white" }}>Study Now</button>
+            <button style={{ backgroundColor: "#00272D", color: "white" }}>
+              Study Now
+            </button>
             <button>
               Explore
               <ArrowRight />
@@ -37,10 +39,6 @@ export const Header = (_props: Props) => {
           <img src={map} alt="" />
         </div>
       </div>
-      {/* <div className={styles.LinesWrapper}>
-        <img src={background} alt="" />
-      </div> */}
-   
     </div>
   );
 };

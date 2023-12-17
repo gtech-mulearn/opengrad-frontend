@@ -44,10 +44,11 @@
   display: flex;
   flex-direction: column;
   gap: 8px;
+  width: 100%;
 }
 .ImageHoverBoxWrapper .Content h2 {
   color: #034852;
-  font-size: 17px;
+  font-size: 16px;
   line-height: 1;
   text-transform: uppercase;
 }

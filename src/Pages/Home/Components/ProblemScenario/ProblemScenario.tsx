@@ -20,7 +20,7 @@ export const ProblemScenario = () => {
         {" "}
         <SectionHeading title="The Problem Scenario" />
         <p>
-          Increased commercialization of entrance education, has<br></br> led to
+          Increased commercialization of entrance education, has
           disproportionate participation.
         </p>
       </div>

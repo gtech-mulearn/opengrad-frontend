@@ -4,6 +4,7 @@
   width: 100%;
   background-color: white;
   padding: 0px 5vw;
+  gap: 20px;
 }
 
 .FooterWrapper .TopSection {
@@ -65,10 +66,11 @@
 .FooterWrapper .BottomSection > p {
   color: #656565;
 }
-@media screen and (max-width: 900px) {
+@media screen and (max-width: 950px) {
   .FooterWrapper .BottomSection > p {
     text-align: center;
     width: 100%;
+    font-size: 13px;
   }
 }
 
