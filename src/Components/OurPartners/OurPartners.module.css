@@ -16,14 +16,21 @@
   overflow-x: auto;
 }
 .PartnersImageWrapper > div {
-  margin: 10px;
+
   flex-shrink: 0;
+  display: flex;
+  align-items: center;
+  gap: 20px;
+
+  justify-content: space-between;
+  width: 100%;
 }
 
 .Partners .PartnersImageWrapper img {
   height: 90px;
   object-fit: contain;
   filter: grayscale(100%);
+  padding: 0px 15px;
 }
 .Partners .PartnersImageWrapper img:hover {
   filter: grayscale(0%);
