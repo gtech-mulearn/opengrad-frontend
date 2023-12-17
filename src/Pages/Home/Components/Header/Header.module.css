@@ -4,9 +4,10 @@
   justify-content: center;
   min-height: 100vh;
   height: fit-content;
-  padding-top: 100px;
+  padding: 100px 0px 50px;
   width: 100%;
-  position: relative;
+  background: url("../../../assets/backgroundLinesClouds.png") center
+    center/cover no-repeat;
 }
 .HeaderWrapper img {
   width: 100%;
@@ -14,17 +15,13 @@
   object-fit: cover;
 }
 .HeaderWrapper .DetailSection {
-  position: absolute;
-
   height: calc(100% - 50px);
   width: 100%;
-  z-index: 600;
   padding: 0px 20px 0px 5vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
   gap: 20px;
-
 }
 .HeaderWrapper .DetailSection > .ContentWrapper {
   width: 55%;
@@ -34,7 +31,7 @@
   align-items: flex-start;
   justify-content: center;
   gap: 25px;
-  min-width: 300px
+  min-width: 300px;
 }
 
 .HeaderWrapper .DetailSection > .ContentWrapper .Title {
@@ -45,31 +42,31 @@
   gap: 20px;
 }
 .HeaderWrapper .DetailSection > .ContentWrapper .Title h2 {
-  font-size: 4rem;
+  font-size: 4vw;
   line-height: 1.2;
   color: #034852;
 }
 .HeaderWrapper .DetailSection > .ContentWrapper .Title h2 span {
   color: #05b570;
 }
-.HeaderWrapper .DetailSection > .ContentWrapper .Title p{
-    font-size: 20px;
-    line-height: 1.2;
+.HeaderWrapper .DetailSection > .ContentWrapper .Title p {
+  font-size: 20px;
+  line-height: 1.2;
 }
-.HeaderWrapper .DetailSection > .ContentWrapper .ButtonWrapper{
-    display: flex;
-    align-items: center;
+.HeaderWrapper .DetailSection > .ContentWrapper .ButtonWrapper {
+  display: flex;
+  align-items: center;
 }
-.HeaderWrapper .DetailSection > .ContentWrapper .ButtonWrapper button{
-    padding: 10px 30px;
-    display: flex;
-    align-items: center;
-    gap: 5px;
-    background-color: transparent;
-    color: #000000;
-    font-size: 17px;
-    border-radius: 10px;
-    cursor: pointer;
+.HeaderWrapper .DetailSection > .ContentWrapper .ButtonWrapper button {
+  padding: 10px 30px;
+  display: flex;
+  align-items: center;
+  gap: 5px;
+  background-color: transparent;
+  color: #000000;
+  font-size: 17px;
+  border-radius: 10px;
+  cursor: pointer;
 }
 .HeaderWrapper .DetailSection .MapWrapper {
   display: flex;
@@ -77,12 +74,13 @@
   justify-content: end;
   width: 45%;
   height: calc(100% - 0px);
+  pointer-events: none;
 }
 .HeaderWrapper .DetailSection > div img {
   height: 95%;
   width: 100%;
   min-width: 300px;
-  object-fit: contain;
+  object-fit: cover;
 }
 .HeaderWrapper .LinesWrapper {
   position: absolute;
@@ -91,9 +89,34 @@
   width: 100%;
 }
 
-.HeaderWrapper.CloudWrapper {
-  position: absolute;
-  z-index: 400;
-  height: calc(100% - 100px);
-  width: 100%;
+@media screen and (max-width: 1200px) {
+  .HeaderWrapper .DetailSection {
+    flex-direction: column-reverse;
+    padding: 0px 10vw;
+  }
+  .HeaderWrapper .DetailSection > .ContentWrapper {
+    width: 100%;
+  }
+  .HeaderWrapper .DetailSection .MapWrapper {
+    width: 100%;
+  }
+  .HeaderWrapper .DetailSection > div img {
+    object-fit: contain;
+    max-height: 400px;
+  }
+  .HeaderWrapper .DetailSection > .ContentWrapper .Title h2 {
+    font-size: 6.2vw;
+    line-height: 1.1;
+  }
+}
+@media screen and (max-width: 1200px) {
+  .HeaderWrapper .DetailSection {
+    padding: 0px 5vw;
+  }
+  .HeaderWrapper .DetailSection > .ContentWrapper .Title h2 {
+    font-size: 8vw;
+  }
+  .HeaderWrapper .DetailSection > .ContentWrapper .Title p {
+    font-size: 16px;
+  }
 }

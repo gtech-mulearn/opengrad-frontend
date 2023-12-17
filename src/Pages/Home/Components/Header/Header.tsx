@@ -1,7 +1,7 @@
-import { ArrowRight, CloudSvg } from "../../../../assets/svg";
-import background from "../../../assets/backgroundLines.png";
+import { ArrowRight } from "../../../../assets/svg";
+// import background from "../../../assets/backgroundLinesClouds.png";
 import styles from "./Header.module.css";
-import map from "./mapIndia.png";
+import map from "./mapIndiaWithLogo.png";
 
 type Props = {};
 
@@ -37,12 +37,10 @@ export const Header = (_props: Props) => {
           <img src={map} alt="" />
         </div>
       </div>
-      <div className={styles.LinesWrapper}>
+      {/* <div className={styles.LinesWrapper}>
         <img src={background} alt="" />
-      </div>
-      <div className={styles.CloudWrapper}>
-        <CloudSvg width="230" height="117" />
-      </div>
+      </div> */}
+   
     </div>
   );
 };

@@ -1,14 +1,15 @@
 import React, { useEffect, useState } from "react";
-import styles from './CounterContainer.module.css'
+import styles from "./CounterContainer.module.css";
 
 type Props = {
   Svg: React.ElementType; // This type expects a React component.
   limit: number;
   text1: string;
   text2: string;
+  speed: number;
 };
 
-export const CounterComponent = ({ Svg, limit, text1, text2 }: Props) => {
+export const CounterComponent = ({ Svg, limit, text1, text2,speed }: Props) => {
   const [count, setCount] = useState(0);
 
   useEffect(() => {
@@ -21,13 +22,13 @@ export const CounterComponent = ({ Svg, limit, text1, text2 }: Props) => {
           return currentCount;
         }
       });
-    }, 100); // Counts every 100 milliseconds
+    }, speed); // Counts every 100 milliseconds
 
     return () => clearInterval(interval); // Cleanup interval on component unmount
   }, [limit]);
 
   return (
-    <div className={styles.CounterComponent} >
+    <div className={styles.CounterComponent}>
       <Svg />
       <h1>{count}+</h1>
       <div>

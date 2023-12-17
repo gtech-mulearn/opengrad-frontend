@@ -18,21 +18,6 @@
   height: 100%;
   object-fit: cover;
 }
-/* .WorksWrapper > div:nth-child(even) {
-  width: 400px;
-}
-.WorksWrapper > div:nth-child(1) {
-  flex: 5; 
-}
-
-
-.WorksWrapper > div:nth-child(3) {
-  flex: 4; 
-}
-
-.WorksWrapper > div:nth-child(5) {
-  width: calc(100% - 820px); 
-} */
 
 .WorksWrapper > div:nth-child(1) {
   width: 40vw;
@@ -81,4 +66,28 @@
   color: white;
   font-size: 17px;
   line-height: 1.3;
+}
+
+@media screen and (max-width: 1000px) {
+  .WorksWrapper > div {
+  height: 300px;
+}
+  .WorksWrapper > div:nth-child(1) {
+    width: 60vw;
+  }
+  .WorksWrapper > div:nth-child(2) {
+    width: 39vw;
+  }
+  .WorksWrapper > div:nth-child(3) {
+    width: 38vw;
+  }
+  .WorksWrapper > div:nth-child(4) {
+    width: 61vw;
+  }
+  .WorksWrapper > div:nth-child(5) {
+    width: 58vw;
+  }
+  .WorksWrapper > div:nth-child(6) {
+    width: 41vw;
+  }
 }

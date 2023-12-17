@@ -9,7 +9,7 @@ export const Footer = (_props: Props) => {
       <div className={styles.TopSection}>
         <img src={logo} alt="" />
         <p>
-          OpenGrad’s journey is fueled by compassion and<br></br>empowerment.
+          OpenGrad’s journey is fueled by compassion and empowerment.
         </p>
       </div>
       <div className={styles.BottomSection}>
