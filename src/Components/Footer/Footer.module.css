@@ -47,17 +47,30 @@
   display: flex;
   gap: 20px;
 }
-.FooterWrapper .BottomSection .left a{
-    text-decoration: none;
-    color: #656565;
+.FooterWrapper .BottomSection .left a {
+  text-decoration: none;
+  color: #656565;
 }
-.FooterWrapper .BottomSection .left a:hover{
-    color: #034852;
+.FooterWrapper .BottomSection .left a:hover {
+  color: #034852;
 }
 .FooterWrapper .BottomSection .Social {
   display: flex;
   gap: 30px;
 }
-.FooterWrapper .BottomSection >p{
-    color: #656565;
+.FooterWrapper .BottomSection > p {
+  color: #656565;
+  width: 100%;
+}
+@media screen and (max-width: 900px){
+.FooterWrapper .BottomSection > p {
+  text-align: center;
+}
+}
+
+@media screen and (max-width: 550px) {
+  .FooterWrapper .BottomSection {
+    flex-direction: column;
+    gap: 10px;
+  }
 }
