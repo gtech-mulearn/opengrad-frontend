@@ -4,7 +4,7 @@
   width: 100%;
   gap: 30px;
   padding: 50px 5vw;
-    background: url('./background.png')right top/cover no-repeat;
+  background: url("./background.png") right top/cover no-repeat;
 }
 
 .OurStoryWrapper .DetailSectionWrapper {
@@ -96,7 +96,15 @@
   .SliderTestimonialWrapper
   .IndividualSlider
   .testContentWrap {
-background: linear-gradient(180deg, #FFF 0%, #FFF 15.1%, #E4F7F0 33.11%, #CCF0E2 50.04%, #B3E8D3 66.67%, #82DAB7 100%);
+  background: linear-gradient(
+    180deg,
+    #fff 0%,
+    #fff 15.1%,
+    #e4f7f0 33.11%,
+    #ccf0e2 50.04%,
+    #b3e8d3 66.67%,
+    #82dab7 100%
+  );
   position: relative;
   width: 100%;
   height: 300px;
