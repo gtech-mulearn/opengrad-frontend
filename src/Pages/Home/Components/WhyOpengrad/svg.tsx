@@ -179,7 +179,12 @@ export const Empowersvg = () => {
     </svg>
   );
 };
-export const GreenArrowsvg = () => {
+
+type Props = {
+  className: string;
+};
+
+export const GreenArrowsvg = ({ className }: Props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -187,6 +192,7 @@ export const GreenArrowsvg = () => {
       height="73"
       viewBox="0 0 73 73"
       fill="none"
+      className={className}
     >
       <path
         d="M47.146 15.2084H33.4585L48.6668 36.5L33.4585 57.7917H47.146L62.3543 36.5L47.146 15.2084Z"
