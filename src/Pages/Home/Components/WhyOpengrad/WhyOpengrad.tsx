@@ -43,7 +43,7 @@ export const WhyOpengrad = () => {
          setTimeout(() => {
            child.classList.remove(styles.hidden);
            child.classList.add(styles.visible);
-         }, 500 * index);
+         }, 100 * index);
        });
      }
    }, [isVisible]);
