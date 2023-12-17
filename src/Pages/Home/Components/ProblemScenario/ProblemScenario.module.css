@@ -4,6 +4,8 @@
   width: 100%;
   padding: 50px 5vw;
   gap: 25px;
+    background: url("./assets/background.png") center
+    center/cover no-repeat;
 }
 .ProblemScenarioWrapper .heading {
   font-size: 18px;
@@ -52,6 +54,7 @@
 .GrifSet img {
   width: 45%;
   height: 45%;
+   pointer-events: none;
 }
 .GrifSet p {
   font-size: 15px;
@@ -61,6 +64,7 @@
 .CircularAnimationWrapper {
   width: 35vw;
   min-width: 330px;
+   pointer-events: none;
 }
 .CircularAnimationWrapper img {
   width: 100%;

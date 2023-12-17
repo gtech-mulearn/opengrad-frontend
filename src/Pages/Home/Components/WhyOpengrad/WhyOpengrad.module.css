@@ -5,6 +5,7 @@
   width: 100%;
   gap: 30px;
   padding: 0px 5vw;
+  background: url('./background.png')left top/cover no-repeat;
 }
 .WhyOpengradWrapper >div{
     display: flex;

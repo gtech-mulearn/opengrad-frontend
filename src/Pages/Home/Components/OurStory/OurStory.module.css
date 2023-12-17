@@ -4,6 +4,7 @@
   width: 100%;
   gap: 30px;
   padding: 50px 5vw;
+    background: url('./background.png')right top/cover no-repeat;
 }
 
 .OurStoryWrapper .DetailSectionWrapper {
