@@ -4,7 +4,7 @@
   width: 100%;
   gap: 30px;
   padding: 50px 5vw;
-    background: url('./background.png')right top/cover no-repeat;
+  background: url("./background.png") right top/cover no-repeat;
 }
 
 .OurStoryWrapper .DetailSectionWrapper {
@@ -31,6 +31,21 @@
   letter-spacing: 8.544px;
   color: var(--Secondary, #05b570);
   font-weight: 500;
+  font-size: 20px;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 10px;
+}
+.OurStoryWrapper .DetailSectionWrapper .foundersWrapper > h3 > p {
+  display: flex;
+  text-wrap: nowrap;
+}
+.OurStoryWrapper .DetailSectionWrapper .foundersWrapper > h3 > div {
+  height: 1px;
+  background-color: #05b570;
+  width: 100%;
 }
 .OurStoryWrapper .DetailSectionWrapper .foundersWrapper > .ImageBoxWrapper {
   width: 100%;
@@ -49,6 +64,20 @@
 .OurStoryWrapper .DetailSectionWrapper .SliderTestimonialWrapper {
   width: 40%;
   display: flex;
+  position: relative;
+}
+.OurStoryWrapper .DetailSectionWrapper .SliderTestimonialWrapper > h3 {
+  border-top: 0.5px solid #82dab7;
+  border-bottom: 0.5px solid #82dab7;
+  letter-spacing: 8.544px;
+  color: #05b570;
+  padding: 10px 0px;
+  font-size: 18px;
+  height: fit-content;
+  position: absolute;
+  z-index: 555;
+  right: 0;
+  top: 0;
 }
 .OurStoryWrapper
   .DetailSectionWrapper
@@ -82,29 +111,15 @@
   .DetailSectionWrapper
   .SliderTestimonialWrapper
   .IndividualSlider
-  .Topset
-  h3 {
-  border-top: 0.5px solid #82dab7;
-  border-bottom: 0.5px solid #82dab7;
-  letter-spacing: 8.544px;
-  color: #05b570;
-  padding: 10px 0px;
-  height: fit-content;
-}
-.OurStoryWrapper
-  .DetailSectionWrapper
-  .SliderTestimonialWrapper
-  .IndividualSlider
   .testContentWrap {
   background: linear-gradient(
-    179deg,
-    #fff 0.11%,
-    #fbfefd 18.29%,
-    #effaf6 26.81%,
-    #e0f6ed 36.57%,
-    #c5eede 55.24%,
-    #a5e5cc 76.62%,
-    #87dbba 98.69%
+    180deg,
+    #fff 0%,
+    #fff 15.1%,
+    #e4f7f0 33.11%,
+    #ccf0e2 50.04%,
+    #b3e8d3 66.67%,
+    #82dab7 100%
   );
   position: relative;
   width: 100%;
@@ -121,6 +136,8 @@
   height: 200px;
   bottom: 0;
   right: 0;
+  object-fit: cover;
+  aspect-ratio: 1/1;
 }
 .OurStoryWrapper
   .DetailSectionWrapper
@@ -130,7 +147,7 @@
   .TextContent {
   display: flex;
   flex-direction: column;
-  padding: 10% 10% 12%;
+  padding: 10% 10% 60px;
   text-align: left;
   height: 100%;
   justify-content: space-between;
@@ -143,8 +160,50 @@
   .TextContent
   > p {
   width: 70%;
+  line-height: 1.3;
+  font-weight: 500;
+  color: #222;
+  font-size: 17px;
+}
+.OurStoryWrapper
+  .DetailSectionWrapper
+  .SliderTestimonialWrapper
+  .IndividualSlider
+  .testContentWrap
+  .TextContent
+  > div {
+  display: flex;
+  flex-direction: column;
+  color: var(--Primary, #034852);
+  line-height: 1;
+  gap: 5px;
+}
+.OurStoryWrapper
+  .DetailSectionWrapper
+  .SliderTestimonialWrapper
+  .IndividualSlider
+  .testContentWrap
+  .TextContent
+  > div
+  h3 {
+  font-size: 20px;
+}
+
+.OurStoryWrapper
+  .DetailSectionWrapper
+  .SliderTestimonialWrapper
+  .IndividualSlider
+  .testContentWrap
+  .TextContent
+  > div
+  p {
+  font-weight: 600;
+  font-size: 16px;
 }
 @media screen and (max-width: 1300px) {
+  .OurStoryWrapper {
+    gap: 20px;
+  }
   .OurStoryWrapper .DetailSectionWrapper {
     flex-direction: column;
     align-items: center;
@@ -152,10 +211,23 @@
   .OurStoryWrapper .DetailSectionWrapper .foundersWrapper {
     width: 100%;
   }
+  .OurStoryWrapper .DetailSectionWrapper .foundersWrapper > p {
+    font-size: 18px;
+  }
   .OurStoryWrapper .DetailSectionWrapper .SliderTestimonialWrapper {
     width: 100%;
     max-width: 500px;
   }
+  .OurStoryWrapper
+  .DetailSectionWrapper
+  .SliderTestimonialWrapper
+  .IndividualSlider
+  .testContentWrap
+  .TextContent
+  > p {
+
+  font-size: 16px;
+}
 }
 @media screen and (max-width: 720px) {
   .OurStoryWrapper .DetailSectionWrapper .foundersWrapper > p {
@@ -165,4 +237,64 @@
   .OurStoryWrapper .DetailSectionWrapper .foundersWrapper > .ImageBoxWrapper {
     justify-content: center;
   }
+}
+
+@media screen and (max-width: 600px) {
+  .OurStoryWrapper .DetailSectionWrapper .SliderTestimonialWrapper > h3 {
+    letter-spacing: 7px;
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 480px) {
+  .OurStoryWrapper
+    .DetailSectionWrapper
+    .SliderTestimonialWrapper
+    .IndividualSlider
+    .testContentWrap
+    img {
+    width: 150px;
+    height: 150px;
+  }
+  .OurStoryWrapper
+    .DetailSectionWrapper
+    .SliderTestimonialWrapper
+    .IndividualSlider
+    .testContentWrap
+    .TextContent
+    > div
+    h3 {
+    font-size: 18px;
+  }
+
+  .OurStoryWrapper
+    .DetailSectionWrapper
+    .SliderTestimonialWrapper
+    .IndividualSlider
+    .testContentWrap
+    .TextContent
+    > div
+    p {
+    font-size: 14px;
+  }
+}
+@media screen and (max-width: 400px) {
+  .OurStoryWrapper
+    .DetailSectionWrapper
+    .SliderTestimonialWrapper
+    .IndividualSlider
+    .Topset
+    > svg {
+    width: 100px;
+    height: 100px;
+  }
+  .OurStoryWrapper
+  .DetailSectionWrapper
+  .SliderTestimonialWrapper
+  .IndividualSlider
+  .testContentWrap
+  .TextContent
+  > p {
+  width: 80%;
+  
+}
 }
