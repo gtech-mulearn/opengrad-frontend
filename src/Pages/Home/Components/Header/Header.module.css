@@ -86,12 +86,7 @@
   min-width: 300px;
   object-fit: cover;
 }
-.HeaderWrapper .LinesWrapper {
-  position: absolute;
-  z-index: 500;
-  height: calc(100% - 100px);
-  width: 100%;
-}
+
 
 @media screen and (max-width: 1200px) {
   .HeaderWrapper .DetailSection {
