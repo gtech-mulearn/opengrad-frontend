@@ -60,11 +60,12 @@
 }
 .FooterWrapper .BottomSection > p {
   color: #656565;
-  width: 100%;
 }
 @media screen and (max-width: 900px){
 .FooterWrapper .BottomSection > p {
   text-align: center;
+  width: 100%;
+
 }
 }
 

@@ -19,9 +19,14 @@
     gap: 20px;
     padding: 5px 35px 5px 10px;
 }
-
+.CounterComponent>svg{
+    width: 45px;
+    height: 45px;
+}
 .CounterComponent h1{
     color: #05B570;
+    font-size: 45px;
+   font-family: Open Sans;
 }
 
 .CounterComponent div{
@@ -29,4 +34,16 @@
     flex-direction: column;
     align-items: flex-start;
     line-height: 1;
+}
+
+@media screen and (max-width:1088px) {
+    .CounterComponent>svg{
+    width: 40px;
+    height: 40px;
+}
+.CounterComponent h1{
+    color: #05B570;
+    font-size: 40px;
+}
+
 }
