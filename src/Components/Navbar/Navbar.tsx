@@ -28,7 +28,7 @@ export const Navbar = (_props: Props) => {
   return (
     <div
       className={styles.navbarWrapper}
-      style={{ background: navbg ? "rgba(255,255,255,0.4)" : "transparent" }}
+      style={{ background: navbg ? "rgba(255,255,255,1)" : "transparent" }}
     >
       <div className={styles.navbarLeft}>
         <a href="/home">

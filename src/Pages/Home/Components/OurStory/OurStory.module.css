@@ -219,15 +219,14 @@
     max-width: 500px;
   }
   .OurStoryWrapper
-  .DetailSectionWrapper
-  .SliderTestimonialWrapper
-  .IndividualSlider
-  .testContentWrap
-  .TextContent
-  > p {
-
-  font-size: 16px;
-}
+    .DetailSectionWrapper
+    .SliderTestimonialWrapper
+    .IndividualSlider
+    .testContentWrap
+    .TextContent
+    > p {
+    font-size: 16px;
+  }
 }
 @media screen and (max-width: 720px) {
   .OurStoryWrapper .DetailSectionWrapper .foundersWrapper > p {
@@ -288,13 +287,42 @@
     height: 100px;
   }
   .OurStoryWrapper
-  .DetailSectionWrapper
-  .SliderTestimonialWrapper
-  .IndividualSlider
-  .testContentWrap
-  .TextContent
-  > p {
-  width: 80%;
-  
-}
+    .DetailSectionWrapper
+    .SliderTestimonialWrapper
+    .IndividualSlider
+    .testContentWrap
+    .TextContent
+    > p {
+    width: 80%;
+  }
+   .OurStoryWrapper
+    .DetailSectionWrapper
+    .SliderTestimonialWrapper
+    .IndividualSlider
+    .testContentWrap
+    img {
+    width: 130px;
+    height: 130px;
+  }
+  .OurStoryWrapper
+    .DetailSectionWrapper
+    .SliderTestimonialWrapper
+    .IndividualSlider
+    .testContentWrap
+    .TextContent
+    > div
+    h3 {
+    font-size: 16px;
+  }
+
+  .OurStoryWrapper
+    .DetailSectionWrapper
+    .SliderTestimonialWrapper
+    .IndividualSlider
+    .testContentWrap
+    .TextContent
+    > div
+    p {
+    font-size: 12px;
+  }
 }
