@@ -16,7 +16,6 @@
   overflow-x: auto;
 }
 .PartnersImageWrapper > div {
-
   flex-shrink: 0;
   display: flex;
   align-items: center;
@@ -27,13 +26,26 @@
 }
 
 .Partners .PartnersImageWrapper img {
-  height: 90px;
+  height: 100px !important;
   object-fit: contain;
   filter: grayscale(100%);
-  padding: 0px 15px;
+  padding: 0px 0px 10px;
+  flex-shrink: 0;
 }
 .Partners .PartnersImageWrapper img:hover {
   filter: grayscale(0%);
+}
+.PartnersImageWrapper > div h2 {
+  font-size: 20px;
+  font-weight: 500;
+  max-width: 220px;
+  line-height: 1.3;
+  padding-bottom: 10px;
+}
+.PartnersImageWrapper > div p {
+  max-width: 220px;
+  font-size: 14px;
+  line-height: 1.1;
 }
 
 @media screen and (max-width: 550px) {

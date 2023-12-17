@@ -12,10 +12,26 @@ import indore from "../assets/Partners/indore.png";
 import mulearn from "../assets/Partners/mulearn.png";
 export const AboutUs = () => {
   const partnersData = [
-    { image: nuale, name: "Nuale" },
-    { image: ignite, name: "Ignite" },
-    { image: indore, name: "indore" },
-    { image: mulearn, name: "mulearn" },
+    {
+      image: nuale,
+      name: "Legal Aid Clinic - NUALS Kochi",
+      para: "Curating and disseminating CLAT Exam Resources.",
+    },
+    {
+      image: ignite,
+      name: "IGNITE - NIT Calicut",
+      para: "Working together to curate and disseminate JEE exam resources.",
+    },
+    {
+      image: indore,
+      name: "IIM INDORE",
+      para: "Founding institute of IPMAT program, completely curated by the IIM students.",
+    },
+    {
+      image: mulearn,
+      name: "µLearn Foundation",
+      para: "Technology partner, decentralizing and democratizing education.",
+    },
   ];
   return (
     <div>

@@ -6,6 +6,7 @@ import Marquee from "react-fast-marquee";
 type Partner = {
   image: string;
   name: string;
+  para?:string;
 };
 
 type OurPartnersProps = {
@@ -38,11 +39,10 @@ export const OurPartners = ({ partners }: OurPartnersProps) => {
         {isScreenSmall ? (
           <Marquee {...marqParams} style={{ width: "100vw" }}>
             {partners.map((partner, index) => (
-              <div
-                key={index}
-                
-              >
+              <div key={index} style={{ padding: "0px 20px" }}>
                 <img src={partner.image} alt={partner.name} />
+                <h2>{partner.name}</h2>
+                <p>{partner.para}</p>
               </div>
             ))}
           </Marquee>
@@ -50,8 +50,10 @@ export const OurPartners = ({ partners }: OurPartnersProps) => {
           // Render the images without marquee for larger screens
           <div style={{ display: "flex" }}>
             {partners.map((partner, index) => (
-              <div key={index}>
+              <div key={index} style={{ padding: "0px 20px" }}>
                 <img src={partner.image} alt={partner.name} />
+                <h2>{partner.name}</h2>
+                <p>{partner.para}</p>
               </div>
             ))}
           </div>
