@@ -12,19 +12,21 @@ export const CounterContainer = (_props: Props) => {
         limit={3000}
         text1="Students"
         text2="Reached"
+        speed={30}
       />{" "}
       <CounterComponent
         Svg={Personsvg}
         limit={600}
         text1="Students"
         text2="Enrolled"
-        
+        speed={70}
       />{" "}
       <CounterComponent
         Svg={Timersvg}
         limit={200}
         text1="Hours of"
         text2="content"
+        speed={100}
       />
     </div>
   );
