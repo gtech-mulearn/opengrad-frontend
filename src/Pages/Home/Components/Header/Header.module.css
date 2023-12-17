@@ -53,8 +53,8 @@
   border-bottom: 1vw solid rgba(3, 72, 82, 0.1);
   height: 4vw;
 }
-.HeaderWrapper .DetailSection > .ContentWrapper .Title > p {
-  font-size: 20px;
+.HeaderWrapper .DetailSection > .ContentWrapper .Title > div > p {
+  font-size: 22px;
   line-height: 1.2;
 }
 .HeaderWrapper .DetailSection > .ContentWrapper .ButtonWrapper {
@@ -120,7 +120,6 @@
 @media screen and (max-width: 500px) {
   .HeaderWrapper {
     padding: 50px 0px 0px;
-   
   }
   .HeaderWrapper .DetailSection {
     padding: 0px 5vw;
@@ -129,11 +128,11 @@
   .HeaderWrapper .DetailSection > .ContentWrapper .Title h2 {
     font-size: 8vw;
   }
-    .HeaderWrapper .DetailSection > .ContentWrapper .Title h2 div {
+  .HeaderWrapper .DetailSection > .ContentWrapper .Title h2 div {
     border-bottom: 1.5vw solid rgba(3, 72, 82, 0.1);
     height: 7.6vw;
   }
-  .HeaderWrapper .DetailSection > .ContentWrapper .Title > p {
+  .HeaderWrapper .DetailSection > .ContentWrapper .Title > div > p {
     font-size: 16px;
   }
 }

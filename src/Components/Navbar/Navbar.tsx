@@ -3,6 +3,7 @@ import logo from "../../../loader.png";
 import { useState, useEffect } from "react";
 import { useReactPath } from "./path.hook";
 import { MdMenu } from "react-icons/md";
+import { IoMdClose } from "react-icons/io";
 type Props = {};
 
 export const Navbar = (_props: Props) => {
@@ -64,6 +65,9 @@ export const Navbar = (_props: Props) => {
         </button>
         {openmenu && (
           <div>
+            <button className={styles.menuMd} onClick={openMenu}>
+              <IoMdClose />
+            </button>
             {navContent.map((content, i) => (
               <a
                 href={`/${content.toLowerCase().replace(/\s+/g, "")}`}
@@ -76,7 +80,6 @@ export const Navbar = (_props: Props) => {
                     )
                       ? "#05B570"
                       : "#696969",
-                 
                   }}
                 >
                   {content}
