@@ -1,4 +1,5 @@
 import { SectionHeading } from "../../../../Components/SectionHeading/SectionHeading";
+import React, { useEffect, useRef, useState } from "react";
 import {
   PeopleGrpsvg,
   LearnPlatformsvg,
@@ -6,7 +7,7 @@ import {
   Empowersvg,
   GreenArrowsvg,
 } from "./svg";
-import styles from './WhyOpengrad.module.css'
+import styles from "./WhyOpengrad.module.css";
 type Props = {
   Svg: React.ElementType;
   pra1: string;
@@ -14,29 +15,61 @@ type Props = {
 };
 
 export const WhyOpengrad = () => {
+  const ref = useRef<HTMLDivElement>(null);
+  const [isVisible, setIsVisible] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entry]) => {
+        if (entry.isIntersecting) {
+          setIsVisible(true);
+          observer.disconnect();
+        }
+      },
+      { threshold: 0.5 }
+    );
+
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+
+    return () => {
+      observer.disconnect();
+    };
+  }, []);
+   useEffect(() => {
+     if (isVisible && ref.current) {
+       Array.from(ref.current.children).forEach((child, index) => {
+         setTimeout(() => {
+           child.classList.remove(styles.hidden);
+           child.classList.add(styles.visible);
+         }, 500 * index);
+       });
+     }
+   }, [isVisible]);
   return (
     <div className={styles.WhyOpengradWrapper}>
       {" "}
       <SectionHeading title="Why choose OpenGrad?" />
-      <div>
+      <div ref={ref}>
         <Containers
           Svg={PeopleGrpsvg}
           pra1="Mentors, teachers &"
           pra2="students prepare syllabus"
         />
-        <GreenArrowsvg />
+        <GreenArrowsvg className={styles.hidden} />
         <Containers
           Svg={LearnPlatformsvg}
           pra1="Free to access"
           pra2="learning platform"
         />
-        <GreenArrowsvg />{" "}
+        <GreenArrowsvg className={styles.hidden} />
         <Containers
           Svg={OutReachsvg}
           pra1="Outreach activities to"
           pra2="marginalized sections"
         />
-        <GreenArrowsvg />
+        <GreenArrowsvg className={styles.hidden} />
         <Containers
           Svg={Empowersvg}
           pra1="Empower students,"
@@ -49,7 +82,7 @@ export const WhyOpengrad = () => {
 
 const Containers = ({ Svg, pra1, pra2 }: Props) => {
   return (
-    <div className={styles.container}>
+    <div className={`${styles.container} ${styles.hidden}`}>
       <Svg />
       <div>
         <p>{pra1}</p>

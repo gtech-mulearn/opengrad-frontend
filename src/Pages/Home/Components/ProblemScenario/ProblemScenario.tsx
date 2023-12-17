@@ -11,6 +11,9 @@ type Props = {
 };
 
 export const ProblemScenario = () => {
+ 
+   
+
   return (
     <div className={styles.ProblemScenarioWrapper}>
       <div className={styles.heading}>

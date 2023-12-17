@@ -7,6 +7,14 @@ import { SectionHeading } from "../../../../Components/SectionHeading/SectionHea
 import { DoubleQuotessvg } from "./svg";
 import test1 from "./assets/test1.png";
 
+import { Swiper, SwiperSlide } from "swiper/react";
+
+// Import Swiper styles
+import "swiper/css";
+import "swiper/css/pagination";
+
+import "./styles.css";
+import { Pagination } from "swiper/modules";
 type Props = {};
 
 export const OurStory = (_props: Props) => {
@@ -50,26 +58,51 @@ export const OurStory = (_props: Props) => {
           </div>
         </div>
         <div className={styles.SliderTestimonialWrapper}>
-          <div className={styles.IndividualSlider}>
-            <div className={styles.Topset}>
-              <DoubleQuotessvg />
-              <h3>TESTIMONIALS</h3>
-            </div>
-            <div className={styles.testContentWrap}>
-              <div className={styles.TextContent}>
-                <p>
-                  Excited about Opengrad! It connects all, offering free and
-                  top-notch content for competitive exam prep.
-                </p>
-                <div>
-                  <h3>Dr. Gopichand Katragadda</h3>
-                  <p>Founder and CEO at Myelin Foundry</p>
-                </div>
-              </div>
-              <img src={test1} alt="" />
-            </div>
+          <Swiper
+            pagination={true}
+            modules={[Pagination]}
+            className="mySwiper"
+            loop={true}
+          >
+            <SwiperSlide>
+              <TestimonialIndividuals />
+            </SwiperSlide>
+            <SwiperSlide>
+              <TestimonialIndividuals />
+            </SwiperSlide>
+            <SwiperSlide>
+              <TestimonialIndividuals />
+            </SwiperSlide>
+
+            <SwiperSlide>
+              <TestimonialIndividuals />
+            </SwiperSlide>
+          </Swiper>
+        </div>
+      </div>
+    </div>
+  );
+};
+
+const TestimonialIndividuals = () => {
+  return (
+    <div className={styles.IndividualSlider}>
+      <div className={styles.Topset}>
+        <DoubleQuotessvg />
+        <h3>TESTIMONIALS</h3>
+      </div>
+      <div className={styles.testContentWrap}>
+        <div className={styles.TextContent}>
+          <p>
+            Excited about Opengrad! It connects all, offering free and top-notch
+            content for competitive exam prep.
+          </p>
+          <div>
+            <h3>Dr. Gopichand Katragadda</h3>
+            <p>Founder and CEO at Myelin Foundry</p>
           </div>
         </div>
+        <img src={test1} alt="" />
       </div>
     </div>
   );
