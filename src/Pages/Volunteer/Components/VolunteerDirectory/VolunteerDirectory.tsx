@@ -7,6 +7,7 @@ import aadia from '../../../assets/VolunteerDirectory/AADIA NAIR.png'
 import arjun from '../../../assets/VolunteerDirectory/ARJUN P RAJ.png'
 import reshma from '../../../assets/VolunteerDirectory/RESHMA GEORGE.png'
 import riya from "../../../assets/VolunteerDirectory/RIYA NEEMA.png";
+import { ArrowRight } from "../../../../assets/svg";
 
 type Props = {};
 
@@ -51,6 +52,7 @@ export const VolunteerDirectory = (_props: Props) => {
           height=""
         />
       </div>
+      <button>See More<ArrowRight /></button>
     </div>
   );
 };
