@@ -78,6 +78,7 @@ export const VolunteerStories = (_props: Props) => {
           watchSlidesProgress={true}
           slidesPerView={2}
           className="mySwiper"
+          loop={true}
         >
           {data.map(({ para, name, descrp, image }) => {
             return (
