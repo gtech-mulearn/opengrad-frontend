@@ -28,51 +28,52 @@ export const WhyVolunteer = () => {
 
   const containerStyle = {
     backgroundColor: isHovered ? "#05B570" : "white",
-    bgs: isHovered ? "white" : "rgba(3, 72, 82, 0.2)",
-    colors: isHovered ? "#05B570" : "rgba(3, 72, 82, 1)",
+   
   };
 
-  
+  const data = [
+    {
+      Svg: Peoplesvg,
+      heading: "Community",
+      para: `Join the largest community of Top institution alumnus, students and veteran fighting for a mission to uplift underserved communities through fair access to education.`,
+    },
+    {
+      Svg: Pensvg,
+      heading: "Ownership",
+      para: `Will have complete ownership, with a freedom to challenge the system, experiment and fine tune to perfection.`,
+    },
+    {
+      Svg: Burgsvg,
+      heading: "Connects",
+      para: `We are supported by some of the pioneers in the entrepreneurship, corporate and social sectors and it's your turn to work with them to make a difference.`,
+    },
+    {
+      Svg: Ticksvg,
+      heading: "Cause",
+      para: `Be the part of the mission to make Education in India truly Free and Fair as it claims by democratizing the unfair part of it - Entrance coaching.`,
+    },
+  ];
   return (
     <div className={styles.WhyVolunteerWrap}>
       <SectionHeading title="Why Volunteer?" />
       <div>
-        <IndividualContainer
-          Svgs={Peoplesvg}
-          svgProps={{ bg: "rgba(3, 72, 82, 0.2)", color: "rgba(3, 72, 82, 1)" }}
-          headings=""
-          para=""
-          style={containerStyle}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        />{" "}
-        <IndividualContainer
-          Svgs={Pensvg}
-          svgProps={{ bg: "rgba(3, 72, 82, 0.2)", color: "rgba(3, 72, 82, 1)" }}
-          headings=""
-          para=""
-          style={containerStyle}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        />{" "}
-        <IndividualContainer
-          Svgs={Burgsvg}
-          svgProps={{ bg: "rgba(3, 72, 82, 0.2)", color: "rgba(3, 72, 82, 1)" }}
-          headings=""
-          para=""
-          style={containerStyle}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        />{" "}
-        <IndividualContainer
-          Svgs={Ticksvg}
-          svgProps={{ bg: "rgba(3, 72, 82, 0.2)", color: "rgba(3, 72, 82, 1)" }}
-          headings=""
-          para=""
-          style={containerStyle}
-          onMouseEnter={handleMouseEnter}
-          onMouseLeave={handleMouseLeave}
-        />
+        {data.map(({ Svg, heading, para }) => {
+          return (
+            <IndividualContainer
+              Svgs={Svg}
+              svgProps={{
+                bg: "rgba(3, 72, 82, 0.2)",
+                color: "rgba(3, 72, 82, 1)",
+              }}
+              headings={heading}
+              para={para}
+              style={containerStyle}
+              onMouseEnter={handleMouseEnter}
+              onMouseLeave={handleMouseLeave}
+            />
+          );
+        })}
+      
       </div>
     </div>
   );
