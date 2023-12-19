@@ -1,0 +1,36 @@
+.VolunteerStoriesWrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 5vh 5vw 0px;
+  width: 100%;
+}
+.VolunteerStoriesWrapper .SwiperSlide {
+  width: calc(100%/2 - 20px);
+}
+.VolunteerStoriesWrapper .SwiperSlide .IndividualContainer {
+  background: url("./assets/background.png") center center/cover no-repeat;
+  display: flex;
+  padding-left: 5%;
+  height: 300px;
+  align-items: end;
+  width: 100%;
+  margin:0px 10px;
+}
+.VolunteerStoriesWrapper .SwiperSlide .IndividualContainer .Details {
+  width: calc(100% - 200px);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 30px;
+}
+.VolunteerStoriesWrapper .SwiperSlide .IndividualContainer .Details .Toper {
+  display: flex;
+  text-align: left;
+  gap: 20px;
+}
+.VolunteerStoriesWrapper .SwiperSlide img {
+  width: auto;
+  height: 100%;
+  object-fit: contain;
+}

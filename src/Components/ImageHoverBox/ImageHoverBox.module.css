@@ -24,6 +24,7 @@
 .ImageHoverBoxWrap .FrontDiv img {
   width: 100%;
   filter: grayscale(100%);
+  border: none;
 }
 .ImageHoverBoxWrap .BackDiv {
   height: 100%;
