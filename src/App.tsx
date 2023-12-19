@@ -20,7 +20,7 @@ function App() {
       element: <AboutUs />,
     },
     {
-      path: "/volunteer",
+      path: "/joinus",
       element: <Volunteer />,
     },
   ]);
