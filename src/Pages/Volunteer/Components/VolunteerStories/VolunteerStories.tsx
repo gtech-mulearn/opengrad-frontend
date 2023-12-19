@@ -82,7 +82,7 @@ export const VolunteerStories = (_props: Props) => {
         >
           {data.map(({ para, name, descrp, image }) => {
             return (
-              <SwiperSlide>
+              <SwiperSlide className={styles.SwiperSlide}>
                 <IndividualContainer
                   para={para}
                   name={name}
@@ -106,13 +106,15 @@ const IndividualContainer = ({
 }: IndividualContainerProps) => {
   return (
     <div className={styles.IndividualContainer}>
-      <div>
-        <DoubleQuotessvg />
-        <p>{para}</p>
-      </div>
-      <div>
-        <h2>{name}</h2>
-        <p>{descrp}</p>
+      <div className={styles.Details}>
+        <div className={styles.Toper}>
+          <DoubleQuotessvg />
+          <p>{para}</p>
+        </div>
+        <div>
+          <h2>{name}</h2>
+          <p>{descrp}</p>
+        </div>
       </div>
       <img src={image} alt={name} />
     </div>

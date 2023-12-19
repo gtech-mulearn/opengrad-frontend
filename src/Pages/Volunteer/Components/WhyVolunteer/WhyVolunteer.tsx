@@ -28,7 +28,7 @@ export const WhyVolunteer = () => {
 
   const containerStyle = {
     backgroundColor: isHovered ? "#05B570" : "white",
-   
+    color: isHovered ? "#fff" : "black",
   };
 
   const data = [
@@ -73,7 +73,6 @@ export const WhyVolunteer = () => {
             />
           );
         })}
-      
       </div>
     </div>
   );
@@ -103,6 +102,7 @@ const IndividualContainer = ({
   const containerStyle = {
     ...style,
     backgroundColor: isHovered ? "#05B570" : "white",
+    color: isHovered ? "#fff" : "black",
   };
   const svgStyle = {
     bg: isHovered ? "white" : svgProps?.bg,
@@ -110,9 +110,10 @@ const IndividualContainer = ({
   };
   return (
     <div
-      style={containerStyle}
+      style={containerStyle }
       onMouseEnter={handleMouseEnter}
       onMouseLeave={handleMouseLeave}
+      className={styles.Individual}
     >
       <Svgs {...svgStyle} />
       <h2>{headings}</h2>
