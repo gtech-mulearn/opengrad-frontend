@@ -10,6 +10,9 @@ import { DoubleQuotessvg } from "../../../Home/Components/OurStory/svg";
 import vs1 from "./assets/vs1.png";
 import vs2 from "./assets/vs2.png";
 
+import "./styles.css";
+import { Pagination } from "swiper/modules";
+
 type Props = {};
 
 type IndividualContainerProps = {
@@ -77,8 +80,10 @@ export const VolunteerStories = (_props: Props) => {
         <Swiper
           watchSlidesProgress={true}
           slidesPerView={2}
-          className="mySwiper"
+          className="volunteerStories"
           loop={true}
+          pagination={true}
+          modules={[Pagination]}
         >
           {data.map(({ para, name, descrp, image }) => {
             return (
