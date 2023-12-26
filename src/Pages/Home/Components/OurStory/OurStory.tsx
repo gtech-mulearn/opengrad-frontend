@@ -66,7 +66,7 @@ export const OurStory = (_props: Props) => {
           <Swiper
             pagination={true}
             modules={[Pagination]}
-            className="mySwiper"
+            className="OurStory"
             loop={true}
           >
             <SwiperSlide>

@@ -54,11 +54,10 @@ export const VolunteerDirectory = (_props: Props) => {
             />
           );
         })}
-  
       </div>
       <button>
         See More
-        <ArrowRight />
+        <ArrowRight color="#05B570" />
       </button>
     </div>
   );
