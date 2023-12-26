@@ -65,7 +65,7 @@
   color: #034852;
   display: flex;
   flex-wrap: wrap;
-  max-width: 700px;
+  max-width: 800px;
 }
 .HeaderWrapper .DetailWrapper > .Content h2 div {
   color: #05b570;
@@ -77,8 +77,29 @@
   line-height: 1.2;
   text-align: justify;
   font-weight: 500;
+  
 }
-
+.HeaderWrapper .DetailWrapper > .Content .ButtonWrapper{
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+.HeaderWrapper .DetailWrapper > .Content .ButtonWrapper button{
+  background-color: transparent;
+  color: black;
+  border-radius: 10px;
+  padding: 10px 25px;
+  cursor: pointer;
+  display: flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 16px;
+  font-weight: 600;
+}
+.HeaderWrapper .DetailWrapper > .Content >.ButtonWrapper .join{
+  background-color: #00272D;
+  color: white;
+}
 .HeaderWrapper .DetailWrapper .MapWrapper {
   display: flex;
 
@@ -110,10 +131,14 @@
 .HeaderWrapper .DetailWrapper .MapWrapper :nth-child(5) {
  width: calc(100% / 2 - 5px);
 }
-
+@media screen and (max-width: 1600px){
+  .HeaderWrapper .DetailWrapper > .Content h2{
+    max-width: 600px;
+  }
+}
 @media screen and (max-width: 1200px) {
   .HeaderWrapper .DetailWrapper {
-    flex-direction: column-reverse;
+    flex-direction: column;
     padding: 0px 10vw;
   }
   .HeaderWrapper .DetailWrapper > .Content {
@@ -135,16 +160,21 @@
   .HeaderWrapper .DetailWrapper > .Content h2 {
     font-size: 6.5vw;
     line-height: 1.1;
+    max-width: 750px;
+
   }
   .HeaderWrapper .DetailWrapper > .Content h2 div {
     border-bottom: 1vw solid rgba(3, 72, 82, 0.1);
     height: 6vw;
   }
+   .HeaderWrapper .DetailWrapper > .Content > div > p {
+    font-size: 18px;
+  }
 }
 
 @media screen and (max-width: 500px) {
   .HeaderWrapper {
-    padding: 80px 0px 0px;
+    padding: 100px 0px 30px;
   }
   .HeaderWrapper .DetailWrapper {
     padding: 0px 5vw;

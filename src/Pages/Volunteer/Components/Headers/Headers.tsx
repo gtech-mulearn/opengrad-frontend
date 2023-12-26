@@ -23,7 +23,7 @@ export const Headers = (_props: Props) => {
             <h2>
               Join OpenGrad's &nbsp;<div>Volunteer</div>&nbsp;Program
             </h2>
-            <p>
+            <p style={{marginTop: "10px"}}>
               Do you have what it takes to democratize one of the most exploited
               industries across the country, one of the most plagued issues
               hindering the underserved communities! Volunteer with the OpenGrad
@@ -32,8 +32,8 @@ export const Headers = (_props: Props) => {
               realize their dreams.
             </p>
           </div>
-          <div>
-            <button>Join Us</button>
+          <div className={styles.ButtonWrapper}>
+            <button className={styles.join}>Join Us</button>
             <button>
               Explore
               <ArrowRight color="black" />
