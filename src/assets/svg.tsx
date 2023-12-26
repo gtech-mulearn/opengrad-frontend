@@ -1,10 +1,12 @@
-
 type Props = {
-  width:string,
-  height:string
-}
+  width: string;
+  height: string;
+};
+type Proct = {
+  color: string;
+};
 
-export const ArrowRight = () => {
+export const ArrowRight = ({ color }: Proct) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
@@ -15,16 +17,16 @@ export const ArrowRight = () => {
     >
       <path
         d="M8 1.5L15 8.5M15 8.5L8 15.5M15 8.5H1"
-        stroke="black"
+        stroke={color}
         stroke-width="1.5"
         stroke-linecap="round"
         stroke-linejoin="round"
       />
     </svg>
   );
-}
+};
 
-export const CloudSvg = ({width,height}: Props) => {
+export const CloudSvg = ({ width, height }: Props) => {
   return (
     <svg
       xmlns="http://www.w3.org/2000/svg"
