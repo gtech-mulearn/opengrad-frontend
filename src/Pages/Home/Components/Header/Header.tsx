@@ -16,22 +16,22 @@ export const Header = (_props: Props) => {
               <div>Open Source</div>&nbsp;<p>Entrance</p> Exam Solution
             </h2>
             <div>
-              <p>
+              {/* <p>
                 We enable high leverage opportunities for marginalized youth of
                 our nation using community and tech based learning solutions
-              </p>
-              <p style={{ color: "#7B7B7B" }}>
+              </p> */}
+              <p>
                 Check out how we are democratizing entrance education in India.
               </p>
             </div>
           </div>
           <div className={styles.ButtonWrapper}>
             <button style={{ backgroundColor: "#00272D", color: "white" }}>
-              Study Now
+              Enroll NoW
             </button>
             <button>
               Explore
-              <ArrowRight color="black"/>
+              <ArrowRight color="black" />
             </button>
           </div>
         </div>

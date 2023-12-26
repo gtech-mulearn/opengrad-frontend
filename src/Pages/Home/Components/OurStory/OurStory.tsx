@@ -24,10 +24,10 @@ export const OurStory = (_props: Props) => {
       <div className={styles.DetailSectionWrapper}>
         <div className={styles.foundersWrapper}>
           <p>
-            Lorem Ipsum is simply dummy text of the printing and typesetting
-            industry. Lorem Ipsum has been the industry's standard dummy text
-            ever since the 1500s, when an unknown printer took a galley of type
-            and scrambled it to make a type specimen.
+            Crafted with compassion, Opengrad Foundation emerged from a
+            collective belief in Education for All. Our mission is to enable the
+            next generation to access elite higher education, fostering a
+            society where everyone can dream without fear.
           </p>
           <h3>
             <div></div>

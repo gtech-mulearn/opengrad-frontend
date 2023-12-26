@@ -87,13 +87,13 @@ export const Navbar = (_props: Props) => {
               </a>
             ))}
             <button className={styles.StudyButton}>
-              <a href="http://app.mulearn.org">Study Now</a>
+              <a href="http://app.mulearn.org">Enroll NoW</a>
             </button>
           </div>
         )}
       </div>{" "}
       <button className={styles.StudyButton}>
-        <a href="http://app.mulearn.org">Study Now</a>
+        <a href="http://app.mulearn.org">Enroll NoW</a>
       </button>
     </div>
   );
