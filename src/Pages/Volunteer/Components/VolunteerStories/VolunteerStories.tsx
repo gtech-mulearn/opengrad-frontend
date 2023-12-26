@@ -12,6 +12,7 @@ import vs2 from "./assets/vs2.png";
 
 import "./styles.css";
 import { Pagination } from "swiper/modules";
+import { useEffect, useState } from "react";
 
 type Props = {};
 
@@ -73,16 +74,26 @@ export const VolunteerStories = (_props: Props) => {
       image: vs2,
     },
   ];
+  const [set, setset] = useState(false);
+
+  useEffect(() => {
+    if (window.innerWidth < 1400) {
+      setset(true);
+    }
+  }, []);
   return (
     <div className={styles.VolunteerStoriesWrapper}>
       <SectionHeading title="Volunteer Stories" />
       <div>
         <Swiper
           watchSlidesProgress={true}
-          slidesPerView={2}
+          slidesPerView={set ? 1 : 2}
           className="volunteerStories"
           loop={true}
-          pagination={true}
+          pagination={{
+            clickable: true,
+            el: ".custom-pagination-container", // Link your custom container
+          }}
           modules={[Pagination]}
         >
           {data.map(({ para, name, descrp, image }) => {
@@ -97,6 +108,7 @@ export const VolunteerStories = (_props: Props) => {
               </SwiperSlide>
             );
           })}
+          <div className="custom-pagination-container"></div>
         </Swiper>
       </div>
     </div>

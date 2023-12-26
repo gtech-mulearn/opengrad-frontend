@@ -29,7 +29,7 @@ export const Headers = (_props: Props) => {
           </div>
           <div>
             <button>Join Us</button>
-            <button>Explore<ArrowRight /></button>
+            <button>Explore<ArrowRight color="black"/></button>
           </div>
         </div>
         <div className={styles.MapWrapper}>

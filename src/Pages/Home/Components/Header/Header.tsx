@@ -31,7 +31,7 @@ export const Header = (_props: Props) => {
             </button>
             <button>
               Explore
-              <ArrowRight />
+              <ArrowRight color="black"/>
             </button>
           </div>
         </div>

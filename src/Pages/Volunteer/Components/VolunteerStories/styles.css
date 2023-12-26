@@ -10,9 +10,9 @@
 }
 
 /* Align pagination to the left bottom of the container */
-.volunteerStories .swiper-pagination {
+.volunteerStories .custom-pagination-container {
   margin-left: 0%;
-  margin-bottom: -10px;
+  margin-top: 10px;
   right: auto;
   text-align: center;
 
