@@ -12,7 +12,7 @@
   background: url("./assets/background.png") center center/cover no-repeat;
   display: flex;
   padding-left: 5%;
-  height: 300px;
+  height: 280px;
   align-items: end;
   width: 100%;
   margin: 0px 10px;
@@ -53,6 +53,7 @@
   .VolunteerStoriesWrapper .SwiperSlide .IndividualContainer {
     margin: 0;
     max-width: 700px;
+    height: 220px;
   }
   .VolunteerStoriesWrapper .SwiperSlide .IndividualContainer .Details {
     width: calc(100% - 150px);
@@ -83,6 +84,10 @@
   }
 }
 @media screen and (max-width: 600px) {
+    .VolunteerStoriesWrapper .SwiperSlide .IndividualContainer {
+   
+    height: 200px;
+  }
   .VolunteerStoriesWrapper .SwiperSlide .IndividualContainer .Details {
     width: calc(100% - 120px);
   }
