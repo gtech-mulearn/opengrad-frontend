@@ -34,32 +34,32 @@ export const OurJourney = (_props: Props) => {
   const data = [
     {
       color: "rgba(5, 181, 112, 0.1)",
-      divHeight: "15%",
+      divHeight: "20%",
       text: "Shahid starts a community sourced Ed Tech platform for IPMAT caoching.",
       year: "2018",
     },
     {
       color: "rgba(5, 181, 112, 0.2)",
       divHeight: "25%",
-      text: "Shahid starts a community sourced Ed Tech platform for IPMAT caoching.",
+      text: "Sahil being a part of the founding team @keralarecue.in",
       year: "2019",
     },
     {
       color: "rgba(5, 181, 112, 0.3)",
       divHeight: "35%",
-      text: "Shahid starts a community sourced Ed Tech platform for IPMAT caoching.",
+      text: "Sahil starts giving CAT coaching and mentorship for aspirants.",
       year: "2020",
     },
     {
       color: "rgba(5, 181, 112, 0.5)",
       divHeight: "45%",
-      text: "Shahid starts a community sourced Ed Tech platform for IPMAT caoching.",
+      text: "AlphaIpmat shifts to an open for all community platform.",
       year: "2021",
     },
     {
       color: "rgba(5, 181, 112, 0.7)",
       divHeight: "55%",
-      text: "Shahid starts a community sourced Ed Tech platform for IPMAT caoching.",
+      text: "Initial plan and early build of Opengrad platform.",
       year: "2022",
     },
     {
@@ -71,7 +71,7 @@ export const OurJourney = (_props: Props) => {
     {
       color: "rgba(5, 181, 112, 1)",
       divHeight: "70%",
-     
+
       text: "Shahid starts a community sourced Ed Tech platform for IPMAT caoching.",
       year: "2024",
     },
@@ -86,13 +86,20 @@ export const OurJourney = (_props: Props) => {
             <div className={styles.IndividualContainer}>
               <div className={styles.lineCircle}>
                 <div
-                  style={{ height: `calc(100% - ${divHeight} - 35px)` }}
+                  style={{ height: `calc(150% - ${divHeight} )` }}
                   className={styles.line}
                 ></div>
                 <div className={styles.circle}></div>
               </div>
               <h3>{year}</h3>
-              <div style={{ backgroundColor: color, height: divHeight ,flexShrink:0}}>
+              <div
+                style={{
+                  backgroundColor: color,
+                  height: divHeight,
+                  flexShrink: 0,
+                }}
+                className={styles.text}
+              >
                 <p>{text}</p>
               </div>
             </div>
