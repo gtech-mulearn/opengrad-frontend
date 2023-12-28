@@ -4,7 +4,7 @@ import { OurPartners } from "../../Components/OurPartners/OurPartners";
 import { AdvisoryPanel } from "./Components/AdvisoryPanel/AdvisoryPanel";
 import { FoundersSection } from "./Components/FoundersSection/FoundersSection";
 import { Header } from "./Components/Header/Header";
-// import { OurJourney } from "./Components/OurJourney/OurJourney";
+import { OurJourney } from "./Components/OurJourney/OurJourney";
 
 import ignite from "../assets/Partners/ignite.png";
 import nuale from "../assets/Partners/nuals.png";
@@ -38,7 +38,7 @@ export const AboutUs = () => {
       <Navbar />
       <Header />
       <FoundersSection />
-      {/* <OurJourney /> */}
+      <OurJourney />
       <AdvisoryPanel />
       <OurPartners partners={partnersData} />
       <Footer />
