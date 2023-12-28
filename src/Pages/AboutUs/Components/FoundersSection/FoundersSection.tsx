@@ -14,24 +14,26 @@ export const FoundersSection = (_props: Props) => {
       <div>
         <ImageHoverBox
           image={sahil}
-          name={"Sahil Sameer"}
+          name={"Sahil Sameer (CEO)"}
           width={"300px"}
           height={"320px"}
-          description="Builder of OpenGrad, MBA FROM IIM INDORE, & HUMANITARIAN"
+          description="Co-founder of Opengrad, IIM Indore alumnus, led Keralarescue.in, focuses on social change through communities, ex-manager at Samsung.
+"
         />
         <ImageHoverBox
           image={amith}
-          name={"Amith Tony Joseph"}
+          name={"Amith Tony Joseph (CTO)"}
           width={"300px"}
           height={"320px"}
-          description="Innovations head, Ex Founder - Alpha study memix.com"
+          description="Expert in Product Management from ESMT Berlin, focuses on user-centric tech for Opengrad, enhancing digital platforms and AI tools' accessibility."
         />
         <ImageHoverBox
           image={shahid}
-          name={"Mohammed Shahid CO"}
+          name={"Mohammed Shahid (COO)"}
           width={"300px"}
           height={"320px"}
-          description="ENGINEERING GRAD PASSIONATE ABOUT PRODUCTS, BRIDGING TECH AND MANAGEMENT."
+          description="Co-founder, IIM Indore alumnus, from humble beginnings to EdTech leader, founded 'alpha IPMAT', instrumental in shaping Opengrad's vision.
+"
         />
       </div>
     </div>
