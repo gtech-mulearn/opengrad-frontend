@@ -18,10 +18,10 @@ export const ProblemScenario = () => {
     <div className={styles.ProblemScenarioWrapper}>
       <div className={styles.heading}>
         {" "}
-        <SectionHeading title="The Problem Scenario" />
+        <SectionHeading title="Rebuilding Online Education " />
         <p>
-          Increased commercialization of entrance education, has
-          disproportionate participation.
+          Confronting an Exploitive Industry to Redistribute Power and
+          Opportunity to Millions of Families and Learners.
         </p>
       </div>
       <div className={styles.DetailSection}>
