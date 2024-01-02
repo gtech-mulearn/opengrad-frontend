@@ -40,24 +40,27 @@ export const OurStory = (_props: Props) => {
               name={"Sahil Sameer"}
               width={""}
               height={""}
-              description="Builder of OpenGrad"
+              description="Chief Executive Officer"
               className={styles.ImageBox}
+              linkedIn="https://www.linkedin.com/in/sahil-sameer/"
             />
             <ImageHoverBox
               image={amith}
               name={"Amith Tony Joseph"}
               width={""}
               height={""}
-              description="Co-Founder & Product Lead"
+              description="Chief Technical Officer "
               className={styles.ImageBox}
+              linkedIn="https://www.linkedin.com/in/amith-tj/"
             />
             <ImageHoverBox
               image={shahid}
               name={"Mohammed Shahid CO"}
               width={""}
               height={""}
-              description="Co-Founder, OpenGrad"
+              description="Chief Operations Officer"
               className={styles.ImageBox}
+              linkedIn="https://www.linkedin.com/in/shahidco/"
             />
           </div>
         </div>

@@ -128,7 +128,7 @@ const IndividualContainer = ({
           <DoubleQuotessvg />
           <p>{para}</p>
         </div>
-        <div>
+        <div style={{ color: "#034852",textAlign:"left" }}>
           <h2>{name}</h2>
           <p>{descrp}</p>
         </div>

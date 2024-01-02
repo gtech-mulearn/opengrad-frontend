@@ -26,8 +26,17 @@ export const Header = (_props: Props) => {
             </div>
           </div>
           <div className={styles.ButtonWrapper}>
-            <button style={{ backgroundColor: "#00272D", color: "white" }}>
-              Enroll NoW
+            <button
+              style={{ backgroundColor: "#00272D", color: "white" }}
+            
+              onClick={() =>
+                window.open(
+                  "https://opengrad-foundation.learnyst.com/learn",
+                  "_blank"
+                )
+              }
+            >
+              Enroll Now
             </button>
             <button>
               Explore

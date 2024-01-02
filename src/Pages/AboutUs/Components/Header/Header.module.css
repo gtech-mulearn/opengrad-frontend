@@ -99,6 +99,7 @@
   font-size: 20px;
   line-height: 1.2;
   gap: 20px;
+  background-color: white;
 }
 .HeaderWrapper .VisionWrap div {
   display: flex;

@@ -8,8 +8,10 @@ import { OurJourney } from "./Components/OurJourney/OurJourney";
 
 import ignite from "../assets/Partners/ignite.png";
 import nuale from "../assets/Partners/nuals.png";
-import indore from "../assets/Partners/indore.png";
+// import indore from "../assets/Partners/indore.png";
 import mulearn from "../assets/Partners/mulearn.png";
+import ieee from "../assets/Partners/ieee.png";
+import vikanasana from "../assets/Partners/vikasana.png";
 export const AboutUs = () => {
   const partnersData = [
     {
@@ -22,15 +24,25 @@ export const AboutUs = () => {
       name: "IGNITE - NIT Calicut",
       para: "Working together to curate and disseminate JEE exam resources.",
     },
-    {
-      image: indore,
-      name: "IIM INDORE",
-      para: "Founding institute of IPMAT program, completely curated by the IIM students.",
-    },
+    // {
+    //   image: indore,
+    //   name: "IIM INDORE",
+    //   para: "Founding institute of IPMAT program, completely curated by the IIM students.",
+    // },
     {
       image: mulearn,
       name: "µLearn Foundation",
       para: "Technology partner, decentralizing and democratizing education.",
+    },
+    {
+      image: ieee,
+      name: "IEEE Kerala Section",
+      para: "Dedicated to advancing technology for the benefit of humanity.",
+    },
+    {
+      image: vikanasana,
+      name: "Vikasana - IIM Bangalore",
+      para: "Working together to curate and disseminate JEE exam resources.",
     },
   ];
   return (

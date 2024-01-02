@@ -8,9 +8,7 @@ export const Footer = (_props: Props) => {
     <div className={styles.FooterWrapper}>
       <div className={styles.TopSection}>
         <img src={logo} alt="" />
-        <p>
-          OpenGrad’s journey is fueled by compassion and empowerment.
-        </p>
+        <p>OpenGrad’s journey is fueled by compassion and empowerment.</p>
       </div>
       <div className={styles.BottomSection}>
         <div className={styles.left}>
@@ -23,7 +21,11 @@ export const Footer = (_props: Props) => {
             <Facebook className={styles.iconDefault} />
             <FacebookFill className={styles.iconFill} />
           </a>
-          <a href="" target="_blank" className={styles.iconLink}>
+          <a
+            href="https://www.instagram.com/opengradfoundation"
+            target="_blank"
+            className={styles.iconLink}
+          >
             <Instagram className={styles.iconDefault} />
             <InstagramFill className={styles.iconFill} />
           </a>
@@ -31,7 +33,11 @@ export const Footer = (_props: Props) => {
             <Youtube className={styles.iconDefault} />
             <YoutubeFill className={styles.iconFill} />
           </a>
-          <a href="" target="_blank" className={styles.iconLink}>
+          <a
+            href="https://www.linkedin.com/company/opengrad-foundation/"
+            target="_blank"
+            className={styles.iconLink}
+          >
             <LinkedIn className={styles.iconDefault} />
             <LinkedInFill className={styles.iconFill} />
           </a>
