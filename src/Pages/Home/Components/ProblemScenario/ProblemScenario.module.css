@@ -45,8 +45,8 @@
   justify-content: center;
   width: 100%;
   height: 100%;
-  gap: 5px;
-  padding: 0px 5px;
+  gap: 10px;
+  padding: 0px 2vw;
   border-right: 0.5px solid #82dab7; /* Vertical center line */
   border-bottom: 0.5px solid #82dab7;
 }
@@ -58,12 +58,16 @@
 }
 
 .GrifSet img {
-  width: auto;
+  width: 80px;
   height: 80px;
   pointer-events: none;
   object-fit: contain;
 }
-
+.GrifSet p{
+  color: #034852;
+  font-weight: 600;
+  font-size: 16px;
+}
 @media screen and (max-width: 1800px) {
   .GrifSet img {
     height: 60px;
@@ -88,6 +92,7 @@
   width: 100%;
   height: 100%;
   object-fit: contain;
+
 }
 
 @media screen and (max-width: 700px) {

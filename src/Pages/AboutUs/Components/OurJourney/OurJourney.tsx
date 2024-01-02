@@ -35,26 +35,26 @@ export const OurJourney = (_props: Props) => {
     {
       color: "rgba(5, 181, 112, 0.1)",
       divHeight: "20%",
-      text: "Shahid starts a community sourced Ed Tech platform for IPMAT caoching.",
+      text: "Shahid starts a community sourced  ed tech platform",
       year: "2018",
     },
     {
       color: "rgba(5, 181, 112, 0.2)",
       divHeight: "25%",
-      text: "Sahil being a part of the founding team @keralarecue.in",
-      year: "2019",
+      text: "Sahil is part of the founding team @keralarecue.in ",
+      year: "2018",
     },
     {
       color: "rgba(5, 181, 112, 0.3)",
       divHeight: "35%",
-      text: "Sahil starts giving CAT coaching and mentorship for aspirants.",
+      text: "Sahil starts giving Cat coaching and mentorship for aspirants",
       year: "2020",
     },
     {
       color: "rgba(5, 181, 112, 0.5)",
       divHeight: "45%",
-      text: "AlphaIpmat shifts to an open for all community platform.",
-      year: "2021",
+      text: "AlphaIpmat shifts to an open for all community platform ",
+      year: "2022",
     },
     {
       color: "rgba(5, 181, 112, 0.7)",
@@ -65,15 +65,8 @@ export const OurJourney = (_props: Props) => {
     {
       color: "rgba(5, 181, 112, 0.8)",
       divHeight: "62%",
-      text: "Shahid starts a community sourced Ed Tech platform for IPMAT caoching.",
+      text: "Opengrad.in is launched and offline engagements begins ",
       year: "2023",
-    },
-    {
-      color: "rgba(5, 181, 112, 1)",
-      divHeight: "70%",
-
-      text: "Shahid starts a community sourced Ed Tech platform for IPMAT caoching.",
-      year: "2024",
     },
   ];
 

@@ -18,7 +18,7 @@
   top: 0;
 }
 .HeaderWrapper .BackgroundText h1 {
-  font-size: 16.8vw;
+  font-size: 25.5vw;
   color: var(--Secondary, #05b570);
   opacity: 0.06;
   margin-top: 50px;
@@ -87,7 +87,7 @@
 .HeaderWrapper .DetailWrapper > .Content .ButtonWrapper button{
   background-color: transparent;
   color: black;
-  border-radius: 10px;
+  border-radius: 5px;
   padding: 10px 25px;
   cursor: pointer;
   display: flex;
@@ -95,6 +95,7 @@
   gap: 8px;
   font-size: 16px;
   font-weight: 600;
+  font-family: Raleway;
 }
 .HeaderWrapper .DetailWrapper > .Content >.ButtonWrapper .join{
   background-color: #00272D;

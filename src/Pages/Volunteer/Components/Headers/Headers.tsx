@@ -12,18 +12,18 @@ export const Headers = (_props: Props) => {
   return (
     <div className={styles.HeaderWrapper}>
       <div className={styles.BackgroundText}>
-        <h1>VOLUNTEER</h1>
+        <h1>JOIN US</h1>
       </div>
       <div className={styles.DetailWrapper}>
         <div className={styles.Content}>
           <div className={styles.TopInner}>
-            <p>VOLUNTEER</p>
+            <p>Join us</p>
           </div>
           <div>
             <h2>
               Join OpenGrad's &nbsp;<div>Volunteer</div>&nbsp;Program
             </h2>
-            <p style={{marginTop: "10px"}}>
+            <p style={{ marginTop: "10px" }}>
               Do you have what it takes to democratize one of the most exploited
               industries across the country, one of the most plagued issues
               hindering the underserved communities! Volunteer with the OpenGrad
@@ -33,7 +33,18 @@ export const Headers = (_props: Props) => {
             </p>
           </div>
           <div className={styles.ButtonWrapper}>
-            <button className={styles.join}>Join Us</button>
+            <button
+              className={styles.join}
+             
+              onClick={() =>
+                window.open(
+                  "https://opengrad.notion.site/opengrad/OpenGrad-Foundation-d6781758edb94934be550ed86c8a2f1e",
+                  "_blank"
+                )
+              }
+            >
+              Join Us
+            </button>
             <button>
               Explore
               <ArrowRight color="black" />
