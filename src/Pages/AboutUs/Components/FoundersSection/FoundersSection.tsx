@@ -19,6 +19,7 @@ export const FoundersSection = (_props: Props) => {
           height={"320px"}
           description="Co-founder of Opengrad, IIM Indore alumnus, led Keralarescue.in, focuses on social change through communities, ex-manager at Samsung.
 "
+          linkedIn="https://www.linkedin.com/in/sahil-sameer/"
         />
         <ImageHoverBox
           image={amith}
@@ -26,6 +27,7 @@ export const FoundersSection = (_props: Props) => {
           width={"300px"}
           height={"320px"}
           description="Co-founder, IIM Indore alumnus, from humble beginnings to EdTech leader, founded 'alpha IPMAT', instrumental in shaping Opengrad's vision."
+          linkedIn="https://www.linkedin.com/in/amith-tj/"
         />
         <ImageHoverBox
           image={shahid}
@@ -33,6 +35,7 @@ export const FoundersSection = (_props: Props) => {
           width={"300px"}
           height={"320px"}
           description="Expert in Product Management from ESMT Berlin, focuses on user-centric tech for Opengrad, enhancing digital platforms and AI tools' accessibility."
+          linkedIn="https://www.linkedin.com/in/shahidco/"
         />
       </div>
     </div>

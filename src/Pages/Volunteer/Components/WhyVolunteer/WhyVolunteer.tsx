@@ -102,7 +102,7 @@ const IndividualContainer = ({
   const containerStyle = {
     ...style,
     backgroundColor: isHovered ? "#05B570" : "white",
-    color: isHovered ? "#fff" : "black",
+    color: isHovered ? "#fff" : "#034852",
   };
   const svgStyle = {
     bg: isHovered ? "white" : svgProps?.bg,

@@ -88,7 +88,7 @@ export const Navbar = (_props: Props) => {
             ))}
             <button className={styles.StudyButton}>
               <a href="https://opengrad-foundation.learnyst.com/learn">
-                Enroll NoW
+                Enroll Now
               </a>
             </button>
           </div>

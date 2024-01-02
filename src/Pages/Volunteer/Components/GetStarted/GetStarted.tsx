@@ -15,8 +15,8 @@ export const GetStarted = (_props: Props) => {
         </p>
       </div>
       <div className={styles.volunteer}>
-        <h2>Who Can Volunteer</h2>
-        <div>
+        <h2><div></div><p>Who Can Volunteer</p><div></div></h2>
+        <div className={styles.imageandcontent}>
           <img src={image} alt="" />
           <p>
             OpenGrad Foundation is a volunteer driven organization and we are

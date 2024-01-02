@@ -42,7 +42,7 @@ export const VolunteerDirectory = (_props: Props) => {
   return (
     <div className={styles.VolunteerDirectory}>
       <SectionHeading title="Volunteer Directory" />
-      <div>
+      <div className={styles.imageContainer}>
         {data.map(({ image, name, description }) => {
           return (
             <ImageHoverBox
@@ -55,14 +55,17 @@ export const VolunteerDirectory = (_props: Props) => {
           );
         })}
       </div>
-      <button
-        onClick={() =>
-          window.open("https://volunteers-one.vercel.app/#", "_blank")
-        }
-      >
-        See More
-        <ArrowRight color="#05B570" />
-      </button>
+      <div className={styles.buttonwrap}>
+        <div></div>
+        <button
+          onClick={() =>
+            window.open("https://volunteers-one.vercel.app/#", "_blank")
+          }
+        >
+          See More
+          <ArrowRight color="#05B570" />
+        </button>
+      </div>
     </div>
   );
 };

@@ -6,6 +6,7 @@ type Props = {
   width: string;
   height: string;
   className?: string;
+  linkedIn?: string;
 };
 
 export const ImageHoverBox = ({
@@ -15,11 +16,14 @@ export const ImageHoverBox = ({
   width,
   height,
   className,
+  linkedIn,
 }: Props) => {
-  console.log(className)
+  console.log(className);
   return (
     <div className={styles.ImageHoverBoxWrapper + " " + className}>
-      <div
+      <a
+        href={linkedIn}
+        target="_blank"
         className={styles.ImageHoverBoxWrap}
         style={{ width: width, height: height }}
       >
@@ -27,7 +31,7 @@ export const ImageHoverBox = ({
           <img src={image} alt="" />
         </div>
         <div className={styles.BackDiv}></div>
-      </div>
+      </a>
       <div className={styles.Content}>
         <h2>{name}</h2>
         <h3>{description}</h3>

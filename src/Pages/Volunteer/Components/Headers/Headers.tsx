@@ -12,12 +12,12 @@ export const Headers = (_props: Props) => {
   return (
     <div className={styles.HeaderWrapper}>
       <div className={styles.BackgroundText}>
-        <h1>VOLUNTEER</h1>
+        <h1>JOIN US</h1>
       </div>
       <div className={styles.DetailWrapper}>
         <div className={styles.Content}>
           <div className={styles.TopInner}>
-            <p>VOLUNTEER</p>
+            <p>Join us</p>
           </div>
           <div>
             <h2>

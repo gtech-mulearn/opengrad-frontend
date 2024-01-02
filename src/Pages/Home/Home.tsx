@@ -7,26 +7,31 @@ import { OurStory } from "./Components/OurStory/OurStory";
 import { OurWorks } from "./Components/OurWorks/OurWorks";
 import { ProblemScenario } from "./Components/ProblemScenario/ProblemScenario";
 import { WhyOpengrad } from "./Components/WhyOpengrad/WhyOpengrad";
-import styles from './Home.module.css'
+import styles from "./Home.module.css";
 
 // Partners data
 
-import nudge from '../assets/Partners/thenudge.png'
-import nsr from '../assets/Partners/nsrcel.png'
-import ignite from '../assets/Partners/ignite.png'
+import nudge from "../assets/Partners/thenudge.png";
+import nsr from "../assets/Partners/nsrcel.png";
+import ignite from "../assets/Partners/ignite.png";
 import nuale from "../assets/Partners/nuals.png";
+import mulearn from "../assets/Partners/mulearn.png";
 import viknasana from "../assets/Partners/vikasana.png";
 import ieee from "../assets/Partners/ieee.png";
 
 export const Home = () => {
-   const partnersData = [
-     { image: nudge, name: "" },
-     { image: nsr, name: "" },
-     { image: ignite, name: "" },
-     { image: nuale, name: "" },
-     { image: viknasana, name: "" },
-     { image: ieee, name: "" },
-   ];
+  const partnersData = [
+    { image: nudge, name: "" },
+    { image: nsr, name: "" },
+    { image: ignite, name: "" },
+    { image: nuale, name: "" },
+    {
+      image: mulearn,
+      name: "",
+    },
+    { image: viknasana, name: "" },
+    { image: ieee, name: "" },
+  ];
 
   return (
     <div className={styles.HomePageWrapper}>
