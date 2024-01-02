@@ -55,7 +55,11 @@ export const VolunteerDirectory = (_props: Props) => {
           );
         })}
       </div>
-      <button>
+      <button
+        onClick={() =>
+          window.open("https://volunteers-one.vercel.app/#", "_blank")
+        }
+      >
         See More
         <ArrowRight color="#05B570" />
       </button>
