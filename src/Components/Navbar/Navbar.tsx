@@ -95,7 +95,7 @@ export const Navbar = (_props: Props) => {
         )}
       </div>{" "}
       <button className={styles.StudyButton}>
-        <a href="https://opengrad-foundation.learnyst.com/learn">Enroll NoW</a>
+        <a href="https://opengrad-foundation.learnyst.com/learn">Enroll Now</a>
       </button>
     </div>
   );

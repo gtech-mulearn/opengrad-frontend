@@ -16,12 +16,14 @@ export const AboutUs = () => {
   const partnersData = [
     {
       image: nuale,
-      name: "Legal Aid Clinic - NUALS Kochi",
+      name: "Legal Aid Clinic -",
+      name2: "NUALS Kochi",
       para: "Curating and disseminating CLAT Exam Resources.",
     },
     {
       image: ignite,
-      name: "IGNITE - NIT Calicut",
+      name: "IGNITE - NIT",
+      name2: "Calicut",
       para: "Working together to curate and disseminate JEE exam resources.",
     },
     // {
@@ -31,17 +33,20 @@ export const AboutUs = () => {
     // },
     {
       image: mulearn,
-      name: "µLearn Foundation",
+      name: "µLearn",
+      name2: "Foundation",
       para: "Technology partner, decentralizing and democratizing education.",
     },
     {
       image: ieee,
-      name: "IEEE Kerala Section",
+      name: "IEEE",
+      name2: "Kerala Section",
       para: "Dedicated to advancing technology for the benefit of humanity.",
     },
     {
       image: vikanasana,
-      name: "Vikasana - IIM Bangalore",
+      name: "Vikasana -",
+      name2: "IIM Bangalore",
       para: "Working together to curate and disseminate JEE exam resources.",
     },
   ];

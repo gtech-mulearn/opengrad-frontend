@@ -26,7 +26,7 @@
 .CounterComponent h1 {
   color: #05b570;
   font-size: 45px;
- font-family: Open Sans;
+  font-family: "Open Sans", sans-serif;
 }
 
 .CounterComponent div {
