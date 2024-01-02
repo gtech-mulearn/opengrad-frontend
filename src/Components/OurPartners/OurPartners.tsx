@@ -14,7 +14,7 @@ type OurPartnersProps = {
 };
 
 export const OurPartners = ({ partners }: OurPartnersProps) => {
- const [isScreenSmall, setIsScreenSmall] = useState(window.innerWidth < 900);
+ const [isScreenSmall, setIsScreenSmall] = useState(window.innerWidth < 1700);
 
  useEffect(() => {
    const handleResize = () => {
@@ -39,7 +39,7 @@ export const OurPartners = ({ partners }: OurPartnersProps) => {
         {isScreenSmall ? (
           <Marquee {...marqParams} style={{ width: "100vw" }}>
             {partners.map((partner, index) => (
-              <div key={index} style={{ padding: "0px 20px" }}>
+              <div key={index} style={{ padding: "0px 25px" }}>
                 <img src={partner.image} alt={partner.name} />
                 <h2>{partner.name}</h2>
                 <p>{partner.para}</p>

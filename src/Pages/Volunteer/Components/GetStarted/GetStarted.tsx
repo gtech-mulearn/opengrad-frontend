@@ -15,7 +15,7 @@ export const GetStarted = (_props: Props) => {
         </p>
       </div>
       <div className={styles.volunteer}>
-        {/* <h2>Who Can Volunteer</h2> */}
+        <h2>Who Can Volunteer</h2>
         <div>
           <img src={image} alt="" />
           <p>

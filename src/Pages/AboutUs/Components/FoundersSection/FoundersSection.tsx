@@ -25,15 +25,14 @@ export const FoundersSection = (_props: Props) => {
           name={"Amith Tony Joseph (CTO)"}
           width={"300px"}
           height={"320px"}
-          description="Expert in Product Management from ESMT Berlin, focuses on user-centric tech for Opengrad, enhancing digital platforms and AI tools' accessibility."
+          description="Co-founder, IIM Indore alumnus, from humble beginnings to EdTech leader, founded 'alpha IPMAT', instrumental in shaping Opengrad's vision."
         />
         <ImageHoverBox
           image={shahid}
           name={"Mohammed Shahid (COO)"}
           width={"300px"}
           height={"320px"}
-          description="Co-founder, IIM Indore alumnus, from humble beginnings to EdTech leader, founded 'alpha IPMAT', instrumental in shaping Opengrad's vision.
-"
+          description="Expert in Product Management from ESMT Berlin, focuses on user-centric tech for Opengrad, enhancing digital platforms and AI tools' accessibility."
         />
       </div>
     </div>

@@ -1,7 +1,7 @@
 import { ImageHoverBox } from "../../../../Components/ImageHoverBox/ImageHoverBox";
 import { SectionHeading } from "../../../../Components/SectionHeading/SectionHeading";
 import gopichand from "../../../assets/advisory/gopichand.png";
-import santhosh from "../../../assets/advisory/santhosh.png";
+import mohan from "../../../assets/advisory/mohan.png";
 import sathish from "../../../assets/advisory/sathish.png";
 import styles from './AdvisoryPanel.module.css'
 
@@ -17,14 +17,14 @@ export const AdvisoryPanel = (_props: Props) => {
           name={"Dr. Gopichand Katragadda"}
           width={"300px"}
           height={"320px"}
-          description="FOUNDER & CEO OF MYELIN FOUNDRY, ENHANCING HUMAN EXPERIENCES THROUGH AI"
+          description="FOUNDER & CEO OF MYELIN FOUNDRY, PAST CTO OF TATA GROUP"
         />
         <ImageHoverBox
-          image={santhosh}
-          name={"Santhosh Kurup"}
+          image={mohan}
+          name={"Mohan Sundaram"}
           width={"300px"}
           height={"320px"}
-          description="CEO OF ICT ACADEMY OF KERALA, EMPOWERING EMPLOYABILITY SKILLS"
+          description="CEO of ARTILAB foundation"
         />
         <ImageHoverBox
           image={sathish}

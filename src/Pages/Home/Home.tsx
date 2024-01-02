@@ -15,6 +15,8 @@ import nudge from '../assets/Partners/thenudge.png'
 import nsr from '../assets/Partners/nsrcel.png'
 import ignite from '../assets/Partners/ignite.png'
 import nuale from "../assets/Partners/nuals.png";
+import viknasana from "../assets/Partners/vikasana.png";
+import ieee from "../assets/Partners/ieee.png";
 
 export const Home = () => {
    const partnersData = [
@@ -22,6 +24,8 @@ export const Home = () => {
      { image: nsr, name: "" },
      { image: ignite, name: "" },
      { image: nuale, name: "" },
+     { image: viknasana, name: "" },
+     { image: ieee, name: "" },
    ];
 
   return (
