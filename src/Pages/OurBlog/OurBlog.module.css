@@ -1,0 +1,261 @@
+.Wrapper {
+  display: flex;
+  flex-direction: column;
+}
+.HeaderWrapper {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  min-height: 100vh;
+  height: fit-content;
+  padding: 100px 5vw 20px;
+  width: 100%;
+  gap: 30px;
+  background: url("../assets/backgroundLinesClouds.png") center center/cover
+    no-repeat;
+  position: relative;
+}
+.HeaderWrapper .BackgroundText {
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+}
+.HeaderWrapper .BackgroundText h1 {
+  font-size: 20.6vw;
+  color: var(--Secondary, #05b570);
+  opacity: 0.06;
+  margin-top: 50px;
+  font-weight: 900;
+}
+.HeaderWrapper .Header {
+  width: 100%;
+}
+.HeaderWrapper .DetailWrapper {
+  height: calc(100% - 50px);
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 3vw;
+}
+.HeaderWrapper .DetailWrapper .TopInner {
+  border-left: 5px solid #034852;
+  margin-left: 1vw;
+}
+.HeaderWrapper .DetailWrapper .TopInner p {
+  background-color: #05b570;
+  text-transform: uppercase;
+  width: fit-content;
+  height: fit-content;
+  font-size: 3vw;
+  line-height: 1.2;
+  margin-left: 2px;
+  color: white;
+  font-weight: 800;
+  padding: 0px 3px;
+}
+
+.HeaderWrapper .DetailWrapper .category {
+  display: flex;
+  gap: 25px;
+  z-index: 10;
+}
+
+.HeaderWrapper .DetailWrapper .category button {
+  background-color: transparent;
+  color: rgba(3, 72, 82, 1);
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.HeaderWrapper .topBlogs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+  text-align: left;
+  font-family: "Raleway";
+}
+
+.HeaderWrapper .topBlogs h3 {
+  color: var(--Primary, #034852);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+}
+.HeaderWrapper .topBlogs p {
+  color: #667085;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.contentCategory {
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+.newsAndUpdates {
+  color: #034852;
+  background-color: rgba(234, 252, 255, 1);
+}
+.CampusDiaries {
+  color: rgba(26, 26, 26, 1);
+  background-color: rgba(240, 240, 240, 1);
+}
+.Events {
+  color: rgba(5, 181, 112, 1);
+  background-color: rgba(234, 255, 247, 1);
+}
+
+.HeaderWrapper .topBlogs .mainblog {
+  width: calc(50% - 15px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.HeaderWrapper .topBlogs .mainblog img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.HeaderWrapper .topBlogs .rightDiv {
+  width: calc(50% - 15px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.HeaderWrapper .topBlogs .rightDiv h3 {
+  color: rgba(26, 26, 26, 1);
+  font-size: 19px;
+  line-height: 28px;
+}
+
+.HeaderWrapper .topBlogs .rightDiv > div {
+  width: 100%;
+  height: calc(100% - 10px);
+  display: flex;
+  gap: 15px;
+}
+
+.HeaderWrapper .topBlogs .rightDiv > div > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.HeaderWrapper .topBlogs .rightDiv > div img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1500px) {
+  .HeaderWrapper .topBlogs .mainblog {
+    width: 100%;
+  }
+  .HeaderWrapper .topBlogs .rightDiv {
+    width: 100%;
+    flex-direction: row;
+  }
+  .HeaderWrapper .topBlogs .rightDiv > div {
+    flex-direction: column;
+  }
+}
+
+@media screen and (max-width: 680px) {
+  .HeaderWrapper .topBlogs .rightDiv {
+    width: 100%;
+    flex-direction: column;
+  }
+}
+
+.allBlogs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 0px 5vw;
+}
+
+.allBlogs h1 {
+  color: var(--Primary, #034852);
+  font-family: "Raleway";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.allBlogs .blogWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  text-align: left;
+  justify-content: center;
+}
+
+.allBlogs .blogWrapper .individualDiv {
+  width: calc(100% / 3 - 10px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  min-width: 300px;
+}
+
+.allBlogs .blogWrapper .individualDiv img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.allBlogs .blogWrapper .individualDiv h3 {
+  color: #1a1a1a;
+
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+}
+.allBlogs .blogWrapper .individualDiv p {
+  color: #667085;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.allBlogs .blogWrapper .individualDiv .categoryDiv {
+  justify-self: flex-end;
+}
+.allBlogs button {
+  background-color: rgba(0, 39, 45, 1);
+  padding: 11px 32px;
+  font-size: 18px;
+  border-radius: 8px;
+  font-family: "Raleway";
+}
+@media screen and (max-width: 1050px) {
+  .allBlogs .blogWrapper .individualDiv {
+    width: calc(100% / 2 - 8px);
+  }
+}
+
+@media screen and (max-width: 685px) {
+  .allBlogs .blogWrapper .individualDiv {
+    width: calc(100%);
+  }
+}
