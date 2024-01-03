@@ -1,3 +1,5 @@
+import { Blogs } from "./Blogs";
+
 type Props = {};
 
 export const AdminDashboard = (_props: Props) => {
@@ -9,6 +11,7 @@ export const AdminDashboard = (_props: Props) => {
         <button>Home - Testimonials</button>
         <button>Join Us - Testimonial</button>
       </div>
+      <Blogs />
     </div>
   );
 };

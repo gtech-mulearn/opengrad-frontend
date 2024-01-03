@@ -9,6 +9,16 @@ import { ComingSoon } from './Pages/ComingSoon/ComingSoon';
 
 import { AdminLogin } from './Pages/Admin/AdminLogin/AdminLogin';
 import { AdminDashboard } from './Pages/Admin/AdminDashboard/AdminDashboard';
+import { createClient } from '@supabase/supabase-js';
+import { OurBlog } from './Pages/OurBlog/OurBlog';
+
+
+
+export const supabase = createClient(
+  "https://qdcedrwncwklrdqhzbda.supabase.co",
+  "eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJpc3MiOiJzdXBhYmFzZSIsInJlZiI6InFkY2VkcnduY3drbHJkcWh6YmRhIiwicm9sZSI6ImFub24iLCJpYXQiOjE3MDQyMTA5NjMsImV4cCI6MjAxOTc4Njk2M30.nxDc8SosMwlwDFP_sILt90aeeJpiGsHsX-8thEZTnp8"
+);
+
 
 function App() {
   const router = createBrowserRouter([
@@ -42,7 +52,7 @@ function App() {
     },
     {
       path: "/ourblog",
-      element: <ComingSoon />,
+      element: <OurBlog />,
     },
     {
       path: "/admin",
