@@ -42,28 +42,42 @@ export const OurBlog = (_props: Props) => {
             </div>
           </div>
         </div>
-        <div>
+        <div className={styles.topBlogs}>
           {data.slice(0, 1).map(({ image, title, description, category }) => {
             return (
-              <div>
+              <div className={styles.mainblog}>
                 <img src={image} alt="" />
                 <h3>{title}</h3>
                 <p>{description}</p>
                 <div>
-                  <p>{category}</p>
+                  <p
+                    className={
+                      styles.newsAndUpdates + " " + styles.contentCategory
+                    }
+                  >
+                    {category}
+                  </p>
                 </div>
               </div>
             );
           })}
-          <div>
+          <div className={styles.rightDiv}>
             {data.slice(1, 3).map(({ image, title, description, category }) => {
               return (
                 <div>
                   <img src={image} alt="" />
-                  <h3>{title}</h3>
-                  <p>{description}</p>
                   <div>
-                    <p>{category}</p>
+                    <h3>{title}</h3>
+                    <p>{description}</p>
+                    <div>
+                      <p
+                        className={
+                          styles.newsAndUpdates + " " + styles.contentCategory
+                        }
+                      >
+                        {category}
+                      </p>
+                    </div>
                   </div>
                 </div>
               );
@@ -71,12 +85,12 @@ export const OurBlog = (_props: Props) => {
           </div>
         </div>
       </div>
-      <div>
+      <div className={styles.allBlogs}>
         <h1>All Blogs</h1>
-        <div>
-          {data.map(({ image, title, description, category }) => {
+        <div className={styles.blogWrapper}>
+          {[...data].reverse().map(({ image, title, description, category }) => {
             return (
-              <div>
+              <div className={styles.individualDiv}>
                 <img src={image} alt="" />
                 <h3>{title}</h3>
                 <p>{description}</p>

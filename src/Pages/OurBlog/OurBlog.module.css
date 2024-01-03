@@ -1,7 +1,6 @@
-.Wrapper{
-    display: flex;
-    flex-direction: column;
-
+.Wrapper {
+  display: flex;
+  flex-direction: column;
 }
 .HeaderWrapper {
   display: flex;
@@ -10,16 +9,17 @@
   justify-content: center;
   min-height: 100vh;
   height: fit-content;
-  padding: 100px 0px 50px;
+  padding: 100px 5vw 20px;
   width: 100%;
-  background: url("../assets/backgroundLinesClouds.png") center
-    center/cover no-repeat;
+  gap: 30px;
+  background: url("../assets/backgroundLinesClouds.png") center center/cover
+    no-repeat;
   position: relative;
 }
 .HeaderWrapper .BackgroundText {
   width: 100%;
   position: absolute;
-  z-index: 1;
+  z-index: 0;
   top: 0;
 }
 .HeaderWrapper .BackgroundText h1 {
@@ -29,13 +29,12 @@
   margin-top: 50px;
   font-weight: 900;
 }
-.HeaderWrapper .Header{
-    width: 100%;
+.HeaderWrapper .Header {
+  width: 100%;
 }
 .HeaderWrapper .DetailWrapper {
   height: calc(100% - 50px);
   width: 100%;
-  padding: 0px 5vw 0px 5vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -58,15 +57,143 @@
   padding: 0px 3px;
 }
 
-.HeaderWrapper .DetailWrapper .category{
-    display: flex;
-    gap: 25px;
+.HeaderWrapper .DetailWrapper .category {
+  display: flex;
+  gap: 25px;
+  z-index: 10;
 }
 
-.HeaderWrapper .DetailWrapper .category button{
-    background-color: transparent;
-    color: rgba(3, 72, 82, 1);
-    font-weight: 500;
-    font-size: 18px;
-    cursor: pointer;
+.HeaderWrapper .DetailWrapper .category button {
+  background-color: transparent;
+  color: rgba(3, 72, 82, 1);
+  font-weight: 500;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.HeaderWrapper .topBlogs {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 30px;
+  width: 100%;
+  text-align: left;
+  font-family: "Raleway";
+}
+
+.HeaderWrapper .topBlogs h3 {
+  color: var(--Primary, #034852);
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 28px;
+}
+.HeaderWrapper .topBlogs p {
+  color: #667085;
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.contentCategory {
+  width: fit-content;
+  padding: 5px 10px;
+  border-radius: 20px;
+  font-weight: 500;
+}
+.newsAndUpdates {
+  color: #034852;
+  background-color: rgba(234, 252, 255, 1);
+}
+.CampusDiaries {
+  color: rgba(26, 26, 26, 1);
+  background-color: rgba(240, 240, 240, 1);
+}
+.Events {
+  color: rgba(5, 181, 112, 1);
+  background-color: rgba(234, 255, 247, 1);
+}
+
+.HeaderWrapper .topBlogs .mainblog {
+  width: calc(50% - 15px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
+.HeaderWrapper .topBlogs .mainblog img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+.HeaderWrapper .topBlogs .rightDiv {
+  width: calc(50% - 15px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.HeaderWrapper .topBlogs .rightDiv h3 {
+  color: rgba(26, 26, 26, 1);
+  font-size: 19px;
+  line-height: 28px;
+}
+
+.HeaderWrapper .topBlogs .rightDiv > div {
+  width: 100%;
+  height: calc(100% - 10px);
+  display: flex;
+  gap: 15px;
+}
+
+.HeaderWrapper .topBlogs .rightDiv > div > div {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.HeaderWrapper .topBlogs .rightDiv > div img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+}
+
+@media screen and (max-width: 1500px) {
+  .HeaderWrapper .topBlogs .mainblog {
+    width: 100%;
+  }
+  .HeaderWrapper .topBlogs .rightDiv {
+    width: 100%;
+    flex-direction: row;
+  }
+  .HeaderWrapper .topBlogs .rightDiv > div {
+    flex-direction: column;
+  }
+}
+
+.allBlogs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+  padding: 0px 5vw;
+}
+
+.allBlogs h1 {
+  color: var(--Primary, #034852);
+  font-family: "Raleway";
+  font-size: 50px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+.allBlogs .blogWrapper{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 15px;
+    text-align: left;
 }
