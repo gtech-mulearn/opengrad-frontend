@@ -7,6 +7,9 @@ import { Volunteer } from './Pages/Volunteer/Volunteer';
 import NotFound from './Pages/NotFound/NotFound';
 import { ComingSoon } from './Pages/ComingSoon/ComingSoon';
 
+import { AdminLogin } from './Pages/Admin/AdminLogin/AdminLogin';
+import { AdminDashboard } from './Pages/Admin/AdminDashboard/AdminDashboard';
+
 function App() {
   const router = createBrowserRouter([
     {
@@ -40,6 +43,14 @@ function App() {
     {
       path: "/ourblog",
       element: <ComingSoon />,
+    },
+    {
+      path: "/admin",
+      element: <AdminLogin />,
+    },
+    {
+      path: "/admindashboard",
+      element: <AdminDashboard />,
     },
   ]);
   return <RouterProvider router={router} />;
