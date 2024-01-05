@@ -4,6 +4,7 @@ import { ArrowRight } from "../../assets/svg";
 import { getBlogs } from "./Api";
 import styles from "./OurBlog.module.css";
 import { useState, useEffect } from "react";
+import sound from "./assets/sound.png";
 
 type Props = {};
 
@@ -12,6 +13,7 @@ export const OurBlog = (_props: Props) => {
   const [activeComponent, setActiveComponent] =
     useState<string>("News and Updates");
   const [topBlogs, setTopBlogs] = useState<any[]>([]);
+  const [count, setCount] = useState(6);
 
   const handleFetchDetails = async () => {
     try {
@@ -36,6 +38,12 @@ export const OurBlog = (_props: Props) => {
     setTopBlogs(filteredData);
   }, [activeComponent, data]);
 
+  const handleCount = () => {
+    setCount(count + 3);
+  };
+  const handleCountBack = () => {
+    setCount(6);
+  };
   const datas = [
     {
       name: "News and Updates",
@@ -91,7 +99,7 @@ export const OurBlog = (_props: Props) => {
                   <img src={image} alt="" />
                   <h3>{title}</h3>
                   <p>{description}</p>
-                  <CategoryDivContainer category={category}/>
+                  <CategoryDivContainer category={category} />
                 </div>
               );
             })}
@@ -118,6 +126,7 @@ export const OurBlog = (_props: Props) => {
         <div className={styles.blogWrapper}>
           {[...data]
             .reverse()
+            .slice(0, count)
             .map(({ image, title, description, category }) => {
               return (
                 <div className={styles.individualDiv}>
@@ -129,24 +138,30 @@ export const OurBlog = (_props: Props) => {
               );
             })}
         </div>
-        <button>View More</button>
+        {count >= data.length ? (
+          <button onClick={handleCountBack}>Show Less</button>
+        ) : (
+          <button onClick={handleCount}>View More</button>
+        )}
       </div>
-      <div>
-        <div>
+      <div className={styles.bannerSection}>
+        <div className={styles.LeftSection}>
           <h1>
             <p>Join us in</p>&nbsp;<span>rebuilding the future</span>&nbsp;
             <p>of Indian Education</p>
           </h1>
-          <p>
-            Help us build resources, mentor aspirants and support our activities
-            and events.
-          </p>
-          <button>
-            <p>Join Us</p>
-            <ArrowRight color="rgba(3, 72, 82, 1)" />
-          </button>
+          <div>
+            <p>
+              Help us build resources, mentor aspirants and support our
+              activities and events.
+            </p>
+            <button>
+              <p>Join Us</p>
+              <ArrowRight color="rgba(3, 72, 82, 1)" />
+            </button>
+          </div>
         </div>
-        <img src="" alt="" />
+        <img src={sound} alt="" />
       </div>
       <Footer />
     </div>

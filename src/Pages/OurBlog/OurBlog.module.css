@@ -1,6 +1,7 @@
 .Wrapper {
   display: flex;
   flex-direction: column;
+  align-items: center;
 }
 .HeaderWrapper {
   display: flex;
@@ -214,7 +215,7 @@
   flex-direction: column;
   align-items: center;
   gap: 30px;
-  padding: 0px 5vw;
+  padding: 0px 5vw 6vh;
 }
 
 .allBlogs h1 {
@@ -287,4 +288,29 @@
   .allBlogs .blogWrapper .individualDiv {
     width: calc(100%);
   }
+}
+
+
+.bannerSection{
+  width: 90vw;
+  display: flex;
+  align-items: center;
+ 
+  background: url("./assets/background.png")center center/cover no-repeat;
+}
+
+.bannerSection .LeftSection{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  width: 80%;
+}
+.bannerSection .LeftSection h1{
+  color: white;
+  width: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.bannerSection>img{
+  width: 20%;
 }
