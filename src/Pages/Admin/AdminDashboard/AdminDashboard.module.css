@@ -1,0 +1,120 @@
+/* AdminDashboard css */
+.AdminDashboard {
+  padding: 100px 5vw 50px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 6vh;
+}
+
+.AdminDashboard .buttonWrapper {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.AdminDashboard .head{
+display: flex;
+align-items: center;
+justify-content: space-between;
+width: 100%;
+gap: 20px;
+flex-wrap: wrap;
+}
+.AdminDashboard .head > a {
+  text-decoration: none;
+  color: white;
+  background-color: #034852;
+  padding: 10px 25px;
+  border-radius: 10px;
+}
+.AdminDashboard .buttonWrapper button {
+  padding: 20px 35px;
+  border-radius: 10px;
+}
+
+.AdminDashboard h1 {
+  color: var(--Primary, #034852);
+  font-family: "Raleway";
+  font-size: 35px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+
+/* Blogs section css */
+.allBlogs {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 30px;
+}
+
+.allBlogs .header {
+  display: flex;
+  gap: 20px;
+  justify-content: space-between;
+  width: 100%;
+}
+
+.allBlogs .blogWrapper {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  text-align: left;
+  justify-content: center;
+}
+
+.allBlogs .blogWrapper .individualDiv {
+  width: calc(100% / 3 - 10px);
+  height: 100%;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  gap: 10px;
+  min-width: 300px;
+}
+
+.allBlogs .blogWrapper .individualDiv img {
+  height: 300px;
+  width: 100%;
+  object-fit: cover;
+}
+
+.allBlogs .blogWrapper .individualDiv h3 {
+  color: #1a1a1a;
+
+  font-size: 24px;
+  font-style: normal;
+  font-weight: 600;
+  line-height: 32px;
+}
+.allBlogs .blogWrapper .individualDiv p {
+  color: #667085;
+
+  font-size: 16px;
+  font-style: normal;
+  font-weight: 400;
+  line-height: 24px;
+}
+.allBlogs .blogWrapper .individualDiv .categoryDiv {
+  justify-self: flex-end;
+}
+.allBlogs button {
+  background-color: rgba(0, 39, 45, 1);
+  padding: 11px 32px;
+  font-size: 18px;
+  border-radius: 8px;
+  font-family: "Raleway";
+}
+@media screen and (max-width: 1050px) {
+  .allBlogs .blogWrapper .individualDiv {
+    width: calc(100% / 2 - 8px);
+  }
+}
+
+@media screen and (max-width: 685px) {
+  .allBlogs .blogWrapper .individualDiv {
+    width: calc(100%);
+  }
+}

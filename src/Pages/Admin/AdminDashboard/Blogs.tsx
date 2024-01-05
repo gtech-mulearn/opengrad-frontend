@@ -1,5 +1,6 @@
 import { useState, useEffect } from "react";
 import { getBlogs } from "./Apis";
+import styles from "./AdminDashboard.module.css";
 
 type Props = {};
 
@@ -21,25 +22,34 @@ export const Blogs = (_props: Props) => {
   }, []);
 
   return (
-    <div>
-      <div>
-        <h2>Blogs</h2>
+    <div className={styles.allBlogs}>
+      <div className={styles.header}>
+        {" "}
+        <h1>All Blogs</h1>
         <button>add</button>
       </div>
-      <div>
-        {data.map(({ image, title, description, category }) => {
+
+      <div className={styles.blogWrapper}>
+        {[...data].reverse().slice(0,6).map(({ image, title, description, category }) => {
           return (
-            <div>
+            <div className={styles.individualDiv}>
               <img src={image} alt="" />
               <h3>{title}</h3>
               <p>{description}</p>
-              <div>
-                <p>{category}</p>
+              <div className={styles.categoryDiv}>
+                <p
+                  className={
+                    styles.newsAndUpdates + " " + styles.contentCategory
+                  }
+                >
+                  {category}
+                </p>
               </div>
             </div>
           );
         })}
       </div>
+      <button>View More</button>
     </div>
   );
 };
