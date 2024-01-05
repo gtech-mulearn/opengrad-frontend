@@ -22,6 +22,7 @@
   position: absolute;
   z-index: 0;
   top: 0;
+  left: 0;
 }
 .HeaderWrapper .BackgroundText h1 {
   font-size: 20.6vw;
@@ -290,27 +291,90 @@
   }
 }
 
-
-.bannerSection{
-  width: 90vw;
+.bannerSection {
+  width: 90%;
   display: flex;
-  align-items: center;
- 
-  background: url("./assets/background.png")center center/cover no-repeat;
+  align-items: flex-end;
+  height: fit-content;
+  padding: 0vh 5vw 0vh 5vw;
+  margin-bottom: 6vh;
+  background: url("./assets/background.png") center center/cover no-repeat;
 }
 
-.bannerSection .LeftSection{
+.bannerSection .LeftSection {
   display: flex;
   flex-direction: column;
   gap: 10px;
   width: 80%;
+  padding: 4vh 0vw 5vh 0vw;
+  text-align: left;
+  margin-right: -1vw;
 }
-.bannerSection .LeftSection h1{
+.bannerSection .LeftSection h1 {
   color: white;
   width: 100%;
   display: flex;
   flex-wrap: wrap;
+  font-size: 4.3vw;
+  line-height: 1.1;
 }
-.bannerSection>img{
-  width: 20%;
+.bannerSection .LeftSection h1 span {
+  color: #034852;
+  border-bottom: 1vw solid rgba(255, 255, 255, 0.5);
+  height: 4.3vw;
+}
+
+.bannerSection .LeftSection .buttonandpara > p {
+  color: #fff;
+  font-size: 20px;
+  font-style: normal;
+  font-weight: 500;
+}
+.bannerSection .LeftSection .buttonandpara > button {
+  display: flex;
+  gap: 10px;
+  border-radius: 8px;
+  background-color: #fff;
+  font-size: 18px;
+  color: #034852;
+  padding: 11px 32px;
+  margin-top: 5px;
+}
+
+.bannerSection > img {
+  width: calc(20% + 1vw);
+  height: 100%;
+}
+
+@media screen and (max-width: 600px) {
+  .bannerSection .LeftSection {
+    width: 100%;
+    margin-right: 0vw;
+    padding: 4vh 0px;
+  }
+  .bannerSection .LeftSection h1 {
+    font-size: 5.4vw;
+    line-height: 1.1;
+  }
+  .bannerSection .LeftSection h1 span {
+    color: #034852;
+    border-bottom: 1.5vw solid rgba(255, 255, 255, 0.5);
+    height: 5.2vw;
+  }
+  .bannerSection .LeftSection .buttonandpara > p {
+    font-size: 16px;
+    margin-bottom: 10px;
+  }
+  .bannerSection .LeftSection .buttonandpara > button {
+    font-size: 16px;
+    padding: 10px 25px;
+  }
+  .bannerSection > img {
+    display: none;
+  }
+}
+@media screen and (max-width: 420px) {
+  .bannerSection .LeftSection .buttonandpara > p {
+    font-size: 14px;
+  }
 }

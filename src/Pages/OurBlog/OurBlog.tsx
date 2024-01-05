@@ -147,10 +147,10 @@ export const OurBlog = (_props: Props) => {
       <div className={styles.bannerSection}>
         <div className={styles.LeftSection}>
           <h1>
-            <p>Join us in</p>&nbsp;<span>rebuilding the future</span>&nbsp;
+            <p>Join us in</p>&nbsp;<span>rebuilding the future</span>
             <p>of Indian Education</p>
           </h1>
-          <div>
+          <div className={styles.buttonandpara}>
             <p>
               Help us build resources, mentor aspirants and support our
               activities and events.
