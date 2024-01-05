@@ -45,18 +45,25 @@ export const AdminLogin = (_props: Props) => {
       handleLogin(data);
     }
   };
+
+
+  const goToHome = () => {
+    navigate('/home'); // Navigate to the '/home' route
+  };
   return (
     <div className={styles.RegistrationWrapper}>
       <div className={styles.headers}>
         <h2>Hello Again!</h2>
-        <h3>Welcome back to Park Plus, login to continue</h3>
+        <h3>
+          Welcome back to Opengrad - Admin,<br></br> login to continue
+        </h3>
       </div>
       {/* <img src={image} alt="" /> */}
       <div className={styles.InputContainerWrapper}>
         <div>
           <input
             type="text"
-            placeholder="Enter username or Email"
+            placeholder="Email"
             value={data.usernameOrEmail}
             onChange={(e) =>
               setData({
@@ -80,9 +87,11 @@ export const AdminLogin = (_props: Props) => {
             }
           />
           {data.passwordError && <p>{data.passwordError}</p>}
-          <a href="">Forgot Password?</a>
         </div>
-        <button onClick={handleSubmit}>Sign In</button>
+        <div className={styles.buttonWrapper}>
+          <button onClick={handleSubmit}>Log In</button>
+          <button onClick={goToHome}>Home</button>
+        </div>
       </div>
     </div>
   );
