@@ -5,6 +5,7 @@ import { getBlogs } from "./Api";
 import styles from "./OurBlog.module.css";
 import { useState, useEffect } from "react";
 import sound from "./assets/sound.png";
+import { useNavigate } from "react-router-dom";
 
 type Props = {};
 
@@ -62,6 +63,11 @@ export const OurBlog = (_props: Props) => {
       value: "Insights",
     },
   ];
+  const navigate = useNavigate();
+
+  const detailBlogs = (id: any) => {
+    navigate(`/detailedblog/${id}`);
+  };
   return (
     <div className={styles.Wrapper}>
       <Navbar />
@@ -93,9 +99,12 @@ export const OurBlog = (_props: Props) => {
         <div className={styles.topBlogs}>
           {topBlogs
             .slice(0, 1)
-            .map(({ image, title, description, category }) => {
+            .map(({ id, image, title, description, category }) => {
               return (
-                <div className={styles.mainblog}>
+                <div
+                  className={styles.mainblog}
+                  onClick={() => detailBlogs(id)}
+                >
                   <img src={image} alt="" />
                   <h3>{title}</h3>
                   <p>{description}</p>
@@ -106,9 +115,9 @@ export const OurBlog = (_props: Props) => {
           <div className={styles.rightDiv}>
             {topBlogs
               .slice(1, 3)
-              .map(({ image, title, description, category }) => {
+              .map(({ id, image, title, description, category }) => {
                 return (
-                  <div>
+                  <div onClick={() => detailBlogs(id)}>
                     <img src={image} alt="" />
                     <div>
                       <h3>{title}</h3>
@@ -127,9 +136,12 @@ export const OurBlog = (_props: Props) => {
           {[...data]
             .reverse()
             .slice(0, count)
-            .map(({ image, title, description, category }) => {
+            .map(({id, image, title, description, category }) => {
               return (
-                <div className={styles.individualDiv}>
+                <div
+                  className={styles.individualDiv}
+                  onClick={() => detailBlogs(id)}
+                >
                   <img src={image} alt="" />
                   <h3>{title}</h3>
                   <p>{description}</p>
