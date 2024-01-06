@@ -133,6 +133,16 @@
   color: rgba(26, 26, 26, 1);
   background-color: rgba(230, 230, 230, 1);
 }
+.author {
+  display: flex;
+  text-wrap: wrap;
+  color: #494949;
+
+  font-family: "Raleway";
+  font-size: 14px;
+  font-style: normal;
+  font-weight: 600;
+}
 .HeaderWrapper .topBlogs .mainblog {
   width: calc(50% - 15px);
   height: 100%;
@@ -145,7 +155,7 @@
 .HeaderWrapper .topBlogs .mainblog img {
   width: 100%;
   height: 100%;
-  max-height: 400px;
+  max-height: 310px;
   object-fit: cover;
 }
 
@@ -181,10 +191,14 @@
 .HeaderWrapper .topBlogs .rightDiv > div img {
   height: 25vh;
   width: 30vw;
-  min-height: 200px;
+  min-height: 220px;
   min-width: 350px;
 
   object-fit: cover;
+}
+
+@media screen and (max-width: 1800px){
+
 }
 
 @media screen and (max-width: 1500px) {
@@ -240,7 +254,7 @@
   justify-content: center;
 }
 
-.allBlogs .blogWrapper .individualDiv {
+ .individualBlogDiv {
   width: calc(100% / 3 - 10px);
   height: 100%;
   display: flex;
@@ -251,21 +265,22 @@
   cursor: pointer;
 }
 
-.allBlogs .blogWrapper .individualDiv img {
-  height: 300px;
+.individualBlogDiv img {
+  height: 305px;
   width: 100%;
   object-fit: cover;
+  padding-bottom: 5px;
 }
 
-.allBlogs .blogWrapper .individualDiv h3 {
+ .individualBlogDiv h3 {
   color: #1a1a1a;
 
   font-size: 24px;
   font-style: normal;
   font-weight: 600;
-  line-height: 32px;
+  line-height: 1.2;
 }
-.allBlogs .blogWrapper .individualDiv p {
+.individualBlogDiv p {
   color: #667085;
 
   font-size: 16px;
@@ -286,13 +301,13 @@
   font-family: "Raleway";
 }
 @media screen and (max-width: 1050px) {
-  .allBlogs .blogWrapper .individualDiv {
+  .individualBlogDiv {
     width: calc(100% / 2 - 8px);
   }
 }
 
 @media screen and (max-width: 685px) {
-  .allBlogs .blogWrapper .individualDiv {
+   .individualBlogDiv {
     width: calc(100%);
   }
 }
