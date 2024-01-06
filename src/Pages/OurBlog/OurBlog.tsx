@@ -183,7 +183,7 @@ export const OurBlog = (_props: Props) => {
 interface CategoryDivContainerProps {
   category: string;
 }
-const CategoryDivContainer = ({ category }: CategoryDivContainerProps) => {
+export const CategoryDivContainer = ({ category }: CategoryDivContainerProps) => {
   return (
     <div className={styles.categoryDiv}>
       {category.split(",").map((cat: string) => {

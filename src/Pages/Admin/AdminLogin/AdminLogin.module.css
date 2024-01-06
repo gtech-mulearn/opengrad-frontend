@@ -26,6 +26,7 @@
   width: 100%;
   padding: 10px 20px;
   border-radius: 8px;
+  color: black;
 }
 .RegistrationWrapper .InputContainerWrapper .buttonWrapper {
   flex-direction: row;
