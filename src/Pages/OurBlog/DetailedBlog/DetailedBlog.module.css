@@ -6,18 +6,33 @@
 .HeaderWrapper {
   display: flex;
   flex-direction: column;
-  align-items: center;
+  align-items: flex-start;
   justify-content: center;
   min-height: 100vh;
   height: fit-content;
   padding: 100px 5vw 20px;
   width: 100%;
-  gap: 30px;
+  gap: 10px;
   background: url("../../assets/backgroundLinesClouds.png") center top/cover
     no-repeat;
   position: relative;
   background-size: 100% 100vh;
   font-family: "Raleway";
+  text-align: left;
+}
+.HeaderWrapper .BackgroundText {
+  width: 100%;
+  position: absolute;
+  z-index: 0;
+  top: 0;
+  left: 0;
+}
+.HeaderWrapper .BackgroundText h1 {
+  font-size: 20.6vw;
+  color: var(--Secondary, #05b570);
+  opacity: 0.06;
+  margin-top: 50px;
+  font-weight: 900;
 }
 
 .HeaderWrapper .author {
@@ -26,8 +41,66 @@
   font-style: normal;
   font-weight: 500;
   line-height: 28px;
+  width: 100%;
 }
 
-.HeaderWrapper .author span{
-    color: rgba(5, 181, 112, 1);
+.HeaderWrapper .author span {
+  color: rgba(5, 181, 112, 1);
+}
+.HeaderWrapper h2 {
+  width: 100%;
+  color: var(--Primary, #034852);
+  font-size: 52px;
+  font-style: normal;
+  font-weight: 700;
+  line-height: normal;
+}
+.HeaderWrapper img {
+  width: 100%;
+  height: 70vh;
+  min-height: 300px;
+  object-fit: cover;
+}
+.WNRcontainer {
+  width: 100%;
+  padding: 0px 5vw 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 5vh;
+}
+
+.WNRcontainer h1 {
+  color: var(--Primary, #034852);
+  text-align: center;
+  font-size: 50px;
+  font-weight: 700;
+}
+
+.WNRcontainer > div {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  gap: 10px;
+  text-align: left;
+}
+
+@media screen and (max-width: 900px) {
+  .HeaderWrapper h2 {
+    font-size: 42px;
+  }
+  .HeaderWrapper img {
+    height: 50vh;
+    min-height: 320px;
+  }
+}
+
+
+@media screen and (max-width: 500px) {
+  .HeaderWrapper h2 {
+    font-size: 30px;
+  }
+  .HeaderWrapper img {
+    height: 40vh;
+    min-height: 280px;
+  }
 }

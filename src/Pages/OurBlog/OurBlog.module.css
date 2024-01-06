@@ -254,7 +254,7 @@
   justify-content: center;
 }
 
-.allBlogs .blogWrapper .individualDiv {
+ .individualBlogDiv {
   width: calc(100% / 3 - 10px);
   height: 100%;
   display: flex;
@@ -265,14 +265,14 @@
   cursor: pointer;
 }
 
-.allBlogs .blogWrapper .individualDiv img {
+.individualBlogDiv img {
   height: 305px;
   width: 100%;
   object-fit: cover;
   padding-bottom: 5px;
 }
 
-.allBlogs .blogWrapper .individualDiv h3 {
+ .individualBlogDiv h3 {
   color: #1a1a1a;
 
   font-size: 24px;
@@ -280,7 +280,7 @@
   font-weight: 600;
   line-height: 1.2;
 }
-.allBlogs .blogWrapper .individualDiv p {
+.individualBlogDiv p {
   color: #667085;
 
   font-size: 16px;
@@ -301,13 +301,13 @@
   font-family: "Raleway";
 }
 @media screen and (max-width: 1050px) {
-  .allBlogs .blogWrapper .individualDiv {
+  .individualBlogDiv {
     width: calc(100% / 2 - 8px);
   }
 }
 
 @media screen and (max-width: 685px) {
-  .allBlogs .blogWrapper .individualDiv {
+   .individualBlogDiv {
     width: calc(100%);
   }
 }

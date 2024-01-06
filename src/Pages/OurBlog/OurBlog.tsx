@@ -69,18 +69,18 @@ export const OurBlog = (_props: Props) => {
     navigate(`/detailedblog/${id}`);
   };
 
-const formatDate = (inputDate: string | number | Date) => {
-  const options: Intl.DateTimeFormatOptions = {
-    year: "numeric",
-    month: "short",
-    day: "2-digit",
+  const formatDate = (inputDate: string | number | Date) => {
+    const options: Intl.DateTimeFormatOptions = {
+      year: "numeric",
+      month: "short",
+      day: "2-digit",
+    };
+    const formattedDate = new Date(inputDate).toLocaleDateString(
+      "en-US",
+      options
+    );
+    return formattedDate;
   };
-  const formattedDate = new Date(inputDate).toLocaleDateString(
-    "en-US",
-    options
-  );
-  return formattedDate;
-};
   return (
     <div className={styles.Wrapper}>
       <Navbar />
@@ -156,7 +156,7 @@ const formatDate = (inputDate: string | number | Date) => {
                   description,
                   category,
                 }) => {
-                   const formattedDate = formatDate(dateofblog);
+                  const formattedDate = formatDate(dateofblog);
                   return (
                     <div onClick={() => detailBlogs(id)}>
                       <img src={image} alt="" />
@@ -195,24 +195,16 @@ const formatDate = (inputDate: string | number | Date) => {
                 description,
                 category,
               }) => {
-                const formattedDate = formatDate(dateofblog);
                 return (
-                  <div
-                    className={styles.individualDiv}
-                    onClick={() => detailBlogs(id)}
-                  >
-                    <img src={image} alt="" />
-                    <p className={styles.author}>
-                      {author} • {formattedDate}
-                    </p>
-                    <h3>{title}</h3>
-                    <p>
-                      {description.length > 200
-                        ? `${description.slice(0, 200)}...`
-                        : description}
-                    </p>
-                    <CategoryDivContainer category={category} />
-                  </div>
+                  <IndividualBlogContainer
+                    id={id}
+                    image={image}
+                    title={title}
+                    author={author}
+                    description={description}
+                    dateofblog={dateofblog}
+                    category={category}
+                  />
                 );
               }
             )}
@@ -225,6 +217,62 @@ const formatDate = (inputDate: string | number | Date) => {
       </div>
       <BannerOFBlog />
       <Footer />
+    </div>
+  );
+};
+
+interface IndividualBlogContainerProps {
+  id: string;
+  image: string;
+  title: string;
+  author: string;
+  description: string;
+  dateofblog: string;
+  category: string;
+}
+
+export const IndividualBlogContainer = ({
+  id,
+  title,
+  image,
+  category,
+  dateofblog,
+  author,
+  description,
+}: IndividualBlogContainerProps) => {
+  const navigate = useNavigate();
+  const detailBlogs = (id: any) => {
+    console.log(id);
+    navigate(`/detailedblog/${id}`);
+     window.location.reload();
+  };
+
+  const formatDate = (inputDate: string | number | Date) => {
+    const options: Intl.DateTimeFormatOptions = {
+      year: "numeric",
+      month: "short",
+      day: "2-digit",
+    };
+    const formattedDate = new Date(inputDate).toLocaleDateString(
+      "en-US",
+      options
+    );
+    return formattedDate;
+  };
+  const formattedDate = formatDate(dateofblog);
+  return (
+    <div className={styles.individualBlogDiv} onClick={() => detailBlogs(id)}>
+      <img src={image} alt="" />
+      <p className={styles.author}>
+        {author} • {formattedDate}
+      </p>
+      <h3>{title}</h3>
+      <p>
+        {description.length > 200
+          ? `${description.slice(0, 200)}...`
+          : description}
+      </p>
+      <CategoryDivContainer category={category} />
     </div>
   );
 };
@@ -253,8 +301,7 @@ export const CategoryDivContainer = ({
   );
 };
 
-
-export const BannerOFBlog = ()=>{
+export const BannerOFBlog = () => {
   return (
     <div className={styles.bannerSection}>
       <div className={styles.LeftSection}>
@@ -276,4 +323,4 @@ export const BannerOFBlog = ()=>{
       <img src={sound} alt="" />
     </div>
   );
-}
+};
