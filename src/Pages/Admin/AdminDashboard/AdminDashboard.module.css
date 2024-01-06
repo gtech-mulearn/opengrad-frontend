@@ -129,9 +129,8 @@
   width: 80%;
   padding: 6vh 5vw;
   border-radius: 8px;
-
 }
-.modalOverlay h2{
+.modalOverlay h2 {
   color: #fff;
 }
 .modalOverlay form {
@@ -169,22 +168,61 @@
   height: 100px;
 }
 
-.modalOverlay form > div select {
-  background-color: white;
-  color: black;
-  width: 100%;
+.modalOverlay form > .cateoriessection > div {
   display: flex;
-  gap: 10px;
-  padding: 10px 20px;
-  border-radius: 8px;
-  height: fit-content;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  width: fit-content;
+  width: calc(100% - 120px);
+  gap: 15px;
 }
-.modalOverlay form > div select option {
-  padding-bottom: 5px;
-  padding-top: 5px;
-  font-size: 17px;
-  font-weight: 500;
+.modalOverlay form > .cateoriessection > div .innercheckbox {
+  display: flex;
+  text-wrap: nowrap;
+  align-items: center;
+  gap: 10px;
+}
+
+.modalOverlay form > .cateoriessection input[type="checkbox"] {
+  /* ...existing styles */
+  display: grid;
+  place-content: center;
+  width: 30px;
+  height: 30px;
+  border-radius: 50%;
+}
+
+.modalOverlay form > .cateoriessection input[type="checkbox"]::before {
+  content: "";
+  width: 0.65em;
+  height: 0.65em;
+  transform: scale(0);
+  transition: 120ms transform ease-in-out;
+  box-shadow: inset 1em 1em var(--form-control-color);
+}
+
+.modalOverlay form > .cateoriessection input[type="checkbox"]:checked::before {
+  transform: scale(1);
+}
+.modalOverlay form > .buttonWrappers {
+  display: flex;
+  width: 100%;
+  align-items: center;
+  justify-content: center;
+  flex-wrap: wrap;
+  gap: 15px;
 }
 .modalOverlay form button {
   width: fit-content;
+}
+
+@media screen and (max-width: 600px) {
+  .modalOverlay form > div {
+    flex-direction: column;
+  }
+  .modalOverlay form > .cateoriessection > div {
+    width: 100%;
+    flex-direction: column;
+  }
+
 }

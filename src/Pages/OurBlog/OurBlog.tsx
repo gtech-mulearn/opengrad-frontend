@@ -107,7 +107,11 @@ export const OurBlog = (_props: Props) => {
                 >
                   <img src={image} alt="" />
                   <h3>{title}</h3>
-                  <p>{description}</p>
+                  <p>
+                    {description.length > 200
+                      ? `${description.slice(0, 200)}...`
+                      : description}
+                  </p>
                   <CategoryDivContainer category={category} />
                 </div>
               );
@@ -121,7 +125,11 @@ export const OurBlog = (_props: Props) => {
                     <img src={image} alt="" />
                     <div>
                       <h3>{title}</h3>
-                      <p>{description}</p>
+                      <p>
+                        {description.length > 200
+                          ? `${description.slice(0, 200)}...`
+                          : description}
+                      </p>
                       <CategoryDivContainer category={category} />
                     </div>
                   </div>
@@ -144,7 +152,11 @@ export const OurBlog = (_props: Props) => {
                 >
                   <img src={image} alt="" />
                   <h3>{title}</h3>
-                  <p>{description}</p>
+                  <p>
+                    {description.length > 200
+                      ? `${description.slice(0, 200)}...`
+                      : description}
+                  </p>
                   <CategoryDivContainer category={category} />
                 </div>
               );

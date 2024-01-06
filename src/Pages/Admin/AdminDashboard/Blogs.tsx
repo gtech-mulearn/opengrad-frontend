@@ -16,13 +16,25 @@ export const Blogs = (_props: Props) => {
     categories: "",
   });
   const [count, setCount] = useState(6);
-
+  const datas = [
+    {
+      name: "News and Updates",
+    },
+    {
+      name: "Events",
+    },
+    {
+      name: "Campus Diaries",
+    },
+    {
+      name: "Insights",
+    },
+  ];
   const handleFetchDetails = async () => {
     try {
       const response = await getBlogs();
       if (response) {
         setData(response);
-        console.log(data);
       }
     } catch (error) {
       console.log(error);
@@ -34,7 +46,7 @@ export const Blogs = (_props: Props) => {
   }, []);
 
   const handleAddButtonClick = () => {
-    setShowAddForm(true);
+    setShowAddForm(!showAddForm);
   };
 
   const handleViewMoreClick = () => {
@@ -59,15 +71,6 @@ export const Blogs = (_props: Props) => {
       [name]: value,
     }));
   };
-  // const handleCategoriesChange = (selectedCategories: string[]) => {
-  //   const categoriesString = selectedCategories.join(", ");
-
-  //   setFormData((prevData) => ({
-  //     ...prevData,
-  //     categories: categoriesString,
-  //   }));
-  //   console.log(categoriesString);
-  // };
 
   const handleCategoryCheckboxChange = (category: string) => {
     setFormData((prevData) => {
@@ -88,10 +91,8 @@ export const Blogs = (_props: Props) => {
 
   const handleAddFormSubmit = async (e: React.FormEvent) => {
     e.preventDefault();
-    // Implement logic to submit the form data (formData)
-    // Send the data to your API or perform necessary actions
+
     console.log(formData);
-    // Reset the form and close the modal
     setFormData({
       title: "",
       image: "",
@@ -126,7 +127,11 @@ export const Blogs = (_props: Props) => {
               <div key={title} className={styles.individualDiv}>
                 <img src={image} alt="" />
                 <h3>{title}</h3>
-                <p>{description}</p>
+                <p>
+                  {description.length > 200
+                    ? `${description.slice(0, 200)}...`
+                    : description}
+                </p>
                 <CategoryDivContainer category={category} />
               </div>
             );
@@ -139,7 +144,6 @@ export const Blogs = (_props: Props) => {
         <button onClick={handleViewMoreClick}>View More</button>
       )}
 
-      {/* Add Form Modal */}
       {showAddForm && (
         <div className={styles.modalOverlay}>
           <div className={styles.addForm}>
@@ -177,79 +181,37 @@ export const Blogs = (_props: Props) => {
                   required
                 />
               </div>
-              {/* <div>
-                <label>Categories:</label>
-             
-                <select
-                  multiple
-                  value={formData.categories.split(", ")} 
-                  onChange={(e) =>
-                    handleCategoriesChange(
-                      Array.from(
-                        e.target.selectedOptions,
-                        (option) => option.value
-                      )
-                    )
-                  }
-                  required
-                >
-                  <option value="News and Updates">News and Updates</option>
-                  <option value="Events">Events</option>
-                  <option value="Campus Diaries">Campus Diaries</option>
-                  <option value="Insights">Insights</option>
-                </select>
-              </div> */}
 
-              <div>
-                <label>Categories:</label>
-                {/* Implement logic for category selection using checkboxes */}
-                {/* Example: */}
+              <div className={styles.cateoriessection}>
+                <label>Categories:</label>{" "}
                 <div>
-                  <input
-                    type="checkbox"
-                    id="newsUpdates"
-                    value="News and Updates"
-                    checked={formData.categories.includes("News and Updates")}
-                    onChange={() =>
-                      handleCategoryCheckboxChange("News and Updates")
-                    }
-                  />
-                  <label htmlFor="newsUpdates">News and Updates</label>
-                </div>
-                <div>
-                  <input
-                    type="checkbox"
-                    id="events"
-                    value="Events"
-                    checked={formData.categories.includes("Events")}
-                    onChange={() => handleCategoryCheckboxChange("Events")}
-                  />
-                  <label htmlFor="events">Events</label>
-                </div>
-                <div>
-                  <input
-                    type="checkbox"
-                    id="campusDiaries"
-                    value="Campus Diaries"
-                    checked={formData.categories.includes("Campus Diaries")}
-                    onChange={() =>
-                      handleCategoryCheckboxChange("Campus Diaries")
-                    }
-                  />
-                  <label htmlFor="campusDiaries">Campus Diaries</label>
-                </div>
-                <div>
-                  <input
-                    type="checkbox"
-                    id="insights"
-                    value="Insights"
-                    checked={formData.categories.includes("Insights")}
-                    onChange={() => handleCategoryCheckboxChange("Insights")}
-                  />
-                  <label htmlFor="insights">Insights</label>
+                  {datas.map(({ name }) => {
+                    return (
+                      <div className={styles.innercheckbox}>
+                        <input
+                          type="checkbox"
+                          id={name}
+                          value={name}
+                          checked={formData.categories.includes(name)}
+                          onChange={() => handleCategoryCheckboxChange(name)}
+                        />
+                        <label htmlFor={name}>{name}</label>
+                      </div>
+                    );
+                  })}
                 </div>
               </div>
-              <button type="submit">Submit</button>
+              <span className={styles.buttonWrappers}>
+                <button style={{ backgroundColor: "green" }} type="submit">
+                  Submit
+                </button>
+                <button
+                  style={{ backgroundColor: "red" }}
+                  onClick={handleAddButtonClick}
+                >
+                  Close
+                </button>
+              </span>
             </form>
           </div>
         </div>
