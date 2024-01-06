@@ -11,6 +11,7 @@ import { AdminLogin } from './Pages/Admin/AdminLogin/AdminLogin';
 import { AdminDashboard } from './Pages/Admin/AdminDashboard/AdminDashboard';
 import { createClient } from '@supabase/supabase-js';
 import { OurBlog } from './Pages/OurBlog/OurBlog';
+import { DetailedBlog } from './Pages/OurBlog/DetailedBlog/DetailedBlog';
 
 
 
@@ -53,6 +54,10 @@ function App() {
     {
       path: "/ourblog",
       element: <OurBlog />,
+    },
+    {
+      path: "/detailedblog/:id",
+      element: <DetailedBlog />,
     },
     {
       path: "/admin",
