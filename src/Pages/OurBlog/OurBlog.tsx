@@ -223,25 +223,7 @@ const formatDate = (inputDate: string | number | Date) => {
           <button onClick={handleCount}>View More</button>
         )}
       </div>
-      <div className={styles.bannerSection}>
-        <div className={styles.LeftSection}>
-          <h1>
-            <p>Join us in</p>&nbsp;<span>rebuilding the future</span>
-            <p>of Indian Education</p>
-          </h1>
-          <div className={styles.buttonandpara}>
-            <p>
-              Help us build resources, mentor aspirants and support our
-              activities and events.
-            </p>
-            <button>
-              <p>Join Us</p>
-              <ArrowRight color="rgba(3, 72, 82, 1)" />
-            </button>
-          </div>
-        </div>
-        <img src={sound} alt="" />
-      </div>
+      <BannerOFBlog />
       <Footer />
     </div>
   );
@@ -270,3 +252,28 @@ export const CategoryDivContainer = ({
     </div>
   );
 };
+
+
+export const BannerOFBlog = ()=>{
+  return (
+    <div className={styles.bannerSection}>
+      <div className={styles.LeftSection}>
+        <h1>
+          <p>Join us in</p>&nbsp;<span>rebuilding the future</span>
+          <p>of Indian Education</p>
+        </h1>
+        <div className={styles.buttonandpara}>
+          <p>
+            Help us build resources, mentor aspirants and support our activities
+            and events.
+          </p>
+          <button>
+            <p>Join Us</p>
+            <ArrowRight color="rgba(3, 72, 82, 1)" />
+          </button>
+        </div>
+      </div>
+      <img src={sound} alt="" />
+    </div>
+  );
+}
