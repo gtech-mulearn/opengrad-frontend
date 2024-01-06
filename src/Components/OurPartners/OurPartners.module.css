@@ -28,13 +28,10 @@
 .Partners .PartnersImageWrapper img {
   height: 100px !important;
   object-fit: contain;
-  filter: grayscale(100%);
   padding: 0px 0px 10px;
   flex-shrink: 0;
 }
-.Partners .PartnersImageWrapper img:hover {
-  filter: grayscale(0%);
-}
+
 .PartnersImageWrapper > div .name {
   display: flex;
   flex-direction: column;

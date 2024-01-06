@@ -75,10 +75,14 @@ export const DetailedBlog = (_props: Props) => {
       {data.map(
         ({ image, title, author, dateofblog, description, category }) => {
           const formattedDate = formatDate(dateofblog);
+           const formattedDescription = description.replace(
+             /<br>/g,
+             "<br/><br/>"
+           );
           return (
             <div className={styles.HeaderWrapper}>
               <div className={styles.BackgroundText}>
-                <h1>Our Blogs</h1>
+                <h1>Our Blog</h1>
               </div>
               <p className={styles.author}>
                 Posted on {formattedDate} • <span>{author}</span>
@@ -86,7 +90,7 @@ export const DetailedBlog = (_props: Props) => {
               <h2>{title}</h2>
               <img src={image} alt="" />
 
-              <p>{description}</p>
+              <div className={styles.description} dangerouslySetInnerHTML={{ __html: formattedDescription }} />
               <CategoryDivContainer category={category} />
             </div>
           );

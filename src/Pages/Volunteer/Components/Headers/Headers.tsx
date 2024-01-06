@@ -25,17 +25,15 @@ export const Headers = (_props: Props) => {
             </h2>
             <p style={{ marginTop: "10px" }}>
               Do you have what it takes to democratize one of the most exploited
-              industries across the country, one of the most plagued issues
-              hindering the underserved communities! Volunteer with the OpenGrad
-              Foundation to join the revolution of making entrance coaching free
-              and accessible, enabling millions of underserved Indians to
-              realize their dreams.
+              industries across the country, hindering to uplift communities!
+              Volunteer with the OpenGrad Foundation to join the revolution of
+              making entrance coaching free and accessible, enabling millions of
+              underserved Indians to realize their dreams.
             </p>
           </div>
           <div className={styles.ButtonWrapper}>
             <button
               className={styles.join}
-             
               onClick={() =>
                 window.open(
                   "https://opengrad.notion.site/opengrad/OpenGrad-Foundation-d6781758edb94934be550ed86c8a2f1e",

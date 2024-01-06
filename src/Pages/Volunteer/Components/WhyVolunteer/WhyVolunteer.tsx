@@ -35,7 +35,7 @@ export const WhyVolunteer = () => {
     {
       Svg: Peoplesvg,
       heading: "Community",
-      para: `Join the largest community of Top institution alumnus, students and veteran fighting for a mission to uplift underserved communities through fair access to education.`,
+      para: `Join the largest community of Top institution alumnus, students and veteran fighting for a mission to uplift the Nation through fair access to education.`,
     },
     {
       Svg: Pensvg,
