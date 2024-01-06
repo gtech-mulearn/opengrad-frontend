@@ -68,6 +68,19 @@ export const OurBlog = (_props: Props) => {
   const detailBlogs = (id: any) => {
     navigate(`/detailedblog/${id}`);
   };
+
+const formatDate = (inputDate: string | number | Date) => {
+  const options: Intl.DateTimeFormatOptions = {
+    year: "numeric",
+    month: "short",
+    day: "2-digit",
+  };
+  const formattedDate = new Date(inputDate).toLocaleDateString(
+    "en-US",
+    options
+  );
+  return formattedDate;
+};
   return (
     <div className={styles.Wrapper}>
       <Navbar />
@@ -99,42 +112,70 @@ export const OurBlog = (_props: Props) => {
         <div className={styles.topBlogs}>
           {topBlogs
             .slice(0, 1)
-            .map(({ id, image, title, description, category }) => {
-              return (
-                <div
-                  className={styles.mainblog}
-                  onClick={() => detailBlogs(id)}
-                >
-                  <img src={image} alt="" />
-                  <h3>{title}</h3>
-                  <p>
-                    {description.length > 200
-                      ? `${description.slice(0, 200)}...`
-                      : description}
-                  </p>
-                  <CategoryDivContainer category={category} />
-                </div>
-              );
-            })}
+            .map(
+              ({
+                id,
+                image,
+                author,
+                dateofblog,
+                title,
+                description,
+                category,
+              }) => {
+                const formattedDate = formatDate(dateofblog);
+                return (
+                  <div
+                    className={styles.mainblog}
+                    onClick={() => detailBlogs(id)}
+                  >
+                    <img src={image} alt="" />
+                    <p className={styles.author}>
+                      {author} • {formattedDate}
+                    </p>
+                    <h3>{title}</h3>
+                    <p>
+                      {description.length > 150
+                        ? `${description.slice(0, 150)}...`
+                        : description}
+                    </p>
+                    <CategoryDivContainer category={category} />
+                  </div>
+                );
+              }
+            )}
           <div className={styles.rightDiv}>
             {topBlogs
               .slice(1, 3)
-              .map(({ id, image, title, description, category }) => {
-                return (
-                  <div onClick={() => detailBlogs(id)}>
-                    <img src={image} alt="" />
-                    <div>
-                      <h3>{title}</h3>
-                      <p>
-                        {description.length > 200
-                          ? `${description.slice(0, 200)}...`
-                          : description}
-                      </p>
-                      <CategoryDivContainer category={category} />
+              .map(
+                ({
+                  id,
+                  image,
+                  author,
+                  dateofblog,
+                  title,
+                  description,
+                  category,
+                }) => {
+                   const formattedDate = formatDate(dateofblog);
+                  return (
+                    <div onClick={() => detailBlogs(id)}>
+                      <img src={image} alt="" />
+                      <div>
+                        <p className={styles.author}>
+                          {author} • {formattedDate}
+                        </p>
+                        <h3>{title}</h3>
+                        <p>
+                          {description.length > 100
+                            ? `${description.slice(0, 100)}...`
+                            : description}
+                        </p>
+                        <CategoryDivContainer category={category} />
+                      </div>
                     </div>
-                  </div>
-                );
-              })}
+                  );
+                }
+              )}
           </div>
         </div>
       </div>
@@ -144,23 +185,37 @@ export const OurBlog = (_props: Props) => {
           {[...data]
             .reverse()
             .slice(0, count)
-            .map(({id, image, title, description, category }) => {
-              return (
-                <div
-                  className={styles.individualDiv}
-                  onClick={() => detailBlogs(id)}
-                >
-                  <img src={image} alt="" />
-                  <h3>{title}</h3>
-                  <p>
-                    {description.length > 200
-                      ? `${description.slice(0, 200)}...`
-                      : description}
-                  </p>
-                  <CategoryDivContainer category={category} />
-                </div>
-              );
-            })}
+            .map(
+              ({
+                id,
+                image,
+                author,
+                dateofblog,
+                title,
+                description,
+                category,
+              }) => {
+                const formattedDate = formatDate(dateofblog);
+                return (
+                  <div
+                    className={styles.individualDiv}
+                    onClick={() => detailBlogs(id)}
+                  >
+                    <img src={image} alt="" />
+                    <p className={styles.author}>
+                      {author} • {formattedDate}
+                    </p>
+                    <h3>{title}</h3>
+                    <p>
+                      {description.length > 200
+                        ? `${description.slice(0, 200)}...`
+                        : description}
+                    </p>
+                    <CategoryDivContainer category={category} />
+                  </div>
+                );
+              }
+            )}
         </div>
         {count >= data.length ? (
           <button onClick={handleCountBack}>Show Less</button>
@@ -195,7 +250,9 @@ export const OurBlog = (_props: Props) => {
 interface CategoryDivContainerProps {
   category: string;
 }
-export const CategoryDivContainer = ({ category }: CategoryDivContainerProps) => {
+export const CategoryDivContainer = ({
+  category,
+}: CategoryDivContainerProps) => {
   return (
     <div className={styles.categoryDiv}>
       {category.split(",").map((cat: string) => {
