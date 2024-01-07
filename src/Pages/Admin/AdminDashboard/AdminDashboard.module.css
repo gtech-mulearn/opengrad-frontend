@@ -104,7 +104,7 @@
   text-align: left;
 }
 .modalOverlay form > div label {
-  width: 100px;
+  width: 115px;
   color: white;
   font-weight: 500;
 }
@@ -114,6 +114,10 @@
   padding: 10px 20px;
   border-radius: 8px;
   color: black;
+  height: fit-content;
+}
+.modalOverlay form > div >.extraimage{
+height: 40px;
 }
 .modalOverlay form > div textarea {
   background-color: white;
@@ -121,7 +125,7 @@
   padding: 10px 20px;
   border-radius: 8px;
   color: black;
-  height: 100px;
+  min-height: 100px;
 }
 
 .modalOverlay form > .cateoriessection > div {

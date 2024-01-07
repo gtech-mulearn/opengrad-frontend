@@ -14,7 +14,7 @@ const PrivateRoutes: React.FC<PrivateRoutesProps> = ({ children }) => {
     if (!accessToken) {
       navigate("/admin");
     }
-    console.log(accessToken);
+    // console.log(accessToken);
   }, []);
 
   return <div>{children}</div>;

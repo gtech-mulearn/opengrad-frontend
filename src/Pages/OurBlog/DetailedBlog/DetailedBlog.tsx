@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 import { useParams } from "react-router-dom";
-import { getBlogs, getDetailedBlogs } from "../Api";
+import { getDetailedBlogs, getExludedBlogs } from "../Api";
 import styles from "./DetailedBlog.module.css";
 import { Navbar } from "../../../Components/Navbar/Navbar";
 import { Footer } from "../../../Components/Footer/Footer";
@@ -32,14 +32,16 @@ export const DetailedBlog = (_props: Props) => {
     }
   };
   const handleFetcBlogs = async () => {
-    try {
-      const response = await getBlogs();
-      if (response) {
-        setDataBlogs(response);
-        setLevel(response.length);
+    if (typeof id === "string") {
+      try {
+        const response = await getExludedBlogs(id);
+        if (response) {
+          setDataBlogs(response);
+          setLevel(response.length);
+        }
+      } catch (error) {
+        console.error(error);
       }
-    } catch (error) {
-      console.error(error);
     }
   };
   useEffect(() => {
@@ -73,12 +75,20 @@ export const DetailedBlog = (_props: Props) => {
     <div className={styles.Wrapper}>
       <Navbar />
       {data.map(
-        ({ image, title, author, dateofblog, description, category }) => {
+        ({
+          image,
+          title,
+          author,
+          dateofblog,
+          extra_images,
+          description,
+          category,
+        }) => {
           const formattedDate = formatDate(dateofblog);
-           const formattedDescription = description.replace(
-             /<br>/g,
-             "<br/><br/>"
-           );
+          const formattedDescription = description.replace(
+            /<br>/g,
+            "<br/><br/>"
+          );
           return (
             <div className={styles.HeaderWrapper}>
               <div className={styles.BackgroundText}>
@@ -90,7 +100,11 @@ export const DetailedBlog = (_props: Props) => {
               <h2>{title}</h2>
               <img src={image} alt="" />
 
-              <div className={styles.description} dangerouslySetInnerHTML={{ __html: formattedDescription }} />
+              <div
+                className={styles.description}
+                dangerouslySetInnerHTML={{ __html: formattedDescription }}
+              />
+              <ImageDivContainer extra_images={extra_images} />
               <CategoryDivContainer category={category} />
             </div>
           );
@@ -120,6 +134,7 @@ export const DetailedBlog = (_props: Props) => {
                     description={description}
                     dateofblog={dateofblog}
                     category={category}
+                    editable={false}
                   />
                 );
               }
@@ -128,6 +143,24 @@ export const DetailedBlog = (_props: Props) => {
       </div>
       <BannerOFBlog />
       <Footer />
+    </div>
+  );
+};
+
+interface ImageDivContainerProps {
+  extra_images: string;
+}
+
+export const ImageDivContainer = ({ extra_images }: ImageDivContainerProps) => {
+  return (
+    <div className={styles.categoryDiv}>
+      {extra_images.split(",").map((cat: string) => {
+        
+
+        return (
+          <img className={styles.ImageDivContainer} src={cat.trim()} alt="" />
+        );
+      })}
     </div>
   );
 };

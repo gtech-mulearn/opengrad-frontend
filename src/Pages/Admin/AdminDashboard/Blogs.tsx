@@ -12,6 +12,9 @@ export const Blogs = (_props: Props) => {
   const [formData, setFormData] = useState({
     title: "",
     image: "",
+    author: "",
+    dateofblog: "",
+    extra_images: "",
     description: "",
     categories: "",
   });
@@ -63,6 +66,26 @@ export const Blogs = (_props: Props) => {
       [name]: value,
     }));
   };
+  const handleInputDateChange = (e: ChangeEvent<HTMLInputElement>) => {
+    const { name, value } = e.target;
+
+    // Validate and format the date input
+    if (name === "dateofblog") {
+      const formattedDate = formatToYYYYMMDD(value);
+      setFormData((prevData) => ({ ...prevData, [name]: formattedDate }));
+    } else {
+      setFormData((prevData) => ({ ...prevData, [name]: value }));
+    }
+  };
+
+  const formatToYYYYMMDD = (inputDate: string) => {
+    const [year, month, day] = inputDate.split("-");
+    const formattedDate = `${year}-${month.padStart(2, "0")}-${day.padStart(
+      2,
+      "0"
+    )}`;
+    return formattedDate;
+  };
 
   const handleTextareaChange = (e: ChangeEvent<HTMLTextAreaElement>) => {
     const { name, value } = e.target;
@@ -96,6 +119,9 @@ export const Blogs = (_props: Props) => {
     setFormData({
       title: "",
       image: "",
+      author: "",
+      extra_images: "",
+      dateofblog: "",
       description: "",
       categories: "",
     });
@@ -122,19 +148,30 @@ export const Blogs = (_props: Props) => {
         {[...data]
           .reverse()
           .slice(0, count)
-          .map(({id,author,dateofblog, image, title, description, category }) => {
-            return (
-              <IndividualBlogContainer
-                id={id}
-                image={image}
-                title={title}
-                author={author}
-                description={description}
-                dateofblog={dateofblog}
-                category={category}
-              />
-            );
-          })}
+          .map(
+            ({
+              id,
+              author,
+              dateofblog,
+              image,
+              title,
+              description,
+              category,
+            }) => {
+              return (
+                <IndividualBlogContainer
+                  id={id}
+                  image={image}
+                  title={title}
+                  author={author}
+                  description={description}
+                  dateofblog={dateofblog}
+                  category={category}
+                  editable={true}
+                />
+              );
+            }
+          )}
       </div>
 
       {count >= data.length ? (
@@ -160,7 +197,7 @@ export const Blogs = (_props: Props) => {
                 />
               </div>
               <div>
-                <label>Image Link:</label>
+                <label>Image Link :</label>
                 <input
                   type="text"
                   name="image"
@@ -169,9 +206,32 @@ export const Blogs = (_props: Props) => {
                   onChange={handleInputChange}
                   required
                 />
-              </div>
+              </div>{" "}
               <div>
-                <label>Description:</label>
+                <label>Author :</label>
+                <input
+                  type="text"
+                  name="author"
+                  placeholder="Author"
+                  value={formData.author}
+                  onChange={handleInputChange}
+                  required
+                />
+              </div>{" "}
+              <div>
+                <label>Date Of Blog :</label>
+                <input
+                  type="date"
+                  name="dateofblog"
+                  placeholder="Date Of Blog"
+                  value={formData.dateofblog}
+                  onChange={handleInputDateChange}
+                  required
+                />
+              </div>
+       
+              <div>
+                <label>Description :</label>
                 <textarea
                   name="description"
                   placeholder="Description"
@@ -180,7 +240,16 @@ export const Blogs = (_props: Props) => {
                   required
                 />
               </div>
-
+              <div>
+                <label>Extra Image :</label>
+                <textarea
+                  className={styles.extraimage}
+                  name="extra_images"
+                  placeholder="eg:https://iili.io/J7adpyb.png, https://iili.io/J7YbteV.jpg"
+                  value={formData.extra_images}
+                  onChange={handleTextareaChange}
+                />
+              </div>
               <div className={styles.cateoriessection}>
                 <label>Categories:</label>{" "}
                 <div>
