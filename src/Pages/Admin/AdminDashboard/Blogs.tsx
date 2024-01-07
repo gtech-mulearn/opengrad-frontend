@@ -1,7 +1,7 @@
 import { useState, useEffect, ChangeEvent } from "react";
 import { getBlogs, insertBlogs } from "./Apis";
 import styles from "./AdminDashboard.module.css";
-import { CategoryDivContainer } from "../../OurBlog/OurBlog";
+import { IndividualBlogContainer } from "../../OurBlog/OurBlog";
 
 type Props = {};
 
@@ -122,18 +122,17 @@ export const Blogs = (_props: Props) => {
         {[...data]
           .reverse()
           .slice(0, count)
-          .map(({ image, title, description, category }) => {
+          .map(({id,author,dateofblog, image, title, description, category }) => {
             return (
-              <div key={title} className={styles.individualDiv}>
-                <img src={image} alt="" />
-                <h3>{title}</h3>
-                <p>
-                  {description.length > 200
-                    ? `${description.slice(0, 200)}...`
-                    : description}
-                </p>
-                <CategoryDivContainer category={category} />
-              </div>
+              <IndividualBlogContainer
+                id={id}
+                image={image}
+                title={title}
+                author={author}
+                description={description}
+                dateofblog={dateofblog}
+                category={category}
+              />
             );
           })}
       </div>

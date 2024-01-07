@@ -12,6 +12,7 @@ import { AdminDashboard } from './Pages/Admin/AdminDashboard/AdminDashboard';
 import { createClient } from '@supabase/supabase-js';
 import { OurBlog } from './Pages/OurBlog/OurBlog';
 import { DetailedBlog } from './Pages/OurBlog/DetailedBlog/DetailedBlog';
+import PrivateRoutes from './services/PrivateRoutes';
 
 
 
@@ -65,7 +66,7 @@ function App() {
     },
     {
       path: "/admindashboard",
-      element: <AdminDashboard />,
+      element: <PrivateRoutes children={<AdminDashboard />} />,
     },
   ]);
   return <RouterProvider router={router} />;
