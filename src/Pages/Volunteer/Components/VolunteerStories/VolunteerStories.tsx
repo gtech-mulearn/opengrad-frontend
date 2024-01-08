@@ -7,12 +7,12 @@ import "swiper/css";
 import "./styles.css";
 import { SectionHeading } from "../../../../Components/SectionHeading/SectionHeading";
 import { DoubleQuotessvg } from "../../../Home/Components/OurStory/svg";
-import vs1 from "./assets/vs1.png";
-import vs2 from "./assets/vs2.png";
+
 
 import "./styles.css";
 import { Pagination } from "swiper/modules";
 import { useEffect, useState } from "react";
+import { getVolunteerStories } from "./Api";
 
 type Props = {};
 
@@ -24,56 +24,24 @@ type IndividualContainerProps = {
 };
 
 export const VolunteerStories = (_props: Props) => {
-  const data = [
-    {
-      para: "Excited about OpenGrad! It connects all, offering free & top-notch content for competitive exam prep.",
-      name: "RESHI KIRAN",
-      descrp: "IIT ROORKEE ‘18",
-      image: vs1,
-    },
-    {
-      para: "The need of the hour: Accessibility for all in entrance coaching",
-      name: "Rithwik S",
-      descrp: "BITS PILANI",
-      image: vs2,
-    },
-    {
-      para: "Excited about OpenGrad! It connects all, offering free & top-notch content for competitive exam prep.",
-      name: "RESHI KIRAN",
-      descrp: "IIT ROORKEE ‘18",
-      image: vs1,
-    },
-    {
-      para: "The need of the hour: Accessibility for all in entrance coaching",
-      name: "Rithwik S",
-      descrp: "BITS PILANI",
-      image: vs2,
-    },
-    {
-      para: "Excited about OpenGrad! It connects all, offering free & top-notch content for competitive exam prep.",
-      name: "RESHI KIRAN",
-      descrp: "IIT ROORKEE ‘18",
-      image: vs1,
-    },
-    {
-      para: "The need of the hour: Accessibility for all in entrance coaching",
-      name: "Rithwik S",
-      descrp: "BITS PILANI",
-      image: vs2,
-    },
-    {
-      para: "Excited about OpenGrad! It connects all, offering free & top-notch content for competitive exam prep.",
-      name: "RESHI KIRAN",
-      descrp: "IIT ROORKEE ‘18",
-      image: vs1,
-    },
-    {
-      para: "The need of the hour: Accessibility for all in entrance coaching",
-      name: "Rithwik S",
-      descrp: "BITS PILANI",
-      image: vs2,
-    },
-  ];
+    const [data, setData] = useState<any[]>([]);
+
+
+  const handleFetchDetails = async () => {
+    try {
+      const response = await getVolunteerStories();
+      if (response) {
+        setData(response);
+        console.log(data);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    handleFetchDetails();
+  }, []);
   const [set, setset] = useState(false);
 
   useEffect(() => {
@@ -81,6 +49,8 @@ export const VolunteerStories = (_props: Props) => {
       setset(true);
     }
   }, []);
+
+  console.log(data)
   return (
     <div className={styles.VolunteerStoriesWrapper}>
       <SectionHeading title="Volunteer Stories" />
@@ -96,13 +66,13 @@ export const VolunteerStories = (_props: Props) => {
           }}
           modules={[Pagination]}
         >
-          {data.map(({ para, name, descrp, image }) => {
+          {data.map(({ description, name, designation, image }) => {
             return (
               <SwiperSlide className={styles.SwiperSlide}>
                 <IndividualContainer
-                  para={para}
+                  para={description}
                   name={name}
-                  descrp={descrp}
+                  descrp={designation}
                   image={image}
                 />
               </SwiperSlide>
@@ -129,7 +99,7 @@ const IndividualContainer = ({
           <p>{para}</p>
         </div>
         <div style={{ color: "#034852",textAlign:"left" }}>
-          <h2>{name}</h2>
+          <h2 style={{textTransform:"uppercase"}}>{name}</h2>
           <p>{descrp}</p>
         </div>
       </div>

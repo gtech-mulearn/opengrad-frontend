@@ -26,10 +26,10 @@ export const ProblemScenario = () => {
       </div>
       <div className={styles.DetailSection}>
         <div className={styles.GridSetWrapper}>
-          <GridSet image={LOA} pra={"Lack of awareness"} />
+          <GridSet image={LOA} pra={"Awareness"} />
           <GridSet image={LOM} pra={"Lack of Mentors"} />
           <GridSet image={accessability} pra={"Accessibility"} />
-          <GridSet image={finance} pra={"Finance"} />
+          <GridSet image={finance} pra={"Affordability"} />
         </div>
         <div className={styles.CircularAnimationWrapper}>
           <img src={graph} alt="" />

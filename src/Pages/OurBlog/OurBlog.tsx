@@ -1,11 +1,13 @@
 import { Footer } from "../../Components/Footer/Footer";
 import { Navbar } from "../../Components/Navbar/Navbar";
 import { ArrowRight } from "../../assets/svg";
-import { getBlogs } from "./Api";
+import { deleteBlogs, getBlogs } from "./Api";
 import styles from "./OurBlog.module.css";
 import { useState, useEffect } from "react";
 import sound from "./assets/sound.png";
 import { useNavigate } from "react-router-dom";
+import { FaEdit } from "react-icons/fa";
+import { MdDelete } from "react-icons/md";
 
 type Props = {};
 
@@ -204,6 +206,7 @@ export const OurBlog = (_props: Props) => {
                     description={description}
                     dateofblog={dateofblog}
                     category={category}
+                    editable={false}
                   />
                 );
               }
@@ -229,6 +232,7 @@ interface IndividualBlogContainerProps {
   description: string;
   dateofblog: string;
   category: string;
+  editable: boolean;
 }
 
 export const IndividualBlogContainer = ({
@@ -239,12 +243,13 @@ export const IndividualBlogContainer = ({
   dateofblog,
   author,
   description,
+  editable,
 }: IndividualBlogContainerProps) => {
   const navigate = useNavigate();
   const detailBlogs = (id: any) => {
     console.log(id);
     navigate(`/detailedblog/${id}`);
-     window.location.reload();
+    window.location.reload();
   };
 
   const formatDate = (inputDate: string | number | Date) => {
@@ -260,19 +265,47 @@ export const IndividualBlogContainer = ({
     return formattedDate;
   };
   const formattedDate = formatDate(dateofblog);
+
+  const handleFetchDetails = async () => {
+    try {
+      const response = await deleteBlogs(id);
+      if (response) {
+        console.log(response)
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+ 
   return (
-    <div className={styles.individualBlogDiv} onClick={() => detailBlogs(id)}>
-      <img src={image} alt="" />
-      <p className={styles.author}>
-        {author} • {formattedDate}
-      </p>
-      <h3>{title}</h3>
-      <p>
-        {description.length > 200
-          ? `${description.slice(0, 200)}...`
-          : description}
-      </p>
-      <CategoryDivContainer category={category} />
+    <div className={styles.outerIndividualBlog}>
+      {" "}
+      {editable ? (
+        <div className={styles.editable}>
+          <button>
+            <FaEdit />
+          </button>
+          <button onClick={handleFetchDetails}>
+            <MdDelete />
+          </button>
+        </div>
+      ) : (
+        ""
+      )}
+      <div className={styles.individualBlogDiv} onClick={() => detailBlogs(id)}>
+        <img src={image} alt="" />
+        <p className={styles.author}>
+          {author} • {formattedDate}
+        </p>
+        <h3>{title}</h3>
+        <p>
+          {description.length > 200
+            ? `${description.slice(0, 200)}...`
+            : description}
+        </p>
+        <CategoryDivContainer category={category} />
+      </div>
     </div>
   );
 };
