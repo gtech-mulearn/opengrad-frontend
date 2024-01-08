@@ -67,7 +67,7 @@ export const WhyOpengrad = () => {
         <Containers
           Svg={OutReachsvg}
           pra1="Outreach activities to"
-          pra2="marginalized sections"
+          pra2="deserving sections"
         />
         <GreenArrowsvg className={styles.hidden} />
         <Containers

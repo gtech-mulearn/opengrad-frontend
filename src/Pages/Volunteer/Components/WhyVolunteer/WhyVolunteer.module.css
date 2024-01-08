@@ -3,8 +3,8 @@
   flex-direction: column;
   align-items: center;
   width: 100%;
-  gap: 20px;
-  padding: 0px 5vw;
+  gap: 4vh;
+  padding: 6vh 5vw;
 }
 .WhyVolunteerWrap > div {
   display: flex;
