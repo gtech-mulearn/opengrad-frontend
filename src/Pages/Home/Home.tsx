@@ -23,14 +23,15 @@ export const Home = () => {
   const partnersData = [
     { image: nudge, name: "" },
     { image: nsr, name: "" },
-    { image: ignite, name: "" },
-    { image: nuale, name: "" },
+    { image: ignite, name: "IGNITE - NIT", name2: "Calicut" },
+    { image: nuale, name: "Legal Aid Clinic -", name2: "NUALS Kochi" },
     {
       image: mulearn,
-      name: "",
+      name: "µLearn",
+      name2: "Foundation",
     },
-    { image: viknasana, name: "" },
-    { image: ieee, name: "" },
+    { image: viknasana, name: "Vikasana -", name2: "IIM Bangalore" },
+    { image: ieee, name: "IEEE", name2: "Kerala Section" },
   ];
 
   return (

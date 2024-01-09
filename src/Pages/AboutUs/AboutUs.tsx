@@ -47,7 +47,7 @@ export const AboutUs = () => {
       image: vikanasana,
       name: "Vikasana -",
       name2: "IIM Bangalore",
-      para: "Working together to curate and disseminate JEE exam resources.",
+      para: "Working together to curate and disseminate CAT exam resources.",
     },
   ];
   return (

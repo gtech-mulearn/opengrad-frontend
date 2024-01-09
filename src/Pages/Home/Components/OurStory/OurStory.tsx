@@ -5,7 +5,7 @@ import sahil from "../../../assets/founders/sahil.png";
 import shahid from "../../../assets/founders/shahid.png";
 import { SectionHeading } from "../../../../Components/SectionHeading/SectionHeading";
 import { DoubleQuotessvg } from "./svg";
-import test1 from "./assets/test1.png";
+
 
 import { Swiper, SwiperSlide } from "swiper/react";
 
@@ -15,9 +15,29 @@ import "swiper/css/pagination";
 
 import "./styles.css";
 import { Pagination } from "swiper/modules";
+import { useEffect, useState } from "react";
+import { getTestimonial } from "./Api";
+
 type Props = {};
 
 export const OurStory = (_props: Props) => {
+  const [data, setData] = useState<any[]>([]);
+  const handleFetchDetails = async () => {
+    try {
+      const response = await getTestimonial();
+      if (response) {
+        setData(response);
+        console.log(response);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    handleFetchDetails();
+  }, []);
+
   return (
     <div className={styles.OurStoryWrapper}>
       <SectionHeading title="Our Story" />
@@ -72,19 +92,13 @@ export const OurStory = (_props: Props) => {
             className="OurStory"
             loop={true}
           >
-            <SwiperSlide>
-              <TestimonialIndividuals />
-            </SwiperSlide>
-            <SwiperSlide>
-              <TestimonialIndividuals />
-            </SwiperSlide>
-            <SwiperSlide>
-              <TestimonialIndividuals />
-            </SwiperSlide>
-
-            <SwiperSlide>
-              <TestimonialIndividuals />
-            </SwiperSlide>
+            {data.map(({  description, name, designation, image }) => {
+              return (
+                <SwiperSlide>
+                  <TestimonialIndividuals description={description} name={name} designation={designation} image={image}/>
+                </SwiperSlide>
+              );
+            })}
           </Swiper>
         </div>
       </div>
@@ -92,7 +106,17 @@ export const OurStory = (_props: Props) => {
   );
 };
 
-const TestimonialIndividuals = () => {
+
+interface Testimonial {
+  image: string;
+  name: string;
+  designation: string;
+  description: string;
+}
+
+
+const TestimonialIndividuals = ({name,image,designation,description,
+}: Testimonial) => {
   return (
     <div className={styles.IndividualSlider}>
       <div className={styles.Topset}>
@@ -101,15 +125,14 @@ const TestimonialIndividuals = () => {
       <div className={styles.testContentWrap}>
         <div className={styles.TextContent}>
           <p>
-            Excited about Opengrad! It connects all, offering free and top-notch
-            content for competitive exam prep.
+            {description}
           </p>
           <div>
-            <h3>Dr. Gopichand Katragadda</h3>
-            <p>Founder and CEO at Myelin Foundry</p>
+            <h3>{name}</h3>
+            <p>{designation}</p>
           </div>
         </div>
-        <img src={test1} alt="" />
+        <img src={image} alt="" />
       </div>
     </div>
   );
