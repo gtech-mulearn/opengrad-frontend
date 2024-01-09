@@ -21,16 +21,16 @@ import ieee from "../assets/Partners/ieee.png";
 
 export const Home = () => {
   const partnersData = [
-    { image: nudge, name: "" },
-    { image: nsr, name: "" },
-    { image: ignite, name: "IGNITE - NIT", name2: "Calicut" },
-    { image: nuale, name: "Legal Aid Clinic -", name2: "NUALS Kochi" },
+    { image: nudge, name: "The Nudge", name2: "Institute" },
+    { image: nsr, name: "NSRCEL", name2: "IIM Bangalaore" },
+    { image: ignite, name: "IGNITE NIT", name2: "Calicut" },
+    { image: nuale, name: "Legal Aid Clinic", name2: "NUALS Kochi" },
     {
       image: mulearn,
       name: "µLearn",
       name2: "Foundation",
     },
-    { image: viknasana, name: "Vikasana -", name2: "IIM Bangalore" },
+    { image: viknasana, name: "Vikasana", name2: "IIM Bangalore" },
     { image: ieee, name: "IEEE", name2: "Kerala Section" },
   ];
 
