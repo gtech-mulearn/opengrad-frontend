@@ -1,13 +1,15 @@
 import { useState } from "react";
-import { Blogs } from "./Blogs";
+import { Blogs } from "./Blogs/Blogs";
 import styles from "./AdminDashboard.module.css";
-import { HomeTestimonial } from "./HomeTestimonial";
-import { JoinUsTestimonial } from "./JoinUsTestimonial";
+import { HomeTestimonial } from "./HomeTestimonial/HomeTestimonial";
+import { JoinUsTestimonial } from "./JoinUsTestimonial/JoinUsTestimonial";
+import { VolunteerDirectory } from "./VolunteerDirectory/VolunteerDirectory";
 
 type Props = {};
 
 export const AdminDashboard = (_props: Props) => {
-  const [activeComponent, setActiveComponent] = useState<string>("Blogs");
+  const [activeComponent, setActiveComponent] =
+    useState<string>("HomeTestimonial");
   const data = [
     {
       name: "Blogs",
@@ -20,6 +22,10 @@ export const AdminDashboard = (_props: Props) => {
     {
       name: "Join Us - Testimonial",
       value: "JoinUsTestimonial",
+    },
+    {
+      name: "Join Us - VolunteerDirectory",
+      value: "VolunteerDirectory",
     },
   ];
   return (
@@ -46,6 +52,7 @@ export const AdminDashboard = (_props: Props) => {
       {activeComponent === "Blogs" && <Blogs />}
       {activeComponent === "HomeTestimonial" && <HomeTestimonial />}
       {activeComponent === "JoinUsTestimonial" && <JoinUsTestimonial />}
+      {activeComponent === "VolunteerDirectory" && <VolunteerDirectory />}
     </div>
   );
 };

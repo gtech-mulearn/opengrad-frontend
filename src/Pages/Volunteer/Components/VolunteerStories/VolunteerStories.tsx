@@ -3,6 +3,7 @@ import { Swiper, SwiperSlide } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
+import "swiper/css/autoplay";
 
 import "./styles.css";
 import { SectionHeading } from "../../../../Components/SectionHeading/SectionHeading";
@@ -10,7 +11,7 @@ import { DoubleQuotessvg } from "../../../Home/Components/OurStory/svg";
 
 
 import "./styles.css";
-import { Pagination } from "swiper/modules";
+import { Autoplay, Pagination } from "swiper/modules";
 import { useEffect, useState } from "react";
 import { getVolunteerStories } from "./Api";
 
@@ -32,7 +33,7 @@ export const VolunteerStories = (_props: Props) => {
       const response = await getVolunteerStories();
       if (response) {
         setData(response);
-        console.log(data);
+        // console.log(data);
       }
     } catch (error) {
       console.error(error);
@@ -50,7 +51,7 @@ export const VolunteerStories = (_props: Props) => {
     }
   }, []);
 
-  console.log(data)
+  // console.log(data)
   return (
     <div className={styles.VolunteerStoriesWrapper}>
       <SectionHeading title="Volunteer Stories" />
@@ -62,9 +63,13 @@ export const VolunteerStories = (_props: Props) => {
           loop={true}
           pagination={{
             clickable: true,
-            el: ".custom-pagination-container", // Link your custom container
+            el: ".custom-pagination-container",
           }}
-          modules={[Pagination]}
+          modules={[Pagination, Autoplay]}
+          autoplay={{
+            delay: 2000, 
+            disableOnInteraction: false, 
+          }}
         >
           {data.map(({ description, name, designation, image }) => {
             return (

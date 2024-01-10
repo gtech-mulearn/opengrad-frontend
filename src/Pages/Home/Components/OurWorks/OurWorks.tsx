@@ -1,56 +1,58 @@
+import { useEffect, useState } from "react";
 import { SectionHeading } from "../../../../Components/SectionHeading/SectionHeading";
+import { getBlogs } from "../../../OurBlog/Api";
 import styles from "./OurWorks.module.css";
-import w1 from "./assets/w1.png";
-import w2 from "./assets/w2.png";
-import w3 from "./assets/w3.png";
-import w4 from "./assets/w4.png";
-import w5 from "./assets/w5.png";
-import w6 from "./assets/w6.png";
+
+import { useNavigate } from "react-router-dom";
 
 type Props = {
+  id:string;
   image: string;
   par: string;
 };
 
 export const OurWorks = () => {
+  const [data, setData] = useState<any[]>([]);
+  const handleFetchDetails = async () => {
+    try {
+      const response = await getBlogs();
+      if (response) {
+        setData(response);
+      }
+    } catch (error) {
+      console.error(error);
+    }
+  };
+
+  useEffect(() => {
+    handleFetchDetails();
+  }, []);
   return (
     <div className={styles.OurWorkWrapper}>
       {" "}
-      <SectionHeading title="Our Works" />
+      <SectionHeading title="News and updates" />
       <div className={styles.WorksWrapper}>
+        {[...data]
+          .reverse()
+          .slice(0, 6)
+          .map(({ id, image, title }) => {
+            return <Container id={id} image={image} par={title} />;
+          })}
         
-        <Container
-          image={w1}
-          par="Inauguration at Alpha Study Center, Kozhikode"
-        />{" "}
-        <Container
-          image={w2}
-          par="Inauguration at Alpha Study Center, Kozhikode"
-        />{" "}
-        <Container
-          image={w3}
-          par="Inauguration at Alpha Study Center, Kozhikode"
-        />{" "}
-        <Container
-          image={w4}
-          par="Inauguration at Alpha Study Center, Kozhikode"
-        />{" "}
-        <Container
-          image={w5}
-          par="Inauguration at Alpha Study Center, Kozhikode"
-        />{" "}
-        <Container
-          image={w6}
-          par="Inauguration at Alpha Study Center, Kozhikode"
-        />
       </div>
     </div>
   );
 };
 
-const Container = ({ image, par }: Props) => {
+const Container = ({id, image, par }: Props) => {
+  const navigate = useNavigate();
+  const detailBlogs = (id: any) => {
+    console.log(id);
+    navigate(`/detailedblog/${id}`);
+    window.location.reload();
+  };
   return (
-    <div className={styles.Container}>
+    <div className={styles.Container} onClick={() => detailBlogs(id)}>
       <img src={image} alt="" />
       <div className={styles.InnerDiv}>
         <p>{par}</p>

@@ -65,7 +65,6 @@
   justify-content: center;
 }
 
-
 .allBlogs button {
   background-color: rgba(0, 39, 45, 1);
   padding: 11px 32px;
@@ -75,114 +74,65 @@
   cursor: pointer;
 }
 
+/* Home Testimonials */
 
-.modalOverlay {
-  position: absolute;
-  background-color: rgba(3, 72, 82, 0.6);
-  top: 50%;
-  left: 50%;
-  transform: translate(-50%, -50%);
-  width: 80%;
-  padding: 6vh 5vw;
-  border-radius: 8px;
-}
-.modalOverlay h2 {
-  color: #fff;
-}
-.modalOverlay form {
+.HomeTestimonial {
   display: flex;
   flex-direction: column;
-  gap: 15px;
   align-items: center;
-  padding-top: 20px;
+  gap: 30px;
 }
-.modalOverlay form > div {
-  width: 100%;
+
+.HomeTestimonial .header {
   display: flex;
-  align-items: flex-start;
   gap: 20px;
-  text-align: left;
-}
-.modalOverlay form > div label {
-  width: 115px;
-  color: white;
-  font-weight: 500;
-}
-.modalOverlay form > div input {
-  background-color: white;
+  justify-content: space-between;
   width: 100%;
-  padding: 10px 20px;
-  border-radius: 8px;
-  color: black;
-  height: fit-content;
-}
-.modalOverlay form > div >.extraimage{
-height: 40px;
-}
-.modalOverlay form > div textarea {
-  background-color: white;
-  width: 100%;
-  padding: 10px 20px;
-  border-radius: 8px;
-  color: black;
-  min-height: 100px;
 }
 
-.modalOverlay form > .cateoriessection > div {
+.HomeTestimonial button {
+  background-color: rgba(0, 39, 45, 1);
+  padding: 11px 32px;
+  font-size: 18px;
+  border-radius: 8px;
+  font-family: "Raleway";
+  cursor: pointer;
+}
+
+.HomeTestimonial .testimonialsWrap {
   display: flex;
   flex-wrap: wrap;
-  justify-content: space-around;
-  width: fit-content;
-  width: calc(100% - 120px);
   gap: 15px;
-}
-.modalOverlay form > .cateoriessection > div .innercheckbox {
-  display: flex;
-  text-wrap: nowrap;
-  align-items: center;
-  gap: 10px;
-}
 
-.modalOverlay form > .cateoriessection input[type="checkbox"] {
-  /* ...existing styles */
-  display: grid;
-  place-content: center;
-  width: 30px;
-  height: 30px;
-  border-radius: 50%;
-}
-
-.modalOverlay form > .cateoriessection input[type="checkbox"]::before {
-  content: "";
-  width: 0.65em;
-  height: 0.65em;
-  transform: scale(0);
-  transition: 120ms transform ease-in-out;
-  box-shadow: inset 1em 1em var(--form-control-color);
-}
-
-.modalOverlay form > .cateoriessection input[type="checkbox"]:checked::before {
-  transform: scale(1);
-}
-.modalOverlay form > .buttonWrappers {
-  display: flex;
-  width: 100%;
-  align-items: center;
   justify-content: center;
+}
+
+.HomeTestimonial .testimonialsWrap .IndividualSlider {
+  max-width: calc((100% - 30px) / 2);
+  min-width: 300px;
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  border: 2px solid #034852;
+  padding: 5px;
+    text-align: left;
+}
+.HomeTestimonial .testimonialsWrap .IndividualSlider .TextContent {
+  display: flex;
+  justify-content: space-between;
   flex-wrap: wrap;
-  gap: 15px;
 }
-.modalOverlay form button {
-  width: fit-content;
+.HomeTestimonial .testimonialsWrap .IndividualSlider img {
+  max-width: 100%;
+  max-height: 200px;
 }
 
-@media screen and (max-width: 600px) {
-  .modalOverlay form > div {
-    flex-direction: column;
+@media screen and (max-width: 680px) {
+  .HomeTestimonial .testimonialsWrap .IndividualSlider {
+    max-width: calc((100% - 0px) / 1);
+    text-align: center;
   }
-  .modalOverlay form > .cateoriessection > div {
-    width: 100%;
-    flex-direction: column;
+  .HomeTestimonial .testimonialsWrap .IndividualSlider .TextContent {
+    justify-content: center;
   }
-
 }

@@ -1,5 +1,16 @@
 import { supabase } from "../../../App";
 
+  const currentDateAndTime = new Date();
+
+  const year = currentDateAndTime.getFullYear();
+  const month = currentDateAndTime.getMonth() + 1; 
+  const day = currentDateAndTime.getDate();
+  const hours = currentDateAndTime.getHours();
+  const minutes = currentDateAndTime.getMinutes();
+  const seconds = currentDateAndTime.getSeconds();
+
+  const formattedDateAndTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
+
 export const getBlogs = async () => {
   let { data: blogs, error } = await supabase.from("blogs").select("*");
   if (error) {
@@ -11,16 +22,6 @@ export const getBlogs = async () => {
 };
 
 export const insertBlogs = async (formdata: any) => {
-  const currentDateAndTime = new Date();
-
-  const year = currentDateAndTime.getFullYear();
-  const month = currentDateAndTime.getMonth() + 1; 
-  const day = currentDateAndTime.getDate();
-  const hours = currentDateAndTime.getHours();
-  const minutes = currentDateAndTime.getMinutes();
-  const seconds = currentDateAndTime.getSeconds();
-
-  const formattedDateAndTime = `${year}-${month}-${day} ${hours}:${minutes}:${seconds}`;
 
   const adjustedData = {
     title: formdata.title,
@@ -45,3 +46,31 @@ export const insertBlogs = async (formdata: any) => {
     return blogs;
   }
 };
+
+
+
+export const insertHomeTestimonials = async (formdata: any) => {
+
+  const adjustedData = {
+    name: formdata.name,
+    created_at: formattedDateAndTime,
+    designation: formdata.designation,
+
+    image: formdata.image,
+    description: formdata.description,
+  };
+  console.log(adjustedData);
+  const { data: homeTestimonials, error } = await supabase
+    .from("homeTestimonials")
+    .insert([adjustedData])
+    .select();
+
+  if (error) {
+    // Handle the error
+    throw error;
+  } else {
+    return homeTestimonials;
+  }
+};
+
+
