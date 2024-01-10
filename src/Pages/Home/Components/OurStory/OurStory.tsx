@@ -13,35 +13,35 @@ import "swiper/css";
 import "swiper/css/pagination";
 import "./styles.css";
 import { Autoplay, Pagination } from "swiper/modules";
-import { useEffect, useRef, useState } from "react";
+import { useEffect,  useState } from "react";
 import { getTestimonial } from "./Api";
 
 type Props = {};
 
 export const OurStory = (_props: Props) => {
   const [data, setData] = useState<any[]>([]);
-  const progressCircle = useRef<HTMLDivElement>(null);
-  const progressContent = useRef<HTMLDivElement>(null);
-  const onAutoplayTimeLeft = (s: any, time: number, progress: number) => {
-    if (progressCircle.current) {
-      progressCircle.current.style.setProperty(
-        "--progress",
-        `${(1 - progress) * 100}%`
-      );
-    }
+  // const progressCircle = useRef<HTMLDivElement>(null);
+  // const progressContent = useRef<HTMLDivElement>(null);
+  // const onAutoplayTimeLeft = ( time: number, progress: number) => {
+  //   if (progressCircle.current) {
+  //     progressCircle.current.style.setProperty(
+  //       "--progress",
+  //       `${(1 - progress) * 100}%`
+  //     );
+  //   }
 
-    if (progressContent.current) {
-      progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
-    }
-    console.log(s);
-  };
+  //   if (progressContent.current) {
+  //     progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
+  //   }
+   
+  // };
 
   const handleFetchDetails = async () => {
     try {
       const response = await getTestimonial();
       if (response) {
         setData(response);
-        console.log(response);
+        // console.log(response);
       }
     } catch (error) {
       console.error(error);
@@ -113,7 +113,7 @@ export const OurStory = (_props: Props) => {
               delay: 2000,
               disableOnInteraction: false,
             }}
-            onAutoplayTimeLeft={onAutoplayTimeLeft}
+            
           >
             {data.map(({ description, name, designation, image }) => {
               return (

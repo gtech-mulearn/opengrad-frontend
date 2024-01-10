@@ -1,5 +1,5 @@
 import { useState } from "react";
-import { Blogs } from "./Blogs";
+import { Blogs } from "./Blogs/Blogs";
 import styles from "./AdminDashboard.module.css";
 import { HomeTestimonial } from "./HomeTestimonial";
 import { JoinUsTestimonial } from "./JoinUsTestimonial";

@@ -1,3 +1,4 @@
+import { useNavigate } from "react-router-dom";
 import { ArrowRight } from "../../../../assets/svg";
 // import background from "../../../assets/backgroundLinesClouds.png";
 import styles from "./Header.module.css";
@@ -6,6 +7,11 @@ import map from "./mapIndiaWithLogo.png";
 type Props = {};
 
 export const Header = (_props: Props) => {
+  const navigate = useNavigate();
+
+  const navigateToAboutUs = () => {
+    navigate("/aboutus");
+  };
   return (
     <div className={styles.HeaderWrapper}>
       <div className={styles.DetailSection}>
@@ -28,7 +34,6 @@ export const Header = (_props: Props) => {
           <div className={styles.ButtonWrapper}>
             <button
               style={{ backgroundColor: "#00272D", color: "white" }}
-            
               onClick={() =>
                 window.open(
                   "https://opengrad-foundation.learnyst.com/learn",
@@ -38,7 +43,7 @@ export const Header = (_props: Props) => {
             >
               Enroll Now
             </button>
-            <button>
+            <button onClick={navigateToAboutUs}>
               Explore
               <ArrowRight color="black" />
             </button>

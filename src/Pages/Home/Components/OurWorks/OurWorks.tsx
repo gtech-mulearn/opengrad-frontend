@@ -18,7 +18,6 @@ export const OurWorks = () => {
       const response = await getBlogs();
       if (response) {
         setData(response);
-        console.log(data);
       }
     } catch (error) {
       console.error(error);

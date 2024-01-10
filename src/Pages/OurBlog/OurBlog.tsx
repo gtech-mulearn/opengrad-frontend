@@ -270,14 +270,14 @@ export const IndividualBlogContainer = ({
     try {
       const response = await deleteBlogs(id);
       if (response) {
-        console.log(response)
+        console.log(response);
       }
+      window.location.reload();
     } catch (error) {
       console.error(error);
     }
   };
 
- 
   return (
     <div className={styles.outerIndividualBlog}>
       {" "}
