@@ -4,7 +4,7 @@ import { OurPartners } from "../../Components/OurPartners/OurPartners";
 import { AdvisoryPanel } from "./Components/AdvisoryPanel/AdvisoryPanel";
 import { FoundersSection } from "./Components/FoundersSection/FoundersSection";
 import { Header } from "./Components/Header/Header";
-import { OurJourney } from "./Components/OurJourney/OurJourney";
+import { OurJourneys } from "./Components/OurJourney/OurJourneys";
 
 import nudge from "../assets/Partners/thenudge.png";
 import nsr from "../assets/Partners/nsrcel.png";
@@ -69,7 +69,7 @@ export const AboutUs = () => {
       <Navbar />
       <Header />
       <FoundersSection />
-      <OurJourney />
+      <OurJourneys />
       <AdvisoryPanel />
       <OurPartners partners={partnersData} />
       <Footer />
