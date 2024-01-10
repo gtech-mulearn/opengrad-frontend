@@ -8,7 +8,8 @@ import { VolunteerDirectory } from "./VolunteerDirectory/VolunteerDirectory";
 type Props = {};
 
 export const AdminDashboard = (_props: Props) => {
-  const [activeComponent, setActiveComponent] = useState<string>("Blogs");
+  const [activeComponent, setActiveComponent] =
+    useState<string>("HomeTestimonial");
   const data = [
     {
       name: "Blogs",

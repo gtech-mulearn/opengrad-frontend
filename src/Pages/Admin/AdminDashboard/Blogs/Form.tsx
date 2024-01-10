@@ -1,5 +1,5 @@
 import { useState, ChangeEvent } from "react";
-import styles from "../AdminDashboard.module.css";
+import styles from "../Form.module.css";
 import { insertBlogs } from "../Apis";
 type Props = {
   showAddForm: boolean;
