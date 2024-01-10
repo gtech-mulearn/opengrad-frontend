@@ -10,7 +10,7 @@ let { data: volunteerstories, error } = await supabase
     // toast.error(error.message);
     throw error;
   } else {
-    console.log(volunteerstories)
+    // console.log(volunteerstories)
     return volunteerstories;
   }
 };

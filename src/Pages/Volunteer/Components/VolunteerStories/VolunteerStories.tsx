@@ -33,7 +33,7 @@ export const VolunteerStories = (_props: Props) => {
       const response = await getVolunteerStories();
       if (response) {
         setData(response);
-        console.log(data);
+        // console.log(data);
       }
     } catch (error) {
       console.error(error);
@@ -51,7 +51,7 @@ export const VolunteerStories = (_props: Props) => {
     }
   }, []);
 
-  console.log(data)
+  // console.log(data)
   return (
     <div className={styles.VolunteerStoriesWrapper}>
       <SectionHeading title="Volunteer Stories" />

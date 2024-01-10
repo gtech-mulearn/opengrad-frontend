@@ -18,7 +18,7 @@ export const ImageHoverBox = ({
   className,
   linkedIn,
 }: Props) => {
-  console.log(className);
+
   return (
     <div className={styles.ImageHoverBoxWrapper + " " + className}>
       <a
