@@ -164,16 +164,13 @@
 
 .timelineImageWrapper {
   overflow: hidden;
-  border-radius: 12px;
-  background-image: linear-gradient(138deg, #000, transparent 28%),
-    url("https://assets.website-files.com/60dd72519d9f9f67690ae425/60ddadc52f0d9ee8c9532078_Image%20Background.png");
-  background-position: 0px 0px, 0px 0px;
-  background-size: auto, cover;
   width: 30vw;
 }
 .timelineImageWrapper > img {
   width: 100%;
   height: auto;
+  min-height: 200px;
+  background-color: #ff7448;
 }
 
 .timelineLink {
