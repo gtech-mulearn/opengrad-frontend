@@ -61,8 +61,8 @@
   z-index: 2;
 
   display: grid;
-  padding-top: 80px;
-  padding-bottom: 80px;
+  padding-top: 40px;
+    padding-bottom: 40px;
 
   grid-auto-columns: 1fr;
   grid-column-gap: 0px;
@@ -109,9 +109,10 @@
 
 .timelineText {
   color: #000000;
-  font-size: 24px;
+  font-size: 22px;
   line-height: 1.3;
   font-weight: 500;
+  text-align: left;
 }
 
 .timelineCircle {
@@ -173,127 +174,6 @@
   background-color: #ff7448;
 }
 
-.timelineLink {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-align: center;
-  -webkit-align-items: center;
-  -ms-flex-align: center;
-  align-items: center;
-  border-radius: 8px;
-  opacity: 0.6;
-  -webkit-transition: opacity 300ms ease;
-  transition: opacity 300ms ease;
-  color: #000000;
-  font-size: 14px;
-  line-height: 1.3;
-  font-weight: 700;
-  letter-spacing: 0.8px;
-  text-decoration: none;
-  text-transform: uppercase;
-}
-
-.timelineLink:hover {
-  opacity: 1;
-}
-
-.linkIcon {
-  width: 20px;
-  height: 20px;
-  margin-left: 8px;
-}
-
-.inlineBlock {
-  display: inlineBlock;
-}
-
-.textColourLightgrey {
-  color: hsla(0, 1%, 19%, 0.65);
-}
-
-.timelineQuoteWrapper {
-  display: -webkit-box;
-  display: -webkit-flex;
-  display: -ms-flexbox;
-  display: flex;
-  padding: 24px;
-  -webkit-box-align: start;
-  -webkit-align-items: flex-start;
-  -ms-flex-align: start;
-  align-items: flex-start;
-  border-style: solid;
-  border-width: 2px;
-  border-color: #fff;
-  border-radius: 16px;
-}
-
-.timelineQuoteImage {
-  width: 48px;
-  height: 48px;
-  margin-right: 24px;
-  border-radius: 8px;
-}
-
-.timelineQuoteTextWrapper {
-  -webkit-box-flex: 1;
-  -webkit-flex: 1;
-  -ms-flex: 1;
-  flex: 1;
-}
-
-.timelineQuote {
-  margin-bottom: 16px;
-  color: #000000;
-  font-size: 14px;
-}
-
-.timelineQuoteTitle {
-  color: #000000;
-  font-size: 14px;
-  font-weight: 500;
-}
-
-.timelineBadge {
-  display: inlineBlock;
-  margin-top: 16px;
-  margin-bottom: 16px;
-  padding: 6px 8px;
-  border-radius: 8px;
-  background-color: rgba(255, 255, 255, 0.15);
-  color: #000000;
-  font-size: 12px;
-  line-height: 12px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
-.timelineDefinitionWrapper {
-  padding: 16px;
-  border-radius: 16px;
-  background-color: hsla(0, 0%, 100%, 0.05);
-}
-
-.textColourWhite {
-  color: #000000;
-}
-
-.timelineMilestoneBadge {
-  display: inlineBlock;
-  margin-bottom: 24px;
-  padding: 8px 12px;
-  border-radius: 8px;
-  background-color: #fff;
-  color: #161616;
-  font-size: 14px;
-  line-height: 12px;
-  font-weight: 700;
-  letter-spacing: 0.05em;
-  text-transform: uppercase;
-}
-
 .overlayFadeTop {
   position: absolute;
   left: 0%;
@@ -328,7 +208,7 @@
   background-image: linear-gradient(0deg, #ffffff, rgba(255, 255, 255, 0));
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 967px) {
   .paragraphLarge {
     font-size: 18px;
   }
@@ -342,6 +222,7 @@
     width: 100%;
     -ms-grid-columns: 64px 1fr;
     grid-template-columns: 64px 1fr;
+    
   }
 
   .timelineLeft {
@@ -363,7 +244,7 @@
   }
 
   .timelineText {
-    font-size: 20px;
+    font-size: 17.5px;
   }
 
   .timelineProgress {
@@ -371,20 +252,10 @@
   }
 
   .marginBottomXlarge {
-    margin-bottom: 48px;
+    margin-bottom: 20px;
   }
-
-  .timelineQuoteWrapper {
-    -webkit-box-orient: vertical;
-    -webkit-box-direction: reverse;
-    -webkit-flex-direction: column-reverse;
-    -ms-flex-direction: column-reverse;
-    flex-direction: column-reverse;
-  }
-
-  .timelineQuoteImage {
-    margin-top: 24px;
-    margin-right: 0px;
+  .timelineImageWrapper {
+    width: 100%;
   }
 }
 
@@ -402,30 +273,26 @@
     grid-template-columns: 48px 1fr;
   }
   .timelineText {
-    font-size: 16px;
+    font-size: 15.5px;
   }
 }
 
-@media screen and (max-width: 767px) {
+@media screen and (max-width: 967px) {
   #timelineCenterVerified {
     -ms-grid-column-span: 1;
     grid-column-end: 2;
-   
     grid-column-start: 1;
     -ms-grid-row-span: 2;
     grid-row-end: 3;
-   
     grid-row-start: 1;
   }
 
   #timelineLeftVerified {
     -ms-grid-column-span: 1;
     grid-column-end: 3;
-
     grid-column-start: 2;
     -ms-grid-row-span: 1;
     grid-row-end: 2;
-
     grid-row-start: 1;
   }
 }

@@ -49,7 +49,12 @@ export const OurJourneys = (_props: Props) => {
               <div className="timelineProgressBar"></div>
             </div>
             {data.map(({ date, text, imgSrc }) => {
-              const formattedDescription = text.replace(/<br>/g, "<br/><br/>");
+              const textSegments = text
+                .replace(/<br>/g, "<br/><br/>")
+                .split("<img>");
+              const images = imgSrc
+                ? imgSrc.split(",").map((src) => src.trim())
+                : [];
               return (
                 <div className="timelineItem">
                   <div id="timelineLeftVerified" className="timelineLeft">
@@ -59,26 +64,22 @@ export const OurJourneys = (_props: Props) => {
                     <div className="timelineCircle"></div>
                   </div>
                   <div className="timelineRight">
-                    <div className="marginBottomXlarge">
-                      <div
-                        className="timelineText"
-                        dangerouslySetInnerHTML={{
-                          __html: formattedDescription,
-                        }}
-                      />
-                    </div>
-                    {imgSrc != "" ? (
-                      <div className="timelineImageWrapper">
-                        {imgSrc.split(",").map((cat: string) => {
-                          return (
-                            <>
-                              <img src={cat.trim()} loading="lazy" alt="" />
-                              <br></br>
-                            </>
-                          );
-                        })}
+                    {textSegments.map((segment, index) => (
+                      <div className="marginBottomXlarge">
+                        <div
+                          className="timelineText"
+                          dangerouslySetInnerHTML={{ __html: segment }}
+                        />
+                        {images[index] && (
+                          <div className="timelineImageWrapper">
+                            <br></br>
+
+                            <img src={images[index]} loading="lazy" alt="" />
+                            <br></br>
+                          </div>
+                        )}
                       </div>
-                    ) : null}
+                    ))}
                   </div>
                 </div>
               );
