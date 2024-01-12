@@ -17,8 +17,7 @@ export const FoundersSection = (_props: Props) => {
           name={"Sahil Sameer (CEO)"}
           width={"300px"}
           height={"320px"}
-          description="Co-founder of Opengrad, IIM Indore alumnus, led Keralarescue.in, focuses on social change through communities, ex-manager at Samsung.
-"
+          description="IIM Indore grad, crafted a community-driven platform for IPMAT entrances, 'Alpha IPMAT'. Marketing enthusiast previously worked with HUL."
           linkedIn="https://www.linkedin.com/in/sahil-sameer/"
         />
         <ImageHoverBox
@@ -26,7 +25,7 @@ export const FoundersSection = (_props: Props) => {
           name={"Amith Tony Joseph (CTO)"}
           width={"300px"}
           height={"320px"}
-          description="Co-founder, IIM Indore alumnus, from humble beginnings to EdTech leader, founded 'alpha IPMAT', instrumental in shaping Opengrad's vision."
+          description="IIM Indore alumnus, led Keralarescue.in, focuses on social change through communities, ex-manager at Samsung."
           linkedIn="https://www.linkedin.com/in/amith-tj/"
         />
         <ImageHoverBox

@@ -17,6 +17,7 @@
 
 .sectionTimelineHeading {
   background-color: #ffffff;
+  padding-bottom: 6vh;
 }
 
 .paddingVerticalXlarge {
@@ -126,7 +127,7 @@
   min-height: 15px;
   min-width: 15px;
   border-radius: 100%;
-  background-color: #180404;
+  background-color: #00BF63;
 }
 
 .timelineProgress {
@@ -148,7 +149,7 @@
   height: 50vh;
   background-color: #fff;
   /* background-image: -webkit-gradient(linear, left top, left bottom, from(#ff7448), color-stop(51%, #ff4848), to(#6248ff)); */
-  background-image: linear-gradient(180deg, #ff7448, #ff4848 51%, #6248ff);
+  background-image: linear-gradient(180deg, #00BF63, #C1FF72 51%, #00BF63);
 }
 
 .sectionTimeline {
@@ -171,7 +172,7 @@
   width: 100%;
   height: auto;
   min-height: 200px;
-  background-color: #ff7448;
+  
 }
 
 .overlayFadeTop {

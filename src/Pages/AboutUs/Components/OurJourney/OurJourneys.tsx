@@ -8,7 +8,7 @@ export const OurJourneys = (_props: Props) => {
     {
       date: "2018",
       text: "Sahil, a founding member of Keralarescue.in during the 2018 Kerala floods, recognized the profound impact of community engagement for social causes.<img>Shahid, during his time at IIM Indore, successfully developed an edtech platform for IPMAT in collaboration with fellow students, marking a grant success.<img>",
-      imgSrc: "https://iili.io/J7thgQp.jpg,https://iili.io/J7thgQp.jpg",
+      imgSrc: "https://iili.io/J7DV2tV.png,https://iili.io/J7thgQp.jpg",
     },
     {
       date: "2019",
@@ -18,12 +18,12 @@ export const OurJourneys = (_props: Props) => {
     {
       date: "2020",
       text: "Sahil secured a seat at IIM Indore and began personally mentoring five students for the CAT program.<br>Amith actively volunteered with IEEE's Promotion of Innovation and Entrepreneurship community, expanding his network and gaining hands-on tech expertise.<img>",
-      imgSrc: "https://iili.io/J7thLan.jpg",
+      imgSrc: "https://iili.io/J7DVFoB.jpg",
     },
     {
       date: "2021",
-      text: "All students mentored by Sahil secured spots in the top 20 B-schools, reinforcing the impact of relatability in entrance coaching.",
-      imgSrc: "",
+      text: "All students mentored by Sahil secured spots in the top 20 B-schools, reinforcing the impact of relatability in entrance coaching.<br>Shahid got featured in Official Humans of Bombay mentioning his journey from a Govt. School in Kerala to IIM Indore and establishing a community driven edtech for IPMAT entrances<img>",
+      imgSrc: "https://iili.io/JYJMZYB.png",
     },
     {
       date: "2022",
@@ -90,21 +90,7 @@ export const OurJourneys = (_props: Props) => {
           </div>
         </div>
       </div>
-      <div className="sectionTimelineCta">
-        <div className="container">
-          <div className="paddingVerticalXlarge">
-            <div className="timelineMainHeadingWrapper">
-              <div className="marginBottomMedium">
-                <div className="timelineDateText">Today</div>
-              </div>
-              <p className="paragraphLarge">
-                You&#x27;ve heard our story, it&#x27;s now time for the world to
-                hear yours.
-              </p>
-            </div>
-          </div>
-        </div>
-      </div>
+      
     </div>
   );
 };
