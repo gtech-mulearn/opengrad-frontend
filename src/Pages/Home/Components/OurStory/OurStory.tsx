@@ -83,7 +83,7 @@ export const OurStory = (_props: Props) => {
               name={"Amith Tony Joseph"}
               width={""}
               height={""}
-              description="Chief Technical Officer "
+              description="Chief Technology Officer "
               className={styles.ImageBox}
               linkedIn="https://www.linkedin.com/in/amith-tj/"
             />
@@ -92,7 +92,7 @@ export const OurStory = (_props: Props) => {
               name={"Mohammed Shahid CO"}
               width={""}
               height={""}
-              description="Chief Operations Officer"
+              description="Chief Operating Officer"
               className={styles.ImageBox}
               linkedIn="https://www.linkedin.com/in/shahidco/"
             />
