@@ -74,3 +74,15 @@ export const insertHomeTestimonials = async (formdata: any) => {
 };
 
 
+export const deleteTestimonials = async (id: string) => {
+  let { data: homeTestimonials, error } = await supabase
+    .from("homeTestimonials")
+    .delete()
+    .eq("id", id);
+  if (error) {
+    // toast.error(error.message);
+    throw error;
+  } else {
+    return homeTestimonials;
+  }
+};
