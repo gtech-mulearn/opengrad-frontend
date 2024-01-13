@@ -120,3 +120,43 @@ export const deleteJoinUSTestimonials = async (id: string) => {
     return volunteerstories;
   }
 };
+
+
+// volunteers Directory
+
+export const insertVolunteerDirectory = async (formdata: any) => {
+  const adjustedData = {
+    name: formdata.name,
+    created_at: formattedDateAndTime,
+
+    image: formdata.image,
+    description: formdata.description,
+  };
+  console.log(adjustedData);
+  const { data: volunteerDirectory, error } = await supabase
+    .from("volunteerDirectory")
+    .insert([adjustedData])
+    .select();
+
+  if (error) {
+    // Handle the error
+    throw error;
+  } else {
+    return volunteerDirectory;
+  }
+};
+
+
+
+export const deleteVolunteerDirectory = async (id: string) => {
+  let { data: volunteerDirectory, error } = await supabase
+    .from("volunteerDirectory")
+    .delete()
+    .eq("id", id);
+  if (error) {
+    // toast.error(error.message);
+    throw error;
+  } else {
+    return volunteerDirectory;
+  }
+};
