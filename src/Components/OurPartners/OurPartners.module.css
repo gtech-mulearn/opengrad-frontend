@@ -32,12 +32,14 @@
   object-fit: contain;
   padding: 0px 0px 10px;
   flex-shrink: 0;
+  max-width: 240px;
 }
 
 .PartnersImageWrapper > div .name {
   display: flex;
   flex-direction: column;
   padding-bottom: 10px;
+  text-align: center;
 }
 .PartnersImageWrapper > div h2 {
   font-size: 20px;

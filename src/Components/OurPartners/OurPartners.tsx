@@ -15,11 +15,11 @@ type OurPartnersProps = {
 };
 
 export const OurPartners = ({ partners }: OurPartnersProps) => {
-  const [isScreenSmall, setIsScreenSmall] = useState(window.innerWidth < 1920);
+  const [isScreenSmall, setIsScreenSmall] = useState(window.innerWidth < 2020);
 
   useEffect(() => {
     const handleResize = () => {
-      setIsScreenSmall(window.innerWidth < 1000);
+      setIsScreenSmall(window.innerWidth < 2000);
     };
 
     window.addEventListener("resize", handleResize);
@@ -40,7 +40,7 @@ export const OurPartners = ({ partners }: OurPartnersProps) => {
         {isScreenSmall ? (
           <Marquee {...marqParams} style={{ width: "100vw" }}>
             {partners.map((partner, index) => (
-              <div key={index} style={{ padding: "0px 38px" }}>
+              <div key={index} style={{ padding: "0px 38px",textAlign:"center" }}>
                 <img src={partner.image} alt={partner.name} />
                 <div className={styles.name}>
                   <h2>{partner.name}</h2>

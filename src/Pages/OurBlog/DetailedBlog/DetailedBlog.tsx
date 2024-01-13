@@ -85,10 +85,12 @@ export const DetailedBlog = (_props: Props) => {
           category,
         }) => {
           const formattedDate = formatDate(dateofblog);
-          const formattedDescription = description.replace(
-            /<br>/g,
-            "<br/><br/>"
-          );
+          const textSegments = description
+            .replace(/<br>/g, "<br/><br/>")
+            .split("<img>");
+          const images = extra_images
+            ? extra_images.split(",").map((src: string) => src.trim())
+            : [];
           return (
             <div className={styles.HeaderWrapper}>
               <div className={styles.BackgroundText}>
@@ -100,11 +102,17 @@ export const DetailedBlog = (_props: Props) => {
               <h2>{title}</h2>
               <img src={image} alt="" />
 
-              <div
-                className={styles.description}
-                dangerouslySetInnerHTML={{ __html: formattedDescription }}
-              />
-              <ImageDivContainer extra_images={extra_images} />
+              {textSegments.map((segment: any, index: string | number) => (
+                <div>
+                  <div
+                    className={styles.description}
+                    dangerouslySetInnerHTML={{ __html: segment }}
+                  />
+                  {images[index] && (
+                    <img className={styles.extraImages} src={images[index]} loading="lazy" alt="" />
+                  )}
+                </div>
+              ))}
               <CategoryDivContainer category={category} />
             </div>
           );
@@ -143,24 +151,6 @@ export const DetailedBlog = (_props: Props) => {
       </div>
       <BannerOFBlog />
       <Footer />
-    </div>
-  );
-};
-
-interface ImageDivContainerProps {
-  extra_images: string;
-}
-
-export const ImageDivContainer = ({ extra_images }: ImageDivContainerProps) => {
-  return (
-    <div className={styles.categoryDiv}>
-      {extra_images.split(",").map((cat: string) => {
-        
-
-        return (
-          <img className={styles.ImageDivContainer} src={cat.trim()} alt="" />
-        );
-      })}
     </div>
   );
 };
