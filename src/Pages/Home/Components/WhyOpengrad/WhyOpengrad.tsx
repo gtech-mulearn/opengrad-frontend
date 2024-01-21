@@ -54,8 +54,8 @@ export const WhyOpengrad = () => {
       <div ref={ref}>
         <Containers
           Svg={PeopleGrpsvg}
-          pra1="Mentors, teachers &"
-          pra2="students prepare syllabus"
+          pra1="Top university students"
+          pra2="prepare the content"
         />
         <GreenArrowsvg className={styles.hidden} />
         <Containers
