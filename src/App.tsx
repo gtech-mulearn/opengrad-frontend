@@ -49,11 +49,11 @@ function App() {
       element: <Volunteer />,
     },
     {
-      path: "/ourwork",
+      path: "/courses",
       element: <ComingSoon />,
     },
     {
-      path: "/ourblog",
+      path: "/ourblogs",
       element: <OurBlog />,
     },
     {

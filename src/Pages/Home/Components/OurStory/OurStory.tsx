@@ -3,7 +3,7 @@ import styles from "./OurStory.module.css";
 import amith from "../../../assets/founders/amith.png";
 import sahil from "../../../assets/founders/sahil.png";
 import shahid from "../../../assets/founders/shahid.png";
-import { SectionHeading } from "../../../../Components/SectionHeading/SectionHeading";
+// import { SectionHeading } from "../../../../Components/SectionHeading/SectionHeading";
 import { DoubleQuotessvg } from "./svg";
 
 import { Swiper, SwiperSlide } from "swiper/react";
@@ -54,7 +54,7 @@ export const OurStory = (_props: Props) => {
 
   return (
     <div className={styles.OurStoryWrapper}>
-      <SectionHeading title="Our Story" />
+      {/* <SectionHeading title="Our Story" /> */}
       <div className={styles.DetailSectionWrapper}>
         <div className={styles.foundersWrapper}>
           <p>

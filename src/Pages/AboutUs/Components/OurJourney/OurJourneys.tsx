@@ -32,7 +32,7 @@ export const OurJourneys = (_props: Props) => {
     },
     {
       date: "2023",
-      text: "Opengrad Foundation was officially formulated, fostering collaborations with top-tier universities across various disciplines.<br>Officially incubated with Nudge Foundation and NSRCEL IIM Bangalore.<img>Initiated content preparation for various courses by establishing studios in tier 1 universities.<img>The first cohort for the CAT program, comprising 80 students, was successfully launched, with all securing top B-school calls and the top 30 gaining admission to the top 10 B-schools.<img>",
+      text: "Opengrad Foundation was officially formulated, fostering collaborations with top-tier universities across various disciplines.<br>Got selected as one of the 10 organizations for the incubation cohort by The/Nudge Institute from a remarkable pool of 340+ applicants.<br>Opengrad Foundation found a place in the Impact Orbit Cohort of NSRCEL Indian Institute of Management Bangalore among 19 other organizations across India<img>",
       imgSrc:
         "https://iili.io/J7th4CN.jpg,https://iili.io/J7thP4t.jpg,https://iili.io/J7ths3X.jpg",
     },
