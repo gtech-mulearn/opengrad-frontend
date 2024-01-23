@@ -21,8 +21,7 @@ export const ProblemScenario = () => {
         <SectionHeading title="Rebuilding Online Education " />
         <p>
           Confronting an Exploitive Industry to Redistribute Power and
-          Opportunity to Millions of Families and Learners - Millions of
-          Aspirants
+          Opportunity to Millions of Aspirants
         </p>
       </div>
       <div className={styles.DetailSection}>
