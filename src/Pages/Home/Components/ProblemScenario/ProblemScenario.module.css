@@ -16,7 +16,7 @@
 .ProblemScenarioWrapper .heading > p {
   font-size: 16px;
   line-height: 1;
-  max-width: 550px;
+  max-width: 500px;
 }
 .ProblemScenarioWrapper .DetailSection {
   display: flex;
