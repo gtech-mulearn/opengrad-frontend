@@ -60,17 +60,18 @@ export const MentorshipSection = () => {
               <div className={styles.thickline}></div>
             </div>
             <p>
-              Nobody can relate to you like a mentor who has been where you are.
+              Nobody can relate to you like a mentor <br></br>who has been where
+              you are.
             </p>
           </div>
         </div>
       </div>
-      <div>
-        <p>
+      <div className={styles.paragraph}>
+        <p style={{ color: "#222" }}>
           Our carefully curated and strategically developed curriculum
           prioritizes student well-being and healthy learning.
         </p>
-        <p>Our comprehensive resources include:</p>
+        <p style={{ color: "#888" }}>Our comprehensive resources include:</p>
       </div>
       <div ref={ref} className={styles.iterator}>
         <Containers Svg={VideoClass} pra="Video Classes" />
