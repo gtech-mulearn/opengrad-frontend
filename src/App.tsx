@@ -5,7 +5,7 @@ import { Home } from './Pages/Home/Home';
 import { AboutUs } from './Pages/AboutUs/AboutUs';
 import { Volunteer } from './Pages/Volunteer/Volunteer';
 import NotFound from './Pages/NotFound/NotFound';
-import { ComingSoon } from './Pages/ComingSoon/ComingSoon';
+// import { ComingSoon } from './Pages/ComingSoon/ComingSoon';
 
 import { AdminLogin } from './Pages/Admin/AdminLogin/AdminLogin';
 import { AdminDashboard } from './Pages/Admin/AdminDashboard/AdminDashboard';
@@ -13,6 +13,7 @@ import { createClient } from '@supabase/supabase-js';
 import { OurBlog } from './Pages/OurBlog/OurBlog';
 import { DetailedBlog } from './Pages/OurBlog/DetailedBlog/DetailedBlog';
 import PrivateRoutes from './services/PrivateRoutes';
+import { Courses } from './Pages/Courses/Courses';
 
 
 
@@ -49,11 +50,11 @@ function App() {
       element: <Volunteer />,
     },
     {
-      path: "/ourwork",
-      element: <ComingSoon />,
+      path: "/courses",
+      element: <Courses />,
     },
     {
-      path: "/ourblog",
+      path: "/ourblogs",
       element: <OurBlog />,
     },
     {
