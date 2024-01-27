@@ -7,10 +7,18 @@ type Props = {
   text1: string;
   text2: string;
   speed: number;
+  start?: number; // Optional starting number
 };
 
-export const CounterComponent = ({ Svg, limit, text1, text2,speed }: Props) => {
-  const [count, setCount] = useState(0);
+export const CounterComponent = ({
+  Svg,
+  limit,
+  text1,
+  text2,
+  speed,
+  start = 0,
+}: Props) => {
+  const [count, setCount] = useState(start); // Initialize count with 'start'
 
   useEffect(() => {
     const interval = setInterval(() => {
@@ -22,10 +30,10 @@ export const CounterComponent = ({ Svg, limit, text1, text2,speed }: Props) => {
           return currentCount;
         }
       });
-    }, speed); // Counts every 100 milliseconds
+    }, speed); // Counts every 'speed' milliseconds
 
     return () => clearInterval(interval); // Cleanup interval on component unmount
-  }, [limit]);
+  }, [limit, speed, start]); // Add 'start' to the dependency array
 
   return (
     <div className={styles.CounterComponent}>

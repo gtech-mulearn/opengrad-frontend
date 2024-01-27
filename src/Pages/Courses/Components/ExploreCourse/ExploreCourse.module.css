@@ -17,7 +17,7 @@
   border: 1px solid #82dab7;
 }
 
-.gridSection > div {
+.gridSection > a {
   width: calc(100% / 2);
   background-color: rgb(255, 255, 255);
   color: var(--Primary, #034852);
@@ -29,9 +29,10 @@
   padding: 20px;
   min-width: 300px;
   border: 1px solid #82dab7;
+  text-decoration: none;
 }
 
-.gridSection > div:hover {
+.gridSection > a:hover {
   color: white;
   background: url("./bg.png") center center/cover no-repeat;
   border: none;

@@ -74,7 +74,7 @@ export const VolunteerStories = (_props: Props) => {
           }}
           modules={[Pagination, Autoplay]}
           autoplay={{
-            delay: 2000,
+            delay: 3000,
             disableOnInteraction: false,
           }}
           ref={swiperRef}
