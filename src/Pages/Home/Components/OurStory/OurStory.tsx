@@ -6,35 +6,21 @@ import shahid from "../../../assets/founders/shahid.png";
 // import { SectionHeading } from "../../../../Components/SectionHeading/SectionHeading";
 import { DoubleQuotessvg } from "./svg";
 
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, SwiperRef } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
 import "swiper/css/pagination";
 import "./styles.css";
 import { Autoplay, Pagination } from "swiper/modules";
-import { useEffect,  useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { getTestimonial } from "./Api";
 
 type Props = {};
 
 export const OurStory = (_props: Props) => {
+  const swiperRef = useRef<SwiperRef>(null);
   const [data, setData] = useState<any[]>([]);
-  // const progressCircle = useRef<HTMLDivElement>(null);
-  // const progressContent = useRef<HTMLDivElement>(null);
-  // const onAutoplayTimeLeft = ( time: number, progress: number) => {
-  //   if (progressCircle.current) {
-  //     progressCircle.current.style.setProperty(
-  //       "--progress",
-  //       `${(1 - progress) * 100}%`
-  //     );
-  //   }
-
-  //   if (progressContent.current) {
-  //     progressContent.current.textContent = `${Math.ceil(time / 1000)}s`;
-  //   }
-   
-  // };
 
   const handleFetchDetails = async () => {
     try {
@@ -52,9 +38,14 @@ export const OurStory = (_props: Props) => {
     handleFetchDetails();
   }, []);
 
+  const slideLeft = () => {
+    if (swiperRef.current?.swiper) {
+      swiperRef.current.swiper.slidePrev();
+    }
+  };
+  slideLeft();
   return (
     <div className={styles.OurStoryWrapper}>
-      {/* <SectionHeading title="Our Story" /> */}
       <div className={styles.DetailSectionWrapper}>
         <div className={styles.foundersWrapper}>
           <p>
@@ -103,6 +94,8 @@ export const OurStory = (_props: Props) => {
           <Swiper
             watchSlidesProgress={true}
             centeredSlides={true}
+            grabCursor={true}
+            slidesPerView={"auto"}
             pagination={{
               clickable: true,
             }}
@@ -110,10 +103,10 @@ export const OurStory = (_props: Props) => {
             className="OurStory"
             loop={true}
             autoplay={{
-              delay: 2000,
+              delay: 3000,
               disableOnInteraction: false,
             }}
-            
+            ref={swiperRef}
           >
             {data.map(({ description, name, designation, image }) => {
               return (
@@ -127,14 +120,12 @@ export const OurStory = (_props: Props) => {
                 </SwiperSlide>
               );
             })}
-            
           </Swiper>
         </div>
       </div>
     </div>
   );
 };
-
 
 interface Testimonial {
   image: string;

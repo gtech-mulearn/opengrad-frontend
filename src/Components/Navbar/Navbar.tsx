@@ -13,7 +13,7 @@ export const Navbar = (_props: Props) => {
     setopenmenu(!openmenu);
   }
   const path = useReactPath();
-  const navContent = ["Home", "about Us", "Courses", "Join Us", "Our Blogs"];
+  const navContent = ["Home", "about Us", "Courses", "Join Us", "Our Blog"];
   useEffect(() => {}, [path]);
   const changeNavBg = () => {
     window.scrollY >= 150 ? setNavBg(true) : setNavBg(false);
@@ -89,7 +89,10 @@ export const Navbar = (_props: Props) => {
               </a>
             ))}
             <button className={styles.StudyButton}>
-              <a href="https://opengrad-foundation.learnyst.com/learn">
+              <a
+                href="https://opengrad-foundation.learnyst.com/learn"
+                target="_blank"
+              >
                 Enroll Now
               </a>
             </button>
@@ -97,7 +100,12 @@ export const Navbar = (_props: Props) => {
         )}
       </div>{" "}
       <button className={styles.StudyButton}>
-        <a href="https://opengrad-foundation.learnyst.com/learn">Enroll Now</a>
+        <a
+          href="https://opengrad-foundation.learnyst.com/learn"
+          target="_blank"
+        >
+          Enroll Now
+        </a>
       </button>
     </div>
   );
