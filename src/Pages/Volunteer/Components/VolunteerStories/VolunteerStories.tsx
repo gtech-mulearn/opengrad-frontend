@@ -1,5 +1,5 @@
 import styles from "./VolunteerStories.module.css";
-import { Swiper, SwiperSlide } from "swiper/react";
+import { Swiper, SwiperSlide, SwiperRef } from "swiper/react";
 
 // Import Swiper styles
 import "swiper/css";
@@ -12,7 +12,7 @@ import { DoubleQuotessvg } from "../../../Home/Components/OurStory/svg";
 
 import "./styles.css";
 import { Autoplay, Pagination } from "swiper/modules";
-import { useEffect, useState } from "react";
+import { useEffect, useRef, useState } from "react";
 import { getVolunteerStories } from "./Api";
 
 type Props = {};
@@ -26,6 +26,7 @@ type IndividualContainerProps = {
 
 export const VolunteerStories = (_props: Props) => {
     const [data, setData] = useState<any[]>([]);
+    const swiperRef = useRef<SwiperRef>(null);
 
 
   const handleFetchDetails = async () => {
@@ -51,7 +52,12 @@ export const VolunteerStories = (_props: Props) => {
     }
   }, []);
 
-  // console.log(data)
+   const slideLeft = () => {
+     if (swiperRef.current?.swiper) {
+       swiperRef.current.swiper.slidePrev();
+     }
+   };
+   slideLeft();
   return (
     <div className={styles.VolunteerStoriesWrapper}>
       <SectionHeading title="Volunteer Stories" />
@@ -60,6 +66,7 @@ export const VolunteerStories = (_props: Props) => {
           watchSlidesProgress={true}
           slidesPerView={set ? 1 : 2}
           className="volunteerStories"
+          grabCursor={true}
           loop={true}
           pagination={{
             clickable: true,
@@ -67,9 +74,10 @@ export const VolunteerStories = (_props: Props) => {
           }}
           modules={[Pagination, Autoplay]}
           autoplay={{
-            delay: 2000, 
-            disableOnInteraction: false, 
+            delay: 3000,
+            disableOnInteraction: false,
           }}
+          ref={swiperRef}
         >
           {data.map(({ description, name, designation, image }) => {
             return (

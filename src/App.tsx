@@ -54,7 +54,7 @@ function App() {
       element: <Courses />,
     },
     {
-      path: "/ourblogs",
+      path: "/ourblog",
       element: <OurBlog />,
     },
     {

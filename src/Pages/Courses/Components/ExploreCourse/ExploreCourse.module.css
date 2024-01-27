@@ -1,0 +1,50 @@
+.explorecourse {
+  display: flex;
+  flex-direction: column;
+  gap: 3vh;
+  align-items: center;
+  justify-content: center;
+  width: 100%;
+  padding: 0px 5vw 6vh;
+}
+
+.gridSection {
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  max-width: 800px;
+  gap: 0px;
+  border: 1px solid #82dab7;
+}
+
+.gridSection > a {
+  width: calc(100% / 2);
+  background-color: rgb(255, 255, 255);
+  color: var(--Primary, #034852);
+  font-size: 22px;
+  font-weight: 700;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 20px;
+  min-width: 300px;
+  border: 1px solid #82dab7;
+  text-decoration: none;
+}
+
+.gridSection > a:hover {
+  color: white;
+  background: url("./bg.png") center center/cover no-repeat;
+  border: none;
+  margin-right: -1.5px;
+}
+
+@media screen and (max-width: 670px) {
+  .gridSection {
+    width: 302px;
+  }
+
+  .gridSection > div{
+    font-size: 18px;
+  }
+}
