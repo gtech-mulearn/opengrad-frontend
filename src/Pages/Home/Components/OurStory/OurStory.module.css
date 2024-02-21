@@ -181,6 +181,7 @@
   p {
   font-weight: 600;
   font-size: 16px;
+  max-width: 70%;
 }
 @media screen and (max-width: 1300px) {
   .OurStoryWrapper {

@@ -19,7 +19,7 @@ export const Header = (_props: Props) => {
           <div className={styles.Title}>
             <h2>
               India’s First&nbsp;<div>Free</div>&nbsp;and<br></br>
-              <div>Open Source</div>&nbsp;<p>Entrance</p> Exam Solution
+              <div>Community Powered</div>&nbsp;<p>Entrance</p>&nbsp;Exam Solution
             </h2>
             <div>
               {/* <p>
