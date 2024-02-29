@@ -6,7 +6,7 @@ import styles from "./OurWorks.module.css";
 import { useNavigate } from "react-router-dom";
 
 type Props = {
-  id:string;
+  id: string;
   image: string;
   par: string;
 };
@@ -32,19 +32,15 @@ export const OurWorks = () => {
       {" "}
       <SectionHeading title="News and updates" />
       <div className={styles.WorksWrapper}>
-        {[...data]
-          .reverse()
-          .slice(0, 6)
-          .map(({ id, image, title }) => {
-            return <Container id={id} image={image} par={title} />;
-          })}
-        
+        {[...data].slice(0, 6).map(({ id, image, title }) => {
+          return <Container id={id} image={image} par={title} />;
+        })}
       </div>
     </div>
   );
 };
 
-const Container = ({id, image, par }: Props) => {
+const Container = ({ id, image, par }: Props) => {
   const navigate = useNavigate();
   const detailBlogs = (id: any) => {
     console.log(id);
